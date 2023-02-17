@@ -23,50 +23,22 @@ import mods.createtweaker.SequencedAssemblyRecipeBuilder;
 
 
 //removals
-recipes.remove(<item:immersiveengineering:component_iron>);
+
 recipes.remove(<item:immersiveengineering:component_steel>);
 
-<recipetype:create:deploying>.remove(<item:create:andesite_casing>);
-<recipetype:create:item_application>.remove(<item:create:andesite_casing>);
+
 
 <recipetype:create:item_application>.remove(<item:create:brass_casing>);
-
 <recipetype:create:item_application>.remove(<item:create:copper_casing>);
 
 <recipetype:create:sequenced_assembly>.remove(<item:create:precision_mechanism>);
 
+<recipetype:create:mixing>.remove(<item:create:andesite_alloy>);
 
 
 
-//component_iron
-craftingTable.addShaped("iron_component_recipe_changed",<item:immersiveengineering:component_iron>,
-[[<item:minecraft:air>,<item:create:andesite_alloy>,<item:minecraft:air>],[<tag:items:forge:cogwheels>,<item:minecraft:copper_ingot>,<tag:items:forge:cogwheels>],[<item:minecraft:air>,<item:minecraft:iron_ingot>,<item:minecraft:air>]]);
 
 
-
-<recipetype:create:sequenced_assembly>.addRecipe(
-	<recipetype:create:sequenced_assembly>
-	.builder("high_efficiency_iron_component_making")
-	.transitionTo(<item:immersiveengineering:component_iron>)
-	.require(<item:create:andesite_alloy>)
-	.loops(2)
-	.addOutput(<item:immersiveengineering:component_iron>*4, 1)
-	.addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<tag:items:forge:cogwheels>) )
-	.addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<tag:items:forge:ingots/iron>))
-	.addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<tag:items:forge:ingots/copper>))
-	.addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<tag:items:forge:cogwheels>))
-);
-
-<recipetype:create:sequenced_assembly>.addRecipe(<recipetype:create:sequenced_assembly>.builder("high_efficiency_iron_component_making2")
-	.transitionTo(<item:create_connected_blocks:incomplete_iron_reinforcement>)
-	.require(<item:create:andesite_alloy>)
-	.loops(2)
-	.addOutput(<item:immersiveengineering:component_iron>*4, 1)
-	.addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<tag:items:forge:cogwheels>))
-	.addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<tag:items:forge:ingots/zinc>))
-	.addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<tag:items:forge:ingots/copper>))
-	
-);
 
 
 
@@ -98,9 +70,7 @@ craftingTable.addShaped("only_making_steel_component",<item:immersiveengineering
 );
 
 
-//andesite_casing
 
-<recipetype:create:item_application>.addRecipe("on_hand_casing1_making",[<item:create:andesite_casing>],<tag:items:forge:stripped_logs>, <item:immersiveengineering:component_iron>, true);
 
 //brass_casing
 
