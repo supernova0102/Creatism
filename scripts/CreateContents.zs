@@ -26,8 +26,6 @@ import mods.createtweaker.SequencedAssemblyRecipeBuilder;
 
 
 
-
-
 <recipetype:create:item_application>.remove(<item:create:copper_casing>);
 
 
@@ -46,57 +44,5 @@ import mods.createtweaker.SequencedAssemblyRecipeBuilder;
 
 
 
-//drill for mech drill
-stoneCutter.remove(<item:createindustry:drill_head>);
-craftingTable.addShaped("drill_head",<item:createindustry:drill_head>,[
-[<item:minecraft:diamond>,<item:minecraft:air>,<item:minecraft:air>],
-[<item:minecraft:air>,<item:createbigcannons:cast_iron_block>,<item:create:andesite_alloy>],
-[<item:minecraft:air>,<item:create:andesite_alloy>,<item:create:andesite_alloy>]]);
-
-
-//brass hand for deployer
-recipes.remove(<item:create:brass_hand>);
-craftingTable.addShaped("brass_hand",<item:create:brass_hand>,[
-[<item:minecraft:air>,<item:create:copper_sheet>,<item:minecraft:air>],[<item:create:copper_sheet>,<item:create:copper_sheet>,<item:create:copper_sheet>],[<item:create:andesite_alloy>,<item:createaddition:zinc_sheet>,<item:create:andesite_alloy>]]);
-
-//tier1 base machines
-//stonecutter to make
-recipes.remove(<item:create:redstone_contact>);
-recipes.remove(<item:create:mechanical_bearing>);
-recipes.remove(<item:create:rope_pulley>);
-recipes.remove(<item:create:mechanical_piston>);
-recipes.remove(<item:create:mechanical_harvester>);
-recipes.remove(<item:create:mechanical_plough>);
-recipes.remove(<item:create:portable_storage_interface>);
-recipes.remove(<item:create:andesite_funnel>);
-
-stoneCutter.addRecipe("redstone_contact",<item:create:redstone_contact>*2,<item:immersiveengineering:light_engineering>);
-stoneCutter.addRecipe("mechanical_bearing",<item:create:mechanical_bearing>,<item:immersiveengineering:light_engineering>);
-stoneCutter.addRecipe("rope_polley",<item:create:rope_pulley>,<item:immersiveengineering:light_engineering>);
-stoneCutter.addRecipe("mechanical_piston",<item:create:mechanical_piston>,<item:immersiveengineering:light_engineering>);
-stoneCutter.addRecipe("mechanical_harvester",<item:create:mechanical_harvester>*2,<item:immersiveengineering:light_engineering>);
-stoneCutter.addRecipe("mechanical_plough",<item:create:mechanical_plough>*2,<item:immersiveengineering:light_engineering>);
-stoneCutter.addRecipe("portable_storage_interface",<item:create:portable_storage_interface>*2,<item:immersiveengineering:light_engineering>);
-stoneCutter.addRecipe("andesite_funnel",<item:create:andesite_funnel>*2,<item:immersiveengineering:light_engineering>);
-
-//smithing to make
-recipes.remove(<item:createaddition:rolling_mill>);
-recipes.remove(<item:create:encased_fan>);
-recipes.remove(<item:create:mechanical_saw>);
-recipes.remove(<item:create:deployer>);
-recipes.remove(<item:create_mechanical_extruder:mechanical_extruder>);
-recipes.remove(<item:create:mechanical_press>);
-recipes.remove(<item:create:mechanical_mixer>);
-recipes.remove(<item:sliceanddice:slicer>);
-
-smithing.addRecipe("rolling_mill",<item:createaddition:rolling_mill>,<item:immersiveengineering:light_engineering>,<item:create:shaft>);
-smithing.addRecipe("encased_fan",<item:create:encased_fan>,<item:immersiveengineering:light_engineering>,<item:create:propeller>);
-smithing.addRecipe("mechanical_saw",<item:create:mechanical_saw>,<item:immersiveengineering:light_engineering>,<item:minecraft:iron_axe>);
-smithing.addRecipe("deployer",<item:create:deployer>,<item:immersiveengineering:light_engineering>,<item:create:brass_hand>);
-smithing.addRecipe("mechanical_extruder",<item:create_mechanical_extruder:mechanical_extruder>,<item:immersiveengineering:light_engineering>,<item:create_crystal_clear:andesite_glass_casing>);
-smithing.addRecipe("mechanical_press",<item:create:mechanical_press>,<item:immersiveengineering:light_engineering>,<item:minecraft:anvil>);
-smithing.addRecipe("mechanical_mixer",<item:create:mechanical_mixer>,<item:immersiveengineering:light_engineering>,<item:create:whisk>);
-smithing.addRecipe("slicer",<item:sliceanddice:slicer>,<item:immersiveengineering:light_engineering>,<item:farmersdelight:iron_knife>);
-smithing.addRecipe("mechanical_drill",<item:create:mechanical_drill>,<item:immersiveengineering:light_engineering>,<item:createindustry:drill_head>);
 
 
