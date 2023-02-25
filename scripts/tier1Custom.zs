@@ -18,11 +18,15 @@ craftingTable.addShaped("iron_component_recipe_changed",<item:immersiveengineeri
 	.builder("high_efficiency_iron_component_making")
 	.transitionTo(<item:create:andesite_alloy>)
 	.require(<item:create:andesite_alloy>)
-	.loops(2)
-	.addOutput(<item:immersiveengineering:component_iron>*4, 1)
+	.loops(1)
+	.addOutput(<item:immersiveengineering:component_iron>*2, 1)
 	.addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<tag:items:forge:cogwheels>) )
+
 	.addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<tag:items:forge:ingots/iron>))
 	.addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<tag:items:forge:ingots/copper>))
+
+	.addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:create:andesite_alloy>))
+
 );
 
 <recipetype:create:sequenced_assembly>.addRecipe(
@@ -30,10 +34,9 @@ craftingTable.addShaped("iron_component_recipe_changed",<item:immersiveengineeri
 	.builder("low_tier_automation_iron_component")
 	.transitionTo(<item:create:andesite_alloy>)
 	.require(<item:create:andesite_alloy>)
-	.loops(2)
+	.loops(1)
 	.addOutput(<item:immersiveengineering:component_iron>, 1)
-	.addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<tag:items:forge:cogwheels>) )
-	.addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<tag:items:forge:large_cogwheels>))
+	.addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<tag:items:forge:cogwheels>))
 	.addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:create:andesite_alloy>))
 );
 
@@ -54,14 +57,15 @@ craftingTable.addShaped("changed_andesite_alloy", <item:create:andesite_alloy>,[
 
 
 //daub, resource for andesite alloy
+
 recipes.remove(<item:supplementaries:daub>);
 
-craftingTable.addShapeless("daub",<item:supplementaries:daub>,[<item:exnihilosequentia:porcelain_clay>,<item:exnihilosequentia:porcelain_clay>,<item:exnihilosequentia:porcelain_clay>,<item:exnihilosequentia:porcelain_clay>]);
+craftingTable.addShapeless("daub",<item:supplementaries:daub>*2,[<item:exnihilosequentia:porcelain_clay>,<item:exnihilosequentia:porcelain_clay>,<item:exnihilosequentia:porcelain_clay>,<item:exnihilosequentia:porcelain_clay>]);
 
 
 //washing gravel
 
-
+/*
 <recipetype:create:splashing>.removeByInput(<item:minecraft:gravel>);
 
 <recipetype:create:splashing>.addRecipe("washing_gravel",[
@@ -73,15 +77,15 @@ craftingTable.addShapeless("daub",<item:supplementaries:daub>,[<item:exnihiloseq
 <recipetype:create:splashing>.addRecipe("washing_dirt",[
 <item:exnihilosequentia:stone_pebble>%10, <item:exnihilosequentia:granite_pebble>%5,<item:exnihilosequentia:andesite_pebble>%15,<item:exnihilosequentia:calcite_pebble>%5,<item:exnihilosequentia:diorite_pebble>%5,<item:exnihilosequentia:dripstone_pebble>%10,<item:exnihilosequentia:tuff_pebble>%10
 ],<item:minecraft:dirt>, 100);
-
+*/
 
 
 
 //drill for mech drill
 stoneCutter.remove(<item:createindustry:drill_head>);
 craftingTable.addShaped("drill_head",<item:createindustry:drill_head>,[
-[<item:minecraft:diamond>,<item:minecraft:air>,<item:minecraft:air>],
-[<item:minecraft:air>,<item:createbigcannons:cast_iron_block>,<item:create:andesite_alloy>],
+[<item:create:iron_sheet>,<item:minecraft:air>,<item:minecraft:air>],
+[<item:minecraft:air>,<item:minecraft:iron_ingot>,<item:create:andesite_alloy>],
 [<item:minecraft:air>,<item:create:andesite_alloy>,<item:create:andesite_alloy>]]);
 
 
@@ -121,6 +125,8 @@ recipes.remove(<item:create_mechanical_extruder:mechanical_extruder>);
 recipes.remove(<item:create:mechanical_press>);
 recipes.remove(<item:create:mechanical_mixer>);
 recipes.remove(<item:sliceanddice:slicer>);
+recipes.remove(<item:createsifter:sifter>);
+recipes.remove(<item:create:mechanical_drill>);
 
 smithing.addRecipe("rolling_mill",<item:createaddition:rolling_mill>,<item:immersiveengineering:light_engineering>,<item:create:shaft>);
 smithing.addRecipe("encased_fan",<item:create:encased_fan>,<item:immersiveengineering:light_engineering>,<item:create:propeller>);
@@ -131,3 +137,4 @@ smithing.addRecipe("mechanical_press",<item:create:mechanical_press>,<item:immer
 smithing.addRecipe("mechanical_mixer",<item:create:mechanical_mixer>,<item:immersiveengineering:light_engineering>,<item:create:whisk>);
 smithing.addRecipe("slicer",<item:sliceanddice:slicer>,<item:immersiveengineering:light_engineering>,<item:farmersdelight:iron_knife>);
 smithing.addRecipe("mechanical_drill",<item:create:mechanical_drill>,<item:immersiveengineering:light_engineering>,<item:createindustry:drill_head>);
+smithing.addRecipe("sifter",<item:createsifter:sifter>,<item:immersiveengineering:light_engineering>,<tag:items:exnihilosequentia:sieves>);

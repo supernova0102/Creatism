@@ -79,15 +79,39 @@ craftingTable.addShaped("hand_made_electron",<item:create:electron_tube>,[[<item
 <recipetype:create:sequenced_assembly>.addRecipe(<recipetype:create:sequenced_assembly>.builder("precision_mechanism")
 	.transitionTo(<item:create:golden_sheet>)
 	.require(<item:create:golden_sheet>)
-	.loops(2)
+	.loops(1)
 	.addOutput(<item:create:precision_mechanism>, 1)
 	.addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:immersiveengineering:component_steel>))
 	.addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:create:electron_tube>))
 	.addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:createaddition:gold_spool>))
 );
 
-craftingTable.addShaped("handmade_precision_mechanism",<item:create:precision_mechanism>,
-[[<item:minecraft:air>,<item:immersiveengineering:component_steel>,<item:minecraft:air>],[<item:createaddition:gold_spool>,<tag:items:forge:sheetmetals/gold>,<item:createaddition:gold_spool>],[<item:minecraft:air>,<item:create:electron_tube>,<item:minecraft:air>]]);
+
+//destablized_redstone
+<recipetype:create:mixing>.addRecipe("destablized_redstone",<constant:create:heat_condition:superheated>,[<fluid:thermal:redstone> * 100],[<item:minecraft:redstone>],[],1000);
+
+<recipetype:create:mixing>.addRecipe("destablized_redstone2",<constant:create:heat_condition:superheated>,[<fluid:thermal:redstone> * 900],[<item:minecraft:redstone_block>],[],9000);
+
+
+//copper, gold spool
+<recipetype:create:deploying>.addRecipe("empty_spool",<tag:items:forge:plates/iron>,<tag:items:forge:plates/iron>,[<item:createaddition:spool>*16%100],false);
+
+<recipetype:create:sequenced_assembly>.addRecipe(<recipetype:create:sequenced_assembly>.builder("gold_spool")
+	.transitionTo(<item:createaddition:spool>)
+	.require(<item:createaddition:spool>)
+	.loops(4)
+	.addOutput(<item:createaddition:gold_spool> ,1)
+	.addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:createaddition:gold_wire>))
+);
+<recipetype:create:sequenced_assembly>.addRecipe(<recipetype:create:sequenced_assembly>.builder("copper_spool")
+	.transitionTo(<item:createaddition:spool>)
+	.require(<item:createaddition:spool>)
+	.loops(4)
+	.addOutput(<item:createaddition:copper_spool> ,1)
+	.addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<tag:items:forge:wires/copper>))
+);
+
+
 
 
 //tier2 base machines
@@ -120,8 +144,6 @@ stoneCutter.addRecipe("drawer_controller",<item:storagedrawers:controller>,<item
 stoneCutter.addRecipe("generator_block",<item:immersiveengineering:generator>,<item:immersiveengineering:heavy_engineering>);
 stoneCutter.addRecipe("content_observer",<item:create:content_observer>,<item:immersiveengineering:heavy_engineering>);
 stoneCutter.addRecipe("mechanical_arm",<item:create:mechanical_arm>,<item:immersiveengineering:heavy_engineering>);
-stoneCutter.addRecipe("brass_funnel",<item:create:brass_funnel>*2,<item:immersiveengineering:heavy_engineering>);
-stoneCutter.addRecipe("brass_tunnel",<item:create:brass_tunnel>*2,<item:immersiveengineering:heavy_engineering>);
 stoneCutter.addRecipe("brass_drone",<item:create_sa:brass_drone_item>,<item:immersiveengineering:heavy_engineering>);
 
 //smithing to make
@@ -133,3 +155,6 @@ smithing.addRecipe("kinetic_dynamo",<item:immersiveengineering:dynamo>,<item:imm
 smithing.addRecipe("thermionic_generator",<item:immersiveengineering:thermoelectric_generator>,<item:immersiveengineering:heavy_engineering>,<item:immersiveengineering:sheetmetal_constantan>);
 smithing.addRecipe("idle_station",<item:buzzydrones:idle_station>,<item:immersiveengineering:heavy_engineering>,<item:minecraft:beehive>);
 smithing.addRecipe("electric_motor",<item:createaddition:electric_motor>,<item:immersiveengineering:heavy_engineering>,<item:immersiveengineering:dynamo>);
+
+smithing.addRecipe("brass_tunnel",<item:create:brass_funnel>,<item:create:andesite_funnel>,<item:create:precision_mechanism>);
+smithing.addRecipe("brass_funnel",<item:create:brass_tunnel>,<item:create:andesite_tunnel>,<item:create:precision_mechanism>);
