@@ -2,9 +2,9 @@
 recipes.remove(<item:immersiveengineering:heavy_engineering>);
 
 craftingTable.addShaped("heavy_engineering",<item:immersiveengineering:heavy_engineering>,
-[[<item:create:precision_mechanism>,<item:create:brass_casing>,<item:create:precision_mechanism>],
+[[<item:create:precision_mechanism>,<item:create:precision_mechanism>,<item:create:precision_mechanism>],
 [<item:create:precision_mechanism>,<item:immersiveengineering:light_engineering>,<item:create:precision_mechanism>],
-[<item:create:precision_mechanism>,<item:create:brass_casing>,<item:create:precision_mechanism>]]);
+[<item:create:precision_mechanism>,<item:create:precision_mechanism>,<item:create:precision_mechanism>]]);
 
 
 
@@ -88,9 +88,9 @@ craftingTable.addShaped("hand_made_electron",<item:create:electron_tube>,[[<item
 
 
 //destablized_redstone
-<recipetype:create:mixing>.addRecipe("destablized_redstone",<constant:create:heat_condition:superheated>,[<fluid:thermal:redstone> * 100],[<item:minecraft:redstone>],[],1000);
+<recipetype:create:mixing>.addRecipe("destablized_redstone",<constant:create:heat_condition:heated>,[<fluid:thermal:redstone> * 100],[<item:minecraft:redstone>],[],1000);
 
-<recipetype:create:mixing>.addRecipe("destablized_redstone2",<constant:create:heat_condition:superheated>,[<fluid:thermal:redstone> * 900],[<item:minecraft:redstone_block>],[],9000);
+<recipetype:create:mixing>.addRecipe("destablized_redstone2",<constant:create:heat_condition:heated>,[<fluid:thermal:redstone> * 900],[<item:minecraft:redstone_block>],[],9000);
 
 
 //copper, gold spool
@@ -148,7 +148,7 @@ stoneCutter.addRecipe("brass_drone",<item:create_sa:brass_drone_item>,<item:imme
 
 //smithing to make
 
-smithing.addRecipe("mechanical_crafting",<item:create:mechanical_crafter>*3,<item:immersiveengineering:heavy_engineering>,<item:create:crafting_blueprint>);
+smithing.addRecipe("mechanical_crafting",<item:create:mechanical_crafter>*5,<item:immersiveengineering:heavy_engineering>,<item:create:crafting_blueprint>);
 smithing.addRecipe("speed_controller",<item:create:rotation_speed_controller>,<item:immersiveengineering:heavy_engineering>,<item:create:adjustable_chain_gearshift>);
 smithing.addRecipe("solar_panel",<item:engineersdecor:small_solar_panel>,<item:immersiveengineering:heavy_engineering>,<item:minecraft:daylight_detector>);
 smithing.addRecipe("kinetic_dynamo",<item:immersiveengineering:dynamo>,<item:immersiveengineering:heavy_engineering>,<item:immersiveengineering:coil_lv>);

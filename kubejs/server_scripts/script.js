@@ -2,15 +2,31 @@
 
 console.info('Hello, World! (You will see this line every time server resources reload)')
 
+ServerEvents.entityLootTables(event => {
+	event.modifyEntity("minecraft:cow", table => {
+		table.addPool(pool => {
+			pool.addItem("minecraft:bone")
+		})
+	})
+	event.modifyEntity("minecraft:pig", table => {
+		table.addPool(pool => {
+			pool.addItem("minecraft:bone")
+		})
+	})
+	event.modifyEntity("minecraft:sheep", table => {
+		table.addPool(pool => {
+			pool.addItem("minecraft:bone")
+		})
+	})
+})
+
 ServerEvents.recipes(event => {
 	event.recipes.createMechanicalExtruderExtruding(Item.of('minecraft:andesite'),[Fluid.of('minecraft:water'),Fluid.of('minecraft:lava')]).withCatalyst('minecraft:sculk_catalyst')
 	event.recipes.createMechanicalExtruderExtruding(Item.of('minecraft:andesite'),[Fluid.of('minecraft:water'),Fluid.of('minecraft:lava')]).withCatalyst('minecraft:sculk')
-	event.recipes.createMechanicalExtruderExtruding(Item.of('minecraft:andesite'),[Fluid.of('minecraft:water'),Fluid.of('minecraft:lava')]).withCatalyst('minecraft:budding_amethyst')
 	event.recipes.createMechanicalExtruderExtruding(Item.of('minecraft:andesite'),[Fluid.of('minecraft:water'),Fluid.of('minecraft:lava')]).withCatalyst('minecraft:bedrock')
 
 	event.recipes.createMechanicalExtruderExtruding(Item.of('minecraft:dripstone_block'),[Fluid.of('minecraft:water'),Fluid.of('minecraft:lava')]).withCatalyst('minecraft:sculk_catalyst')
 	event.recipes.createMechanicalExtruderExtruding(Item.of('minecraft:dripstone_block'),[Fluid.of('minecraft:water'),Fluid.of('minecraft:lava')]).withCatalyst('minecraft:sculk')
-	event.recipes.createMechanicalExtruderExtruding(Item.of('minecraft:dripstone_block'),[Fluid.of('minecraft:water'),Fluid.of('minecraft:lava')]).withCatalyst('minecraft:budding_amethyst')
 	event.recipes.createMechanicalExtruderExtruding(Item.of('minecraft:dripstone_block'),[Fluid.of('minecraft:water'),Fluid.of('minecraft:lava')]).withCatalyst('minecraft:bedrock')
 	
 	event.recipes.createoreexcavation.drilling('immersiveengineering:raw_aluminum', '{"text": "Bauxite vein"}', 50, 400).id("my_vein1");

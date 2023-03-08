@@ -73,11 +73,11 @@ craftingTable.addShapeless("daub",<item:supplementaries:daub>*2,[<item:exnihilos
 <item:create:copper_nugget>%8, <item:minecraft:iron_nugget>%8, <item:create:zinc_nugget>%8,
 <item:minecraft:gold_nugget>%3
 ],<item:minecraft:gravel>, 100);
-
+*/
 <recipetype:create:splashing>.addRecipe("washing_dirt",[
 <item:exnihilosequentia:stone_pebble>%10, <item:exnihilosequentia:granite_pebble>%5,<item:exnihilosequentia:andesite_pebble>%15,<item:exnihilosequentia:calcite_pebble>%5,<item:exnihilosequentia:diorite_pebble>%5,<item:exnihilosequentia:dripstone_pebble>%10,<item:exnihilosequentia:tuff_pebble>%10
 ],<item:minecraft:dirt>, 100);
-*/
+
 
 
 
