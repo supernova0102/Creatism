@@ -26,22 +26,4 @@ import mods.createtweaker.SequencedAssemblyRecipeBuilder;
 
 
 
-<recipetype:create:item_application>.remove(<item:create:copper_casing>);
 
-
-
-//copper_casing
-
-<recipetype:create:sequenced_assembly>.addRecipe(<recipetype:create:sequenced_assembly>.builder("copper_casing")
-	.transitionTo(<item:create:andesite_casing>)
-	.require(<item:create:andesite_casing>)
-	.loops(1)
-	.addOutput(<item:create:copper_casing>*2, 1)
-	.addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:minecraft:dried_kelp>))
-	.addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:minecraft:copper_ingot>))
-	.addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:minecraft:dried_kelp>))
-);
-
-//steam_engine
-
-//hydralic_engine

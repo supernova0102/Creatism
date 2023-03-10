@@ -1,8 +1,12 @@
+var c1core = <item:immersiveengineering:light_engineering>;
+var baseMachineCore = <item:create:andesite_casing>;
+
+
 //light_engineering blocck = main of tier1
 
-recipes.remove(<item:immersiveengineering:light_engineering>);
+recipes.remove(c1core);
 
-craftingTable.addShaped("light_engineering_block",<item:immersiveengineering:light_engineering>,[[<item:immersiveengineering:component_iron>,<item:immersiveengineering:component_iron>,<item:immersiveengineering:component_iron>],[<item:immersiveengineering:component_iron>,<item:create:andesite_casing>,<item:immersiveengineering:component_iron>],[<item:immersiveengineering:component_iron>,<item:immersiveengineering:component_iron>,<item:immersiveengineering:component_iron>]]);
+craftingTable.addShaped("light_engineering_block",c1core,[[<item:immersiveengineering:component_iron>,<item:immersiveengineering:component_iron>,<item:immersiveengineering:component_iron>],[<item:immersiveengineering:component_iron>,baseMachineCore,<item:immersiveengineering:component_iron>],[<item:immersiveengineering:component_iron>,<item:immersiveengineering:component_iron>,<item:immersiveengineering:component_iron>]]);
 
 
 //component_iron
@@ -41,9 +45,9 @@ craftingTable.addShaped("iron_component_recipe_changed",<item:immersiveengineeri
 );
 
 //andesite_casing
-<recipetype:create:item_application>.remove(<item:create:andesite_casing>);
+<recipetype:create:item_application>.remove(baseMachineCore);
 
-<recipetype:create:item_application>.addRecipe("on_hand_casing1_making",[<item:create:andesite_casing>],<tag:items:forge:stripped_logs>, <item:immersiveengineering:component_iron>, false);
+<recipetype:create:item_application>.addRecipe("on_hand_casing1_making",[baseMachineCore],<tag:items:forge:stripped_logs>, <item:immersiveengineering:component_iron>, false);
 
 
 //andesite_alloy
@@ -106,15 +110,15 @@ recipes.remove(<item:create:portable_storage_interface>);
 recipes.remove(<item:create:andesite_funnel>);
 recipes.remove(<item:create:andesite_tunnel>);
 
-stoneCutter.addRecipe("redstone_contact",<item:create:redstone_contact>*2,<item:immersiveengineering:light_engineering>);
-stoneCutter.addRecipe("mechanical_bearing",<item:create:mechanical_bearing>,<item:immersiveengineering:light_engineering>);
-stoneCutter.addRecipe("rope_polley",<item:create:rope_pulley>,<item:immersiveengineering:light_engineering>);
-stoneCutter.addRecipe("mechanical_piston",<item:create:mechanical_piston>,<item:immersiveengineering:light_engineering>);
-stoneCutter.addRecipe("mechanical_harvester",<item:create:mechanical_harvester>*2,<item:immersiveengineering:light_engineering>);
-stoneCutter.addRecipe("mechanical_plough",<item:create:mechanical_plough>*2,<item:immersiveengineering:light_engineering>);
-stoneCutter.addRecipe("portable_storage_interface",<item:create:portable_storage_interface>*2,<item:immersiveengineering:light_engineering>);
-stoneCutter.addRecipe("andesite_funnel",<item:create:andesite_funnel>*2,<item:immersiveengineering:light_engineering>);
-stoneCutter.addRecipe("andesite_tunnel",<item:create:andesite_tunnel>*2,<item:immersiveengineering:light_engineering>);
+stoneCutter.addRecipe("redstone_contact",<item:create:redstone_contact>*2,c1core);
+stoneCutter.addRecipe("mechanical_bearing",<item:create:mechanical_bearing>,c1core);
+stoneCutter.addRecipe("rope_polley",<item:create:rope_pulley>,c1core);
+stoneCutter.addRecipe("mechanical_piston",<item:create:mechanical_piston>,c1core);
+stoneCutter.addRecipe("mechanical_harvester",<item:create:mechanical_harvester>*2,c1core);
+stoneCutter.addRecipe("mechanical_plough",<item:create:mechanical_plough>*2,c1core);
+stoneCutter.addRecipe("portable_storage_interface",<item:create:portable_storage_interface>*2,c1core);
+stoneCutter.addRecipe("andesite_funnel",<item:create:andesite_funnel>*2,c1core);
+stoneCutter.addRecipe("andesite_tunnel",<item:create:andesite_tunnel>*2,c1core);
 
 //smithing to make
 recipes.remove(<item:createaddition:rolling_mill>);
@@ -128,13 +132,13 @@ recipes.remove(<item:sliceanddice:slicer>);
 recipes.remove(<item:createsifter:sifter>);
 recipes.remove(<item:create:mechanical_drill>);
 
-smithing.addRecipe("rolling_mill",<item:createaddition:rolling_mill>,<item:immersiveengineering:light_engineering>,<item:create:shaft>);
-smithing.addRecipe("encased_fan",<item:create:encased_fan>,<item:immersiveengineering:light_engineering>,<item:create:propeller>);
-smithing.addRecipe("mechanical_saw",<item:create:mechanical_saw>,<item:immersiveengineering:light_engineering>,<item:thermal:saw_blade>);
-smithing.addRecipe("deployer",<item:create:deployer>,<item:immersiveengineering:light_engineering>,<item:create:brass_hand>);
-smithing.addRecipe("mechanical_extruder",<item:create_mechanical_extruder:mechanical_extruder>,<item:immersiveengineering:light_engineering>,<item:create_crystal_clear:andesite_glass_casing>);
-smithing.addRecipe("mechanical_press",<item:create:mechanical_press>,<item:immersiveengineering:light_engineering>,<item:minecraft:anvil>);
-smithing.addRecipe("mechanical_mixer",<item:create:mechanical_mixer>,<item:immersiveengineering:light_engineering>,<item:create:whisk>);
-smithing.addRecipe("slicer",<item:sliceanddice:slicer>,<item:immersiveengineering:light_engineering>,<item:farmersdelight:iron_knife>);
-smithing.addRecipe("mechanical_drill",<item:create:mechanical_drill>,<item:immersiveengineering:light_engineering>,<item:createindustry:drill_head>);
-smithing.addRecipe("sifter",<item:createsifter:sifter>,<item:immersiveengineering:light_engineering>,<tag:items:exnihilosequentia:sieves>);
+smithing.addRecipe("rolling_mill",<item:createaddition:rolling_mill>,c1core,<item:create:shaft>);
+smithing.addRecipe("encased_fan",<item:create:encased_fan>,c1core,<item:create:propeller>);
+smithing.addRecipe("mechanical_saw",<item:create:mechanical_saw>,c1core,<item:thermal:saw_blade>);
+smithing.addRecipe("deployer",<item:create:deployer>,c1core,<item:create:brass_hand>);
+smithing.addRecipe("mechanical_extruder",<item:create_mechanical_extruder:mechanical_extruder>,c1core,<item:create_crystal_clear:andesite_glass_casing>);
+smithing.addRecipe("mechanical_press",<item:create:mechanical_press>,c1core,<item:minecraft:anvil>);
+smithing.addRecipe("mechanical_mixer",<item:create:mechanical_mixer>,c1core,<item:create:whisk>);
+smithing.addRecipe("slicer",<item:sliceanddice:slicer>,c1core,<item:farmersdelight:iron_knife>);
+smithing.addRecipe("mechanical_drill",<item:create:mechanical_drill>,c1core,<item:createindustry:drill_head>);
+smithing.addRecipe("sifter",<item:createsifter:sifter>,c1core,<tag:items:exnihilosequentia:sieves>);
