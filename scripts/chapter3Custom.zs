@@ -102,7 +102,8 @@ var c3machines = [
 	[<item:thermal:machine_bottler>,<item:create:spout>],
 	[<item:thermal:machine_brewer>,<item:minecraft:brewing_stand>],
 	[<item:thermal:machine_crystallizer>,<item:thermal:obsidian_glass>],
-	[<item:thermal:machine_crafter>,<item:minecraft:crafting_table>]
+	[<item:thermal:machine_crafter>,<item:minecraft:crafting_table>],
+	[<item:mininggadgets:modificationtable>,<item:mininggadgets:upgrade_empty>]
 ];
 
 for index, element in c3machines{
@@ -112,6 +113,9 @@ for index, element in c3machines{
 	<recipetype:create:item_application>.addRecipe("return_c3_"+index,[c3core,element[1]]
 ,element[0],<item:immersiveengineering:screwdriver>,false);
 }
+
+recipes.remove(<item:mininggadgets:upgrade_empty>);
+stoneCutter.addRecipe("mininggadget_upgrade",<item:mininggadgets:upgrade_empty>*4,c3core);
 
 
 
