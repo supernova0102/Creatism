@@ -17,18 +17,17 @@ craftingTable.addShaped("iron_to_steel_component",<item:immersiveengineering:com
 [[<item:minecraft:air>,<item:create:andesite_alloy>,<item:minecraft:air>],[<item:immersiveengineering:component_iron>,<item:immersiveengineering:component_iron>,<item:immersiveengineering:component_iron>],[<item:minecraft:air>,<tag:items:forge:ingots/steel>,<item:minecraft:air>]]);
 
 craftingTable.addShaped("only_making_steel_component",<item:immersiveengineering:component_steel>,
-[[<tag:items:forge:cogwheels>,<item:thermal:copper_gear>,<tag:items:forge:cogwheels>],[<item:create:andesite_alloy>,<tag:items:forge:ingots/steel>,<item:create:andesite_alloy>],[<tag:items:forge:cogwheels>,<item:thermal:iron_gear>,<tag:items:forge:cogwheels>]]);
+[[<item:create:cogwheel>,<item:thermal:copper_gear>,<item:create:cogwheel>],[<item:create:andesite_alloy>,<tag:items:forge:ingots/steel>,<item:create:andesite_alloy>],[<item:create:cogwheel>,<item:thermal:iron_gear>,<item:create:cogwheel>]]);
 
 
 
 <recipetype:create:sequenced_assembly>.addRecipe(<recipetype:create:sequenced_assembly>.builder("high_efficiency_steel_component_making1")
-	.transitionTo(<item:create_connected_blocks:incomplete_iron_reinforcement>)
+	.transitionTo(<item:immersiveengineering:component_iron>)
 	.require(<item:immersiveengineering:component_iron>)
 	.loops(1)
 	.addOutput(<item:immersiveengineering:component_steel>*2 ,1)
 	.addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:create:andesite_alloy>))
-	.addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:immersiveengineering:component_iron>))	
-	.addStep<mods.createtweaker.FillingRecipe>((a) => a.require(<fluid:createbigcannons:molten_steel> * 90))
+	.addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:immersiveengineering:component_iron>))
 );
 
 //rose_quartz

@@ -47,11 +47,11 @@ recipes.remove(<item:thermal:redstone_servo>);
 	.addOutput(<item:create_sa:heat_engine>, 1)
 	.addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:create:precision_mechanism>))
 	.addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<tag:items:forge:gears/invar>))
-	.addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:pneumaticcraft:heat_sink>))
+	.addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:immersiveengineering:toolupgrade_railgun_capacitors>))
 );
 
 //heat_sink
-recipes.remove(<item:pneumaticcraft:heat_sink>);
+recipes.remove(<item:immersiveengineering:toolupgrade_railgun_capacitors>);
 
 <recipetype:create:sequenced_assembly>.addRecipe(
 	<recipetype:create:sequenced_assembly>
@@ -59,7 +59,7 @@ recipes.remove(<item:pneumaticcraft:heat_sink>);
 	.transitionTo(<item:createindustry:heavy_plate>)
 	.require(<item:createindustry:heavy_plate>)
 	.loops(8)
-	.addOutput(<item:pneumaticcraft:heat_sink>, 1)
+	.addOutput(<item:immersiveengineering:toolupgrade_railgun_capacitors>, 1)
 	.addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:createindustry:heavy_plate>))
     .addStep<mods.createtweaker.CuttingRecipe>((rb) => rb.duration(20))
 	.addStep<mods.createtweaker.FillingRecipe>((rb) => rb.require(<fluid:minecraft:lava>*125))
@@ -112,6 +112,8 @@ for index, element in c3machines{
 	<recipetype:create:item_application>.addRecipe("hand_c3_"+index,[element[0]],c3core,element[1],true);
 	<recipetype:create:item_application>.addRecipe("return_c3_"+index,[c3core,element[1]]
 ,element[0],<item:immersiveengineering:screwdriver>,false);
+<recipetype:create:item_application>.addRecipe("return2_c3_"+index,[c3core,element[1]]
+,element[0],<item:createindustry:screwdriver>,false);
 }
 
 recipes.remove(<item:mininggadgets:upgrade_empty>);

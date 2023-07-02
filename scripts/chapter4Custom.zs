@@ -1,1 +1,0 @@
-var c4Core = <item:compressedcreativity:compressed_iron_casing>;

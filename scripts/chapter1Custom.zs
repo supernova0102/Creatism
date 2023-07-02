@@ -13,7 +13,7 @@ craftingTable.addShaped("light_engineering_block",c1core,[[<item:immersiveengine
 recipes.remove(<item:immersiveengineering:component_iron>);
 
 craftingTable.addShaped("iron_component_recipe_changed",<item:immersiveengineering:component_iron>,
-[[<item:minecraft:air>,<item:create:andesite_alloy>,<item:minecraft:air>],[<tag:items:forge:cogwheels>,<item:minecraft:copper_ingot>,<tag:items:forge:cogwheels>],[<item:minecraft:air>,<item:minecraft:iron_ingot>,<item:minecraft:air>]]);
+[[<item:minecraft:air>,<item:create:andesite_alloy>,<item:minecraft:air>],[<item:create:cogwheel>,<item:minecraft:copper_ingot>,<item:create:cogwheel>],[<item:minecraft:air>,<item:minecraft:iron_ingot>,<item:minecraft:air>]]);
 
 
 
@@ -24,7 +24,7 @@ craftingTable.addShaped("iron_component_recipe_changed",<item:immersiveengineeri
 	.require(<item:create:andesite_alloy>)
 	.loops(1)
 	.addOutput(<item:immersiveengineering:component_iron>*2, 1)
-	.addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<tag:items:forge:cogwheels>) )
+	.addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:create:cogwheel>) )
 
 	.addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<tag:items:forge:ingots/iron>))
 	.addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<tag:items:forge:ingots/copper>))
@@ -40,7 +40,7 @@ craftingTable.addShaped("iron_component_recipe_changed",<item:immersiveengineeri
 	.require(<item:create:andesite_alloy>)
 	.loops(1)
 	.addOutput(<item:immersiveengineering:component_iron>, 1)
-	.addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<tag:items:forge:cogwheels>))
+	.addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:create:cogwheel>))
 	.addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:create:andesite_alloy>))
 );
 
@@ -55,9 +55,9 @@ recipes.remove(<item:create:andesite_alloy>);
 <recipetype:create:mixing>.remove(<item:create:andesite_alloy>);
 
 
-craftingTable.addShaped("changed_andesite_alloy", <item:create:andesite_alloy>,[[<item:minecraft:andesite>,<item:supplementaries:daub>],[<item:supplementaries:daub>,<item:minecraft:andesite>]]);
+craftingTable.addShaped("changed_andesite_alloy", <item:create:andesite_alloy>*2,[[<item:minecraft:andesite>,<item:supplementaries:daub>],[<item:supplementaries:daub>,<item:minecraft:andesite>]]);
 
-<recipetype:create:mixing>.addRecipe("andesite_alloy",<constant:create:heat_condition:none>,[<item:create:andesite_alloy>%100],[<item:supplementaries:daub>,<item:minecraft:andesite>],[] as crafttweaker.api.fluid.FluidIngredient[],100);
+<recipetype:create:mixing>.addRecipe("andesite_alloy",<constant:create:heat_condition:none>,[<item:create:andesite_alloy>*2%100],[<item:supplementaries:daub>,<item:minecraft:andesite>],[] as crafttweaker.api.fluid.FluidIngredient[],100);
 
 
 //daub, resource for andesite alloy
@@ -65,6 +65,7 @@ craftingTable.addShaped("changed_andesite_alloy", <item:create:andesite_alloy>,[
 recipes.remove(<item:supplementaries:daub>);
 
 craftingTable.addShapeless("daub",<item:supplementaries:daub>*2,[<item:exnihilosequentia:porcelain_clay>,<item:exnihilosequentia:porcelain_clay>,<item:exnihilosequentia:porcelain_clay>,<item:exnihilosequentia:porcelain_clay>]);
+craftingTable.addShapeless("daub2",<item:supplementaries:daub>*4,[<item:exnihilosequentia:porcelain_clay>,<item:exnihilosequentia:porcelain_clay>,<item:farmersdelight:canvas>,<item:farmersdelight:tree_bark>]);
 
 
 //washing gravel
