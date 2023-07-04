@@ -48,7 +48,7 @@ craftingTable.addShaped("iron_component_recipe_changed",<item:immersiveengineeri
 <recipetype:create:item_application>.remove(baseMachineCore);
 
 <recipetype:create:item_application>.addRecipe("on_hand_casing1_making",[baseMachineCore],<tag:items:forge:stripped_logs>, <item:immersiveengineering:component_iron>, false);
-
+smithing.addRecipe("casing1_smithing",baseMachineCore, <tag:items:forge:stripped_logs>, <item:immersiveengineering:component_iron>);
 
 //andesite_alloy
 recipes.remove(<item:create:andesite_alloy>);
@@ -118,8 +118,8 @@ stoneCutter.addRecipe("redstone_contact",<item:create:redstone_contact>*2,c1core
 stoneCutter.addRecipe("mechanical_bearing",<item:create:mechanical_bearing>,c1core);
 stoneCutter.addRecipe("rope_polley",<item:create:rope_pulley>,c1core);
 stoneCutter.addRecipe("mechanical_piston",<item:create:mechanical_piston>,c1core);
-stoneCutter.addRecipe("mechanical_harvester",<item:create:mechanical_harvester>*2,c1core);
-stoneCutter.addRecipe("mechanical_plough",<item:create:mechanical_plough>*2,c1core);
+//stoneCutter.addRecipe("mechanical_harvester",<item:create:mechanical_harvester>*2,c1core);
+//stoneCutter.addRecipe("mechanical_plough",<item:create:mechanical_plough>*2,c1core);
 stoneCutter.addRecipe("portable_storage_interface",<item:create:portable_storage_interface>*2,c1core);
 stoneCutter.addRecipe("andesite_funnel",<item:create:andesite_funnel>*2,c1core);
 stoneCutter.addRecipe("andesite_tunnel",<item:create:andesite_tunnel>*2,c1core);
@@ -137,12 +137,93 @@ recipes.remove(<item:createsifter:sifter>);
 recipes.remove(<item:create:mechanical_drill>);
 
 smithing.addRecipe("rolling_mill",<item:createaddition:rolling_mill>,c1core,<item:create:shaft>);
-smithing.addRecipe("encased_fan",<item:create:encased_fan>,c1core,<item:create:propeller>);
-smithing.addRecipe("mechanical_saw",<item:create:mechanical_saw>,c1core,<item:thermal:saw_blade>);
+//smithing.addRecipe("encased_fan",<item:create:encased_fan>,c1core,<item:create:propeller>);
+//smithing.addRecipe("mechanical_saw",<item:create:mechanical_saw>,c1core,<item:thermal:saw_blade>);
 smithing.addRecipe("deployer",<item:create:deployer>,c1core,<item:create:brass_hand>);
 smithing.addRecipe("mechanical_extruder",<item:create_mechanical_extruder:mechanical_extruder>,c1core,<item:create_crystal_clear:andesite_glass_casing>);
 smithing.addRecipe("mechanical_press",<item:create:mechanical_press>,c1core,<item:minecraft:anvil>);
 smithing.addRecipe("mechanical_mixer",<item:create:mechanical_mixer>,c1core,<item:create:whisk>);
 smithing.addRecipe("slicer",<item:sliceanddice:slicer>,c1core,<item:farmersdelight:iron_knife>);
-smithing.addRecipe("mechanical_drill",<item:create:mechanical_drill>,c1core,<item:createindustry:drill_head>);
+//smithing.addRecipe("mechanical_drill",<item:create:mechanical_drill>,c1core,<item:createindustry:drill_head>);
 smithing.addRecipe("sifter",<item:createsifter:sifter>,c1core,<tag:items:exnihilosequentia:sieves>);
+
+
+
+//simple machine part
+//made by andesite casing
+
+//arbnormal_extrator
+recipes.remove(<item:thermal:device_tree_extractor>);
+
+smithing.addRecipe("arbreal_extractor",<item:thermal:device_tree_extractor>,baseMachineCore,<item:minecraft:bucket>);
+
+//batch_composter
+recipes.remove(<item:thermal:device_composter>);
+
+smithing.addRecipe("batch_composter",<item:thermal:device_composter>,baseMachineCore,<item:minecraft:composter>);
+
+//aquatic_entangler
+recipes.remove(<item:thermal:device_fisher>);
+
+smithing.addRecipe("aquatic_entangler",<item:thermal:device_fisher>,baseMachineCore,<tag:items:forge:fishing_rods>);
+
+var c1_1machine = [
+	[<item:create:mechanical_harvester>,<item:createdeco:zinc_sheet>],
+	[<item:create:mechanical_saw>,<item:thermal:saw_blade>],
+	[<item:create:mechanical_drill>,<item:createindustry:drill_head>],
+	[<item:create:gearbox>,<item:create:cogwheel>],
+	[<item:create:encased_fan>,<item:create:propeller>],
+	[<item:create:gearshift>,<item:minecraft:redstone_torch>],
+	[<item:create:clutch>,<item:minecraft:lever>],
+	[<item:create:mechanical_plough>,<item:create:iron_sheet>],
+	[<item:create:mechanical_roller>,<item:createdeco:andesite_hull>],
+	[<item:create:adjustable_chain_gearshift>,<item:create:electron_tube>]
+];
+
+var c1_1core = <item:create:andesite_casing>;
+
+for index, element in c1_1machine{
+	recipes.remove(element[0]);
+	smithing.addRecipe("smithing_c1_1_"+index,element[0],c1_1core,element[1]);
+	<recipetype:create:item_application>.addRecipe("hand_c1_1_"+index,[element[0]],c1_1core,element[1],false);
+	<recipetype:create:item_application>.addRecipe("return2_c1_1_"+index,[c1_1core,element[1]]
+	,element[0],<item:createindustry:screwdriver>.anyDamage(),false);
+}
+
+
+//chasis
+var chasis1 = <item:create:linear_chassis>;
+var chasis2 = <item:create:secondary_linear_chassis>; 
+
+<recipetype:create:item_application>.addRecipe("chasis1",[chasis1],c1_1core,<item:createindustry:screwdriver>.anyDamage(),false);
+<recipetype:create:item_application>.addRecipe("chasis2",[chasis2],chasis1,<item:createindustry:screwdriver>.anyDamage(),false);
+<recipetype:create:item_application>.addRecipe("chasis3",[c1_1core],chasis2,<item:createindustry:screwdriver>.anyDamage(),false);
+
+//<recipetype:create:item_application>.addRecipe("chasis4",[chasis1],c1_1core,<item:immersiveengineering:screwdriver>,false);
+//<recipetype:create:item_application>.addRecipe("chasis5",[chasis2],chasis1,<item:immersiveengineering:screwdriver>,false);
+//<recipetype:create:item_application>.addRecipe("chasis6",[c1_1core],chasis2,<item:immersiveengineering:screwdriver>,false);
+
+
+
+
+//copper_casing
+
+
+<recipetype:create:item_application>.remove(<item:create:copper_casing>);
+
+craftingTable.addShaped("copper_casing_crafting",<item:create:copper_casing>,
+[
+    [<item:minecraft:air>,<item:minecraft:dried_kelp_block>,<item:minecraft:air>],
+    [<item:minecraft:copper_ingot>,c1_1core,<item:minecraft:copper_ingot>],
+    [<item:minecraft:air>,<item:thermal:cured_rubber_block>,<item:minecraft:air>]
+]);
+
+<recipetype:create:sequenced_assembly>.addRecipe(<recipetype:create:sequenced_assembly>.builder("copper_casing")
+	.transitionTo(c1_1core)
+	.require(baseMachineCore)
+	.loops(1)
+	.addOutput(<item:create:copper_casing>*2, 1)
+	.addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:create:copper_sheet>))
+	.addStep<mods.createtweaker.FillingRecipe>((rb) => rb.require(<fluid:thermal:latex> *125))
+);
+

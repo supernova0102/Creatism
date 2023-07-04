@@ -109,11 +109,11 @@ var c3machines = [
 for index, element in c3machines{
 	recipes.remove(element[0]);
 	smithing.addRecipe("smithing_c3_"+index,element[0],c3core,element[1]);
-	<recipetype:create:item_application>.addRecipe("hand_c3_"+index,[element[0]],c3core,element[1],true);
+	<recipetype:create:item_application>.addRecipe("hand_c3_"+index,[element[0]],c3core,element[1],false);
 	<recipetype:create:item_application>.addRecipe("return_c3_"+index,[c3core,element[1]]
-,element[0],<item:immersiveengineering:screwdriver>,false);
+,element[0],<item:immersiveengineering:screwdriver>,true);
 <recipetype:create:item_application>.addRecipe("return2_c3_"+index,[c3core,element[1]]
-,element[0],<item:createindustry:screwdriver>,false);
+,element[0],<item:createindustry:screwdriver>.anyDamage(),true);
 }
 
 recipes.remove(<item:mininggadgets:upgrade_empty>);
