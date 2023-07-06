@@ -37,12 +37,13 @@ var transMachines = [<item:create:fluid_pipe>*4,
 <item:create_enchantment_industry:printer>,
 <item:minecraft:hopper>,
 <item:uppers:upper>,
-<item:prettypipes:pipe>*2,
-<item:prettypipes:blank_module>*2,
+//<item:prettypipes:pipe>*2,
+//<item:prettypipes:blank_module>*2,
 <item:create_enchantment_industry:disenchanter>,
 <item:create:item_drain>];
 
 recipes.remove(<item:prettypipes:blank_module>);
+recipes.remove(<item:create:portable_fluid_interface>);
 for index, element in transMachines{
     recipes.remove(element);
 	stoneCutter.addRecipe("copper_machines"+ index, element, transCore);
