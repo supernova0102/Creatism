@@ -1,0 +1,290 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: "hexagon"
+	filename: "5E700AFEBE5C5E44"
+	group: "2E336C42198827A5"
+	icon: "minecraft:compass"
+	id: "5E700AFEBE5C5E44"
+	order_index: 2
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["21DC5120B5F15594"]
+			description: [
+				"공장을 설계하는건 즐거운 일입니다."
+				"직접 고민하며 배치한 기계들이 정확하게 맞물리며 복잡한 물건을 생산하는 광경을 보는건 일종의 카타르시스까지 느끼게 하죠."
+				""
+				"하지만 공장의 기계들을 만드는건 그닥 즐거운일이 아닙니다. 눈앞이 깜깜해져요."
+				"어떤 재료부터 준비할지, 얼마나 많은 노동이 기다리고 있는지..."
+				""
+				"그런분들을 위한 가이드가 있습니다."
+				"공장에서 기계를 만들때까지 방향성을 제시하고 유용한 정보를 알려드리겠습니다."
+				"덤으로 유용한 랜덤 보상들도 있죠."
+				""
+				"체크마크를 눌러 시작해주세요"
+			]
+			icon: "minecraft:writable_book"
+			id: "1C3EA111D5E0CB38"
+			rewards: [{
+				icon: "supplementaries:present_black"
+				id: "6A8A2278C73B2C84"
+				table_id: 5857577042976491388L
+				type: "random"
+			}]
+			shape: "square"
+			subtitle: "새로운 시작은 설레임과 두려움이 함께"
+			tasks: [{
+				id: "4F96524C722A1BC7"
+				type: "checkmark"
+			}]
+			title: "개요"
+			x: -0.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["1C3EA111D5E0CB38"]
+			description: [
+				""
+				"안산암과 점토, 뼛가루를 이용해서 만드는 이 금속덩어리는 안산암 합금입니다."
+				""
+				"기초 기계장치의 핵심적인 재료죠"
+				"많이많이 쓸테니 왕창왕창 만드는걸 목표로 달려봅시다."
+			]
+			icon: "create:andesite_alloy"
+			id: "4635972D1C9428E9"
+			shape: "square"
+			subtitle: "여정의 시작"
+			tasks: [{
+				id: "462CB660D8D2F94F"
+				title: "가즈아"
+				type: "checkmark"
+			}]
+			title: "안산암 합금 만들기"
+			x: 1.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["4635972D1C9428E9"]
+			description: [
+				"안산암은 구하기 쉽습니다"
+				""
+				"삽과 곡괭이로 맨땅을 파다보면 금방 얻으실수 있을거에요."
+				"~버튼을 누른체 블럭을 부수면 안산암 덩어리를 한번에 부술수 있습니다."
+				""
+				"음식만 충분히 준비해 두세요."
+			]
+			id: "55FD316B7EE81F3D"
+			rewards: [{
+				icon: "supplementaries:present_cyan"
+				id: "2539C97E90E53673"
+				table_id: 5857577042976491388L
+				type: "random"
+			}]
+			subtitle: "곡괭이를 들어라!"
+			tasks: [{
+				count: 64L
+				id: "2395A9091AD5B065"
+				item: "minecraft:andesite"
+				type: "item"
+			}]
+			title: "자원채집"
+			x: 2.0d
+			y: -1.0d
+		}
+		{
+			dependencies: ["7968EB7BEE45A134"]
+			description: [
+				"호퍼를 퇴비통의 윗면에 두거나 발사기를 사용해 퇴비통을 체울수 있습니다."
+				"밑면에 호퍼를 두거나 다른 인벤토리 상호작용 블럭을 통해 뼛가루를 빼낼수도 있죠"
+			]
+			id: "5603AB15B1349156"
+			rewards: [{
+				icon: "supplementaries:present"
+				id: "75E0C2BDA6C45D98"
+				table_id: 5857577042976491388L
+				type: "random"
+			}]
+			subtitle: "고향의 냄새"
+			tasks: [{
+				id: "65B26F9068A46934"
+				item: "minecraft:composter"
+				type: "item"
+			}]
+			title: "퇴비통"
+			x: 3.5d
+			y: 1.0d
+		}
+		{
+			dependencies: ["4635972D1C9428E9"]
+			description: [
+				"스켈레톤이 주는 뼈는 턱없이 모자랍니다."
+				"우리는 좀더 생산적인 방법을 씁시다. 바로 농사죠."
+				""
+				"물론 퇴비통에 농작물을 우겨넣기만 하는건 비효율적입니다."
+				"양, 돼지, 소, 닭을 키우면서 도축하고 남은 뼈를 사용하죠."
+			]
+			icon: {
+				Count: 1b
+				id: "minecraft:iron_hoe"
+				tag: {
+					Damage: 0
+				}
+			}
+			id: "7968EB7BEE45A134"
+			rewards: [{
+				icon: "supplementaries:present_black"
+				id: "22908A1DB0AC7532"
+				table_id: 5857577042976491388L
+				type: "random"
+			}]
+			subtitle: "칼은 내려놓으세요. 스켈레톤은 놓아줍시다."
+			tasks: [{
+				advancement: "minecraft:husbandry/plant_seed"
+				criterion: ""
+				id: "45C4BDC1BE301FA0"
+				type: "advancement"
+			}]
+			title: "농사 시작"
+			x: 2.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["4635972D1C9428E9"]
+			description: [
+				"강가를 해엄치며 점토를 캡시다."
+				""
+				"혹시 점석석이 있으시다면 점토의 물을 빼서 만드실수도 있습니다."
+			]
+			id: "6887550320629C0D"
+			rewards: [{
+				icon: "supplementaries:present_purple"
+				id: "3B0E6092CB01B5BB"
+				table_id: 5857577042976491388L
+				type: "random"
+			}]
+			subtitle: "삽을 들어라!"
+			tasks: [{
+				count: 32L
+				id: "7198CC289327D938"
+				item: "minecraft:clay_ball"
+				type: "item"
+			}]
+			title: "자원 채집2"
+			x: 2.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["7968EB7BEE45A134"]
+			id: "4D737FF6FFF187E6"
+			rewards: [{
+				icon: "supplementaries:present_yellow"
+				id: "46A4C38A49D2CBDB"
+				table_id: 5857577042976491388L
+				type: "random"
+			}]
+			tasks: [{
+				advancement: "minecraft:husbandry/breed_an_animal"
+				criterion: ""
+				id: "3A4ABC0565349A21"
+				type: "advancement"
+			}]
+			title: "여물먹이기"
+			x: 4.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["5603AB15B1349156"]
+			id: "71F81FA8BCCCD8E8"
+			rewards: [{
+				icon: "supplementaries:present_brown"
+				id: "7B97333DD6A57CCB"
+				table_id: 5857577042976491388L
+				type: "random"
+			}]
+			subtitle: "어짜피 판자가 될 나무라면 껍질이라도 남겨 재활용 해줍시다."
+			tasks: [{
+				count: 4L
+				id: "6ED9C8C46AC55F04"
+				item: "farmersdelight:tree_bark"
+				type: "item"
+			}]
+			title: "나무 껍질 재활용"
+			x: 5.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["7968EB7BEE45A134"]
+			id: "464CFAB7D8C6177B"
+			rewards: [{
+				icon: "supplementaries:present_orange"
+				id: "16762B60AD156922"
+				table_id: 5857577042976491388L
+				type: "random"
+			}]
+			subtitle: "흙에 이것저것 섞고 숙성시키면 기름진 땅이 됩니다. 농사도 잘되요!"
+			tasks: [{
+				count: 8L
+				id: "0630F2F85F0FE44B"
+				item: "farmersdelight:organic_compost"
+				type: "item"
+			}]
+			title: "친환경 퇴비"
+			x: 3.5d
+			y: -1.0d
+		}
+		{
+			dependencies: ["4D737FF6FFF187E6"]
+			id: "623578F927642C91"
+			rewards: [{
+				icon: "supplementaries:present_light_blue"
+				id: "79E8FA2365C925B2"
+				table_id: 5857577042976491388L
+				type: "random"
+			}]
+			subtitle: "그리고 뼈도 더 줍니다."
+			tasks: [{
+				id: "6626CFE5A8948B83"
+				item: "farmersdelight:ham"
+				type: "item"
+			}]
+			title: "돼지를 식칼로 잡으면 맛있어 집니다."
+			x: 5.0d
+			y: -1.0d
+		}
+		{
+			dependencies: ["4D737FF6FFF187E6"]
+			id: "5657487018A1992A"
+			subtitle: "Another bonez, there's another bonez, there's fxxking a lot of bonez"
+			tasks: [{
+				count: 9L
+				id: "07EB5AE22C9E3074"
+				item: "minecraft:bone"
+				type: "item"
+			}]
+			title: "Bonez"
+			x: 5.5d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"5657487018A1992A"
+				"55FD316B7EE81F3D"
+				"6887550320629C0D"
+			]
+			hide_dependency_lines: true
+			id: "489BC8D04EED6845"
+			shape: "rsquare"
+			subtitle: "기계를 향한 첫 걸음을 때셨습니다."
+			tasks: [{
+				count: 32L
+				id: "53784649916C049D"
+				item: "create:andesite_alloy"
+				type: "item"
+			}]
+			title: "1차 목표 달성!"
+			x: 7.0d
+			y: 0.0d
+		}
+	]
+	title: "구체적 목표제시"
+}

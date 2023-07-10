@@ -1,0 +1,14 @@
+
+#Geode O' Plenty Mod configuration settings
+["Configs for Geode O' Plenty Mod"]
+	#Should Generate Nether Brimstone Ancient Debris Geode
+	"Nether Flesh Ancient Debris Geode" = true
+	#Should Generate Nether Brimstone Gold Nugget Geode
+	"Nether Flesh Gold Nugget Geode" = true
+	#Should Generate Nether Brimstone Glowstone Geode
+	"Nether Flesh Glowstone Geode" = true
+	#Should Generate Nether Brimstone Quartz Geode
+	"Nether Flesh Quartz Geode" = true
+	#Should Generate Rose Quartz Geode
+	"Rose Quartz Geode" = true
+

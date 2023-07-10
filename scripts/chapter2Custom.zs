@@ -27,8 +27,8 @@ recipes.remove(<item:immersiveengineering:component_steel>);
 //rose_quartz
 recipes.remove(<item:create:rose_quartz>);
 
-<recipetype:create:mixing>.addRecipe("rose_quartz",<constant:create:heat_condition:none>,[<item:create:rose_quartz>%100],[<item:minecraft:amethyst_shard>*2,<tag:items:ae2:all_quartz>*4],[<fluid:thermal:redstone> * 500],250);
-
+<recipetype:create:mixing>.addRecipe("rose_quartz",<constant:create:heat_condition:none>,[<item:create:rose_quartz>%100],[<item:minecraft:amethyst_shard>*4,<tag:items:ae2:all_quartz>*4],[<fluid:thermal:redstone> * 500],250);
+<recipetype:create:mixing>.addRecipe("budding_rose_quartz",<constant:create:heat_condition:heated>,[<item:geodeoplenty:budding_rose_quartz>%100],[<item:minecraft:budding_amethyst>,<item:ae2:quartz_block>],[<fluid:thermal:redstone> * 500],500);
 //electron_tube
 recipes.remove(<item:create:electron_tube>);
 
@@ -89,24 +89,13 @@ craftingTable.addShaped("hand_made_electron",<item:create:electron_tube>,[[<item
 recipes.remove(<item:create:brass_funnel>);
 recipes.remove(<item:create:brass_tunnel>);
 
-smithing.addRecipe("brass_funnel",<item:create:brass_funnel>,<item:create:andesite_funnel>,<item:create_dd:integrated_mechanism>);
-smithing.addRecipe("brass_tunnel",<item:create:brass_tunnel>,<item:create:andesite_tunnel>,<item:create_dd:integrated_mechanism>);
+smithing.addRecipe("brass_funnel",<item:create:brass_funnel>,<item:create:andesite_funnel>,<item:create:precision_mechanism>);
+smithing.addRecipe("brass_tunnel",<item:create:brass_tunnel>,<item:create:andesite_tunnel>,<item:create:precision_mechanism>);
 
 <recipetype:create:item_application>.addRecipe("brass_tunnel_hand",[<item:create:brass_tunnel>],<item:create:andesite_tunnel>,<item:create_dd:integrated_mechanism>,false);
 <recipetype:create:item_application>.addRecipe("brass_funnel_hand",[<item:create:brass_funnel>],<item:create:andesite_funnel>,<item:create_dd:integrated_mechanism>,false);
 
 
-//integrated_mechanism
-<recipetype:create:sequenced_assembly>.remove(<item:create_dd:integrated_mechanism>);
-
-<recipetype:create:sequenced_assembly>.addRecipe(<recipetype:create:sequenced_assembly>.builder("integrated_mechanism")
-	.transitionTo(<item:create:precision_mechanism>)
-	.require(<item:create:precision_mechanism>)
-	.loops(2)
-	.addOutput(<item:create_dd:integrated_mechanism>, 1)
-	.addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:create:electron_tube>))
-	.addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:create_dd:integrated_circuit>))
-);
 
 
 //brass casing
@@ -136,7 +125,7 @@ var c2_1machine = [
 	[<item:create:clockwork_bearing>,<item:supplementaries:clock_block>],
 	[<item:create:elevator_pulley>,<item:supplementaries:pulley_block>],
 	[<item:createcasing:brass_gearbox>,<item:create:cogwheel>],
-	[<item:createaddition:portable_energy_interface>,<item:immersiveengineering:coil_hv>]
+	[<item:createaddition:portable_energy_interface>,<item:immersiveengineering:coil_hv>],
 ];
 
 var c2_1core = <item:create:brass_casing>;
@@ -149,7 +138,18 @@ for index, element in c2_1machine{
 	,element[0],<item:createindustry:screwdriver>.anyDamage(),false);
 }
 
+recipes.remove(<item:prettypipes:pipe>);
+recipes.remove(<item:prettypipes:blank_module>);
 
+stoneCutter.addRecipe("prettypipes",<item:prettypipes:pipe>*4,c2_1core);
+stoneCutter.addRecipe("blank_module",<item:prettypipes:blank_module>*2,c2_1core);
+
+recipes.remove(<item:prettypipes:pressurizer>);
+craftingTable.addShaped("pipe_pressurizer",<item:prettypipes:pressurizer>,[
+	[<item:prettypipes:high_speed_module>,<item:prettypipes:high_speed_module>,<item:prettypipes:high_speed_module>],
+	[<item:prettypipes:high_speed_module>,c2_1core,<item:prettypipes:high_speed_module>],
+	[<item:prettypipes:high_speed_module>,<item:prettypipes:high_speed_module>,<item:prettypipes:high_speed_module>]
+]);
 
 //destablized_redstone
 <recipetype:create:mixing>.addRecipe("destablized_redstone",<constant:create:heat_condition:heated>,[<fluid:thermal:redstone> * 100],[<item:minecraft:redstone>],[],1000);
@@ -177,6 +177,40 @@ for index, element in c2_1machine{
 );*/
 
 
+//integrated_mechanism
+<recipetype:create:sequenced_assembly>.remove(<item:create_dd:integrated_mechanism>);
+
+<recipetype:create:sequenced_assembly>.addRecipe(<recipetype:create:sequenced_assembly>.builder("integrated_mechanism")
+	.transitionTo(<item:create:precision_mechanism>)
+	.require(<item:create:precision_mechanism>)
+	.loops(2)
+	.addOutput(<item:create_dd:integrated_mechanism>, 1)
+	.addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:create:sturdy_sheet>))
+	.addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:create:electron_tube>))
+	.addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:create_dd:integrated_circuit>))
+);
+
+<recipetype:create:item_application>.remove(<item:create:railway_casing>);
+<recipetype:create:item_application>.addRecipe("train_casing",[<item:create:railway_casing>],<item:create:brass_casing>,<item:create_dd:integrated_mechanism>,false);
+
+
+<recipetype:create:sequenced_assembly>.remove(<item:balancedflight:flight_anchor>);
+<recipetype:create:sequenced_assembly>.addRecipe(<recipetype:create:sequenced_assembly>.builder("flight_anchor")
+	.transitionTo(<item:minecraft:beacon>)
+	.require(<item:minecraft:beacon>)
+	.loops(3)
+	.addOutput(<item:balancedflight:flight_anchor>, 1)
+	.addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:create:railway_casing>))
+	.addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:create_dd:integrated_mechanism>))
+	.addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:minecraft:feather>))
+);
+
+recipes.remove(<item:prettypipes:item_terminal>);
+<recipetype:create:mechanical_crafting>.addRecipe("item_terminal", <item:prettypipes:item_terminal>, [
+	[<item:create_dd:integrated_mechanism>,<item:create:railway_casing>,<item:create_dd:integrated_mechanism>],
+	[<item:create:railway_casing>,<item:create:railway_casing>,<item:create:railway_casing>],
+	[<item:create_dd:integrated_mechanism>,<item:create:railway_casing>,<item:create_dd:integrated_mechanism>],
+]);
 
 //tier2 base machines
 recipes.remove(<item:storagedrawers:controller_slave>);

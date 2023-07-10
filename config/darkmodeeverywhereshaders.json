@@ -1,0 +1,35 @@
+{
+  "shaders": [
+    {
+      "resourceLocation": {
+        "f_135804_": "darkmodeeverywhere",
+        "f_135805_": "perfect_dark"
+      },
+      "displayName": {
+        "translate": "gui.darkmodeeverywhere.perfect_dark"
+      },
+      "darkColorReplacement": 16777215
+    },
+    {
+      "resourceLocation": {
+        "f_135804_": "darkmodeeverywhere",
+        "f_135805_": "less_perfect_dark"
+      },
+      "displayName": {
+        "translate": "gui.darkmodeeverywhere.less_perfect_dark"
+      },
+      "darkColorReplacement": 16777215
+    },
+    {
+      "resourceLocation": {
+        "f_135804_": "darkmodeeverywhere",
+        "f_135805_": "toasted_light"
+      },
+      "displayName": {
+        "translate": "gui.darkmodeeverywhere.toasted_light"
+      },
+      "darkColorReplacement": 16777215
+    }
+  ],
+  "version": 1
+}

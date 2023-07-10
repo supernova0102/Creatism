@@ -1,0 +1,492 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "andesite_casing"
+	group: "4FD6447209893FFA"
+	icon: "create:andesite_casing"
+	id: "2AF6639C0F4B9326"
+	order_index: 1
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["1EEB505A12B555D1"]
+			id: "79F65B6F0899DD52"
+			size: 1.5d
+			tasks: [{
+				id: "50BE1297B020A0ED"
+				item: "create:andesite_casing"
+				type: "item"
+			}]
+			x: 3.5d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"142C45B555308455"
+				"49573E5503E03EBA"
+			]
+			icon: "create:andesite_alloy"
+			id: "4617D3DDF9F45BBB"
+			tasks: [
+				{
+					id: "4AAA56DBBCFFE55A"
+					item: "create:andesite_alloy"
+					type: "item"
+				}
+				{
+					id: "41EDEA261CD27906"
+					type: "checkmark"
+				}
+			]
+			x: -2.5d
+			y: -4.0d
+		}
+		{
+			dependencies: [
+				"7AFE96AE1400D0BD"
+				"7E83C82EE334F782"
+			]
+			icon: "minecraft:stripped_oak_log"
+			id: "441AACBDA5692F2A"
+			tasks: [{
+				id: "48AC86D375E01038"
+				type: "checkmark"
+			}]
+			x: 0.5d
+			y: -4.0d
+		}
+		{
+			dependencies: [
+				"779D3DF4F53368D3"
+				"4835F67041A12B67"
+			]
+			icon: "supplementaries:daub"
+			id: "142C45B555308455"
+			tasks: [
+				{
+					id: "3CEF6041BC1CBAA3"
+					item: "supplementaries:daub"
+					type: "item"
+				}
+				{
+					id: "1FF7B1C537E977F2"
+					type: "checkmark"
+				}
+			]
+			x: -1.5d
+			y: -4.5d
+		}
+		{
+			dependencies: [
+				"1E20474E33ABA1CD"
+				"0D078C18220529C5"
+			]
+			dependency_requirement: "one_completed"
+			icon: "minecraft:andesite"
+			id: "49573E5503E03EBA"
+			tasks: [
+				{
+					id: "12975DD0CF3AA71C"
+					item: "minecraft:andesite"
+					type: "item"
+				}
+				{
+					id: "51E9CBEBC2441758"
+					type: "checkmark"
+				}
+			]
+			x: -3.0d
+			y: -5.0d
+		}
+		{
+			dependencies: ["5C0D9DC31C6E6E19"]
+			icon: "minecraft:oak_log"
+			id: "7AFE96AE1400D0BD"
+			tasks: [{
+				id: "303D1B22F96A1C46"
+				type: "checkmark"
+			}]
+			x: 1.0d
+			y: -5.0d
+		}
+		{
+			dependencies: ["734892A7C10DA1CE"]
+			icon: "minecraft:clay_ball"
+			id: "4835F67041A12B67"
+			tasks: [
+				{
+					id: "79F8162A8230DE8F"
+					item: "minecraft:clay_ball"
+					type: "item"
+				}
+				{
+					id: "4EAE7D6AAFA229FE"
+					type: "checkmark"
+				}
+			]
+			x: -2.0d
+			y: -5.5d
+		}
+		{
+			dependencies: ["21FFB33B6667B643"]
+			icon: "immersiveengineering:component_iron"
+			id: "1EEB505A12B555D1"
+			rewards: [
+				{
+					id: "7A080BCFBADCB0A7"
+					item: "create:builders_tea"
+					type: "item"
+				}
+				{
+					id: "58EB334320036050"
+					item: "create:honeyed_apple"
+					type: "item"
+				}
+			]
+			shape: "hexagon"
+			size: 3.0d
+			tasks: [
+				{
+					id: "1025E4D9D9184F1C"
+					item: "immersiveengineering:component_iron"
+					type: "item"
+				}
+				{
+					id: "44980A4C61B532F3"
+					type: "checkmark"
+				}
+			]
+			x: -1.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"207EA3414E6ED2E9"
+				"505978F5E66FC1F8"
+			]
+			icon: "create:cogwheel"
+			id: "21FFB33B6667B643"
+			tasks: [
+				{
+					id: "3AF8B8DA6B082664"
+					item: "create:cogwheel"
+					type: "item"
+				}
+				{
+					id: "6DF2C7559DE9C29C"
+					item: "create:large_cogwheel"
+					type: "item"
+				}
+				{
+					id: "2C59579EB6EA854C"
+					type: "checkmark"
+				}
+			]
+			x: -1.0d
+			y: -2.5d
+		}
+		{
+			dependencies: ["441AACBDA5692F2A"]
+			icon: "minecraft:oak_planks"
+			id: "505978F5E66FC1F8"
+			tasks: [{
+				id: "5BA9E536DBF52180"
+				type: "checkmark"
+			}]
+			x: 0.0d
+			y: -3.0d
+		}
+		{
+			dependencies: ["79F65B6F0899DD52"]
+			id: "0F06F9B6709BC305"
+			shape: "hexagon"
+			size: 3.0d
+			tasks: [{
+				id: "3A5B446CC2A77F00"
+				item: "immersiveengineering:light_engineering"
+				type: "item"
+			}]
+			x: 3.5d
+			y: -3.0d
+		}
+		{
+			dependencies: ["22CE8702CA1B43B9"]
+			dependency_requirement: "one_completed"
+			icon: "minecraft:dripstone_block"
+			id: "734892A7C10DA1CE"
+			tasks: [
+				{
+					id: "2FD44F55AE9EE95C"
+					item: "minecraft:dripstone_block"
+					type: "item"
+				}
+				{
+					id: "15B4CE0E4ED1D2DA"
+					type: "checkmark"
+				}
+			]
+			x: -2.0d
+			y: -6.5d
+		}
+		{
+			dependencies: ["19F0DAF5FFFDA8A6"]
+			icon: "minecraft:oak_log"
+			id: "1E0DB48CA76F0374"
+			shape: "square"
+			tasks: [{
+				id: "7B1AE4C85D09A605"
+				type: "checkmark"
+			}]
+			x: 1.0d
+			y: -8.5d
+		}
+		{
+			dependencies: ["19F0DAF5FFFDA8A6"]
+			icon: "minecraft:bone_meal"
+			id: "4BFB9EB122796B21"
+			shape: "square"
+			tasks: [{
+				id: "29E55A3F8C71B585"
+				type: "checkmark"
+			}]
+			x: -0.5d
+			y: -8.5d
+		}
+		{
+			dependencies: ["19F0DAF5FFFDA8A6"]
+			icon: "minecraft:clay_ball"
+			id: "704B0C329A5DC71E"
+			shape: "square"
+			tasks: [{
+				id: "396DE0DD55EB21DF"
+				type: "checkmark"
+			}]
+			x: -2.0d
+			y: -8.5d
+		}
+		{
+			dependencies: ["19F0DAF5FFFDA8A6"]
+			icon: "minecraft:andesite"
+			id: "164D829DB47A8BCF"
+			shape: "square"
+			tasks: [{
+				id: "69D616F0946500F3"
+				type: "checkmark"
+			}]
+			x: -3.0d
+			y: -8.5d
+		}
+		{
+			dependencies: [
+				"164D829DB47A8BCF"
+				"704B0C329A5DC71E"
+			]
+			icon: "minecraft:dirt"
+			id: "22CE8702CA1B43B9"
+			shape: "square"
+			tasks: [
+				{
+					id: "5380C7A416AB0698"
+					item: "minecraft:dirt"
+					type: "item"
+				}
+				{
+					id: "686551B878EE676C"
+					type: "checkmark"
+				}
+			]
+			x: -2.5d
+			y: -7.5d
+		}
+		{
+			dependencies: ["4BFB9EB122796B21"]
+			icon: "minecraft:wheat_seeds"
+			id: "6577198F21EE141E"
+			tasks: [
+				{
+					id: "5409E207D9D15E0F"
+					type: "checkmark"
+				}
+				{
+					id: "5C07424286AA9BC2"
+					item: "minecraft:composter"
+					type: "item"
+				}
+			]
+			x: -1.0d
+			y: -7.0d
+		}
+		{
+			dependencies: [
+				"6577198F21EE141E"
+				"6E24211EA4EC3D2B"
+			]
+			dependency_requirement: "one_completed"
+			icon: "minecraft:bone_meal"
+			id: "779D3DF4F53368D3"
+			tasks: [
+				{
+					id: "2905CC7905024A7A"
+					item: "minecraft:bone_meal"
+					type: "item"
+				}
+				{
+					id: "34A75B78FFAD9488"
+					type: "checkmark"
+				}
+			]
+			x: -0.5d
+			y: -5.5d
+		}
+		{
+			dependencies: ["1E0DB48CA76F0374"]
+			icon: "minecraft:oak_sapling"
+			id: "5C0D9DC31C6E6E19"
+			shape: "gear"
+			tasks: [{
+				id: "2FFCBC15498BE16D"
+				type: "checkmark"
+			}]
+			x: 1.0d
+			y: -6.5d
+		}
+		{
+			dependencies: ["4617D3DDF9F45BBB"]
+			icon: "create:shaft"
+			id: "207EA3414E6ED2E9"
+			tasks: [
+				{
+					id: "09FFEA2C7561D5C7"
+					item: "create:shaft"
+					type: "item"
+				}
+				{
+					id: "6C822DF3AC640FB0"
+					type: "checkmark"
+				}
+			]
+			x: -2.0d
+			y: -3.0d
+		}
+		{
+			dependencies: ["4BFB9EB122796B21"]
+			icon: "minecraft:bone"
+			id: "6E24211EA4EC3D2B"
+			tasks: [
+				{
+					id: "1B807F35F50C0A31"
+					item: "minecraft:bone"
+					type: "item"
+				}
+				{
+					id: "541CADA28099D8FB"
+					type: "checkmark"
+				}
+			]
+			x: 0.0d
+			y: -7.0d
+		}
+		{
+			dependencies: ["19F0DAF5FFFDA8A6"]
+			description: [
+				"나무 판자를 만들기위해 별 생각 없이 톱에 나무를 넣으면 끔찍한 일이 일어납니다."
+				"원하지 않았던 아이템이 나오는 일이 빈번하게 발생하죠."
+				""
+				"아이템 필터를 설정하여 이런일을 예방할수 있습니다."
+				"아니면 Slicer를 사용해도 됩니다."
+			]
+			icon: {
+				Count: 1b
+				id: "create:filter"
+				tag: {
+					Items: { }
+				}
+			}
+			id: "7E83C82EE334F782"
+			subtitle: "불량품 걸러내기"
+			tasks: [{
+				id: "2C1451864B1C93CA"
+				type: "checkmark"
+			}]
+			title: "필터 사용의 중요성"
+			x: -0.5d
+			y: -4.5d
+		}
+		{
+			dependencies: ["2AE17160F2F11BC4"]
+			id: "2BF916B5A36F0B6D"
+			tasks: [{
+				id: "0D7C0B49EECEA516"
+				item: "minecraft:copper_ingot"
+				type: "item"
+			}]
+			x: 2.0d
+			y: 3.5d
+		}
+		{
+			dependencies: [
+				"79F65B6F0899DD52"
+				"2BF916B5A36F0B6D"
+				"53E838CE3E5781C6"
+			]
+			id: "4785DFDF2F043B0E"
+			shape: "hexagon"
+			size: 1.5d
+			tasks: [{
+				id: "09D047A5167E24D6"
+				item: "create:copper_casing"
+				type: "item"
+			}]
+			x: 3.5d
+			y: 3.5d
+		}
+		{
+			dependencies: ["164D829DB47A8BCF"]
+			icon: "minecraft:lava_bucket"
+			id: "0D078C18220529C5"
+			tasks: [
+				{
+					id: "2797982185469AF1"
+					item: "minecraft:lava_bucket"
+					type: "item"
+				}
+				{
+					id: "1AA05C0E2E84F7B5"
+					type: "checkmark"
+				}
+			]
+			x: -4.0d
+			y: -7.0d
+		}
+		{
+			dependencies: ["22CE8702CA1B43B9"]
+			icon: "exnihilosequentia:andesite_pebble"
+			id: "1E20474E33ABA1CD"
+			tasks: [
+				{
+					id: "6FA11186D250BE7B"
+					item: "exnihilosequentia:andesite_pebble"
+					type: "item"
+				}
+				{
+					id: "3D08FC922B0EE7D9"
+					type: "checkmark"
+				}
+			]
+			x: -3.0d
+			y: -6.5d
+		}
+		{
+			dependencies: ["19F0DAF5FFFDA8A6"]
+			id: "53E838CE3E5781C6"
+			tasks: [{
+				id: "09A1BEDC54C19FEE"
+				item: "thermal:latex_bucket"
+				type: "item"
+			}]
+			x: 5.0d
+			y: 3.5d
+		}
+	]
+	title: "Light Engineering"
+}

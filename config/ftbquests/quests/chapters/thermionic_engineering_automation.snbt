@@ -1,0 +1,257 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "thermionic_engineering_automation"
+	group: "4FD6447209893FFA"
+	icon: "thermal:machine_frame"
+	id: "0AB9B2F09FBAE4E0"
+	order_index: 3
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: [
+				"12183991C8A6AB31"
+				"141773548658D003"
+			]
+			id: "0606CF37D0C5F10A"
+			shape: "octagon"
+			size: 2.0d
+			tasks: [{
+				id: "5BA220AC4157B2D9"
+				item: "thermal:machine_frame"
+				type: "item"
+			}]
+			x: -4.5d
+			y: 2.5d
+		}
+		{
+			dependencies: ["2692BDE128804CE1"]
+			id: "52F83C12003C9A62"
+			tasks: [{
+				id: "415C8015E556BF14"
+				item: "thermal:cured_rubber"
+				type: "item"
+			}]
+			x: -8.5d
+			y: 5.5d
+		}
+		{
+			dependencies: [
+				"568D35BC119297F8"
+				"349E9762261F76C3"
+				"399086E6FAF59B8A"
+			]
+			id: "7B68D64F5A17F08D"
+			tasks: [{
+				id: "535CEF9D193ACFF6"
+				item: {
+					Count: 1b
+					id: "minecraft:enchanted_book"
+					tag: {
+						StoredEnchantments: [{
+							id: "minecraft:efficiency"
+							lvl: 5s
+						}]
+					}
+				}
+				type: "item"
+			}]
+			x: -8.0d
+			y: 7.0d
+		}
+		{
+			id: "568D35BC119297F8"
+			tasks: [{
+				id: "77C5304DF51DEBA0"
+				item: "create_enchantment_industry:printer"
+				type: "item"
+			}]
+			x: -9.0d
+			y: 8.0d
+		}
+		{
+			id: "349E9762261F76C3"
+			rewards: [{
+				id: "23457E47353F2F76"
+				item: {
+					Count: 1b
+					id: "minecraft:enchanted_book"
+					tag: {
+						StoredEnchantments: [{
+							id: "minecraft:efficiency"
+							lvl: 5s
+						}]
+					}
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "20935A8BC65CAA51"
+				item: "minecraft:book"
+				type: "item"
+			}]
+			x: -9.5d
+			y: 7.0d
+		}
+		{
+			id: "399086E6FAF59B8A"
+			tasks: [{
+				id: "652AE1AB934FED1D"
+				item: "create:experience_nugget"
+				type: "item"
+			}]
+			x: -8.0d
+			y: 8.5d
+		}
+		{
+			id: "2692BDE128804CE1"
+			tasks: [{
+				id: "27285D2290FE9281"
+				item: "thermal:latex_bucket"
+				type: "item"
+			}]
+			x: -10.0d
+			y: 5.5d
+		}
+		{
+			dependencies: [
+				"38D50828D2578E7E"
+				"2B66DECCDE73B094"
+			]
+			id: "12183991C8A6AB31"
+			shape: "hexagon"
+			size: 2.0d
+			tasks: [{
+				id: "4E24D48B08FACCBA"
+				item: "thermal:redstone_servo"
+				type: "item"
+			}]
+			x: -2.5d
+			y: 5.5d
+		}
+		{
+			dependencies: [
+				"7B68D64F5A17F08D"
+				"097C5C1C042E7003"
+				"52F83C12003C9A62"
+				"0401D0E81D6560CB"
+			]
+			id: "38D50828D2578E7E"
+			shape: "hexagon"
+			size: 2.0d
+			tasks: [{
+				id: "272E56F5B698A87E"
+				item: "thermal:rf_coil"
+				type: "item"
+			}]
+			x: -6.5d
+			y: 5.5d
+		}
+		{
+			dependencies: [
+				"5777AF1E7819C4DC"
+				"12FFDC72D6678057"
+				"328331F9A96FBE3C"
+			]
+			id: "2B66DECCDE73B094"
+			tasks: [{
+				id: "2B639D7F8029110A"
+				item: "create_sa:heat_engine"
+				type: "item"
+			}]
+			x: -1.0d
+			y: 7.0d
+		}
+		{
+			dependencies: [
+				"6D9ADB04655F2B89"
+				"60E8FA55111C458B"
+			]
+			id: "097C5C1C042E7003"
+			tasks: [{
+				id: "311B3D275047EC96"
+				item: "thermal:electrum_ingot"
+				type: "item"
+			}]
+			x: -6.5d
+			y: 7.5d
+		}
+		{
+			id: "6D9ADB04655F2B89"
+			tasks: [{
+				id: "571EC2B996F6B261"
+				item: "thermal:silver_ingot"
+				type: "item"
+			}]
+			x: -7.0d
+			y: 9.0d
+		}
+		{
+			id: "60E8FA55111C458B"
+			tasks: [{
+				id: "37DC3A66DE2CA745"
+				item: "minecraft:gold_ingot"
+				type: "item"
+			}]
+			x: -6.0d
+			y: 9.0d
+		}
+		{
+			id: "141773548658D003"
+			tasks: [{
+				id: "6610BE1C6CF3A8E3"
+				item: "immersiveengineering:heavy_engineering"
+				type: "item"
+			}]
+			x: -4.5d
+			y: 0.0d
+		}
+		{
+			id: "12FFDC72D6678057"
+			tasks: [{
+				id: "3515303B56FC6163"
+				item: "thermal:invar_ingot"
+				type: "item"
+			}]
+			x: -1.0d
+			y: 8.5d
+		}
+		{
+			id: "5777AF1E7819C4DC"
+			tasks: [{
+				id: "6D579BBCEA6B2366"
+				item: "create:precision_mechanism"
+				type: "item"
+			}]
+			x: 0.5d
+			y: 7.0d
+		}
+		{
+			id: "0401D0E81D6560CB"
+			tasks: [{
+				id: "5EDDCB5AADD91A95"
+				item: {
+					Count: 1b
+					id: "immersiveengineering:graphite_electrode"
+					tag: {
+						graphDmg: 0
+					}
+				}
+				type: "item"
+			}]
+			x: -8.0d
+			y: 4.0d
+		}
+		{
+			id: "328331F9A96FBE3C"
+			tasks: [{
+				id: "7D9D12C566032F8D"
+				item: "immersiveengineering:toolupgrade_railgun_capacitors"
+				type: "item"
+			}]
+			x: 0.0d
+			y: 8.0d
+		}
+	]
+	title: "OneBlock Engineering"
+}

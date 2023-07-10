@@ -1,0 +1,66 @@
+{
+	icon: "supplementaries:present_black"
+	id: "514A4B492B18C77C"
+	loot_size: 1
+	order_index: 0
+	rewards: [
+		{
+			item: {
+				Count: 1b
+				id: "minecraft:enchanted_book"
+				tag: {
+					StoredEnchantments: [{
+						id: "minecraft:efficiency"
+						lvl: 3s
+					}]
+				}
+			}
+		}
+		{
+			item: {
+				Count: 1b
+				id: "minecraft:enchanted_book"
+				tag: {
+					StoredEnchantments: [{
+						id: "minecraft:fortune"
+						lvl: 2s
+					}]
+				}
+			}
+		}
+		{
+			item: {
+				Count: 1b
+				id: "minecraft:enchanted_book"
+				tag: {
+					StoredEnchantments: [{
+						id: "minecraft:mending"
+						lvl: 1s
+					}]
+				}
+			}
+		}
+		{ count: 16, item: "minecraft:leather" }
+		{ count: 16, item: "minecraft:andesite" }
+		{ item: "delightful:deluxe_cheeseburger" }
+		{ count: 8, item: "farmersdelight:cake_slice" }
+		{ count: 8, item: "minecraft:bamboo" }
+		{ count: 8, item: "minecraft:kelp" }
+		{ count: 4, item: "minecraft:mangrove_propagule" }
+		{ count: 16, item: "minecraft:clay_ball" }
+		{ count: 4, item: "minecraft:slime_ball" }
+		{ count: 32, item: "minecraft:wheat" }
+		{ count: 16, item: "minecraft:potato" }
+		{ count: 16, item: "farmersdelight:tomato_seeds" }
+		{ count: 8, item: "culturaldelights:corn_kernels" }
+		{ count: 8, item: "farmersdelight:cabbage_seeds" }
+		{ count: 8, item: "culturaldelights:cucumber_seeds" }
+		{ count: 8, item: "farmersdelight:rice" }
+		{
+			type: "xp_levels"
+			xp_levels: 1
+		}
+		{ count: 4, item: "farmersdelight:stuffed_potato" }
+	]
+	title: "general_gift_table"
+}

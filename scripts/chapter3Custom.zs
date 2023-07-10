@@ -120,5 +120,73 @@ recipes.remove(<item:mininggadgets:upgrade_empty>);
 stoneCutter.addRecipe("mininggadget_upgrade",<item:mininggadgets:upgrade_empty>*4,c3core);
 
 
+//way to ae2
+<recipetype:create:item_application>.remove(<item:createindustry:heavy_machinery_casing>);
+<recipetype:create:item_application>.addRecipe("heavy_machinery_casing",[<item:createindustry:heavy_machinery_casing>],<item:createindustry:steel_mechanism>,<item:createindustry:steel_casing>,false);
+
+<recipetype:ae2:inscriber>.remove(<item:ae2:printed_calculation_processor>);
+<recipetype:ae2:inscriber>.remove(<item:ae2:printed_engineering_processor>);
+<recipetype:ae2:inscriber>.remove(<item:ae2:printed_logic_processor>);
+
+<recipetype:create:sequenced_assembly>.remove(<item:create_dd:inductive_mechanism>);
+
+<recipetype:create:sequenced_assembly>.addRecipe(<recipetype:create:sequenced_assembly>.builder("logistics_mechanism")
+	.transitionTo(<item:createindustry:steel_mechanism>)
+	.require(<item:createindustry:steel_mechanism>)
+	.addOutput(<item:create_dd:inductive_mechanism>,1)
+	.loops(1)
+	.addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:supplementaries:wrench>.anyDamage()))
+	.addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:immersiveengineering:hammer>.anyDamage()))
+	.addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:immersiveengineering:wirecutter>.anyDamage()))
+	.addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:ae2:fluix_dust>))
+	.addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:ae2:logic_processor>))
+	.addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:create:cogwheel>))
+);
 
 
+<recipetype:create:sequenced_assembly>.remove(<item:create_dd:calculation_mechanism>);
+
+<recipetype:create:sequenced_assembly>.addRecipe(<recipetype:create:sequenced_assembly>.builder("calculation_mechanism")
+	.transitionTo(<item:createindustry:steel_mechanism>)
+	.require(<item:createindustry:steel_mechanism>)
+	.addOutput(<item:create_dd:inductive_mechanism>,1)
+	.loops(1)
+	.addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:supplementaries:wrench>.anyDamage()))
+	.addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:immersiveengineering:hammer>.anyDamage()))
+	.addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:immersiveengineering:wirecutter>.anyDamage()))
+	.addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:ae2:fluix_dust>))
+	.addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:ae2:calculation_processor>))
+	.addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:create:cogwheel>))
+);
+
+recipes.remove(<item:ae2:controller>);
+
+<recipetype:create:mechanical_crafting>.addRecipe("ae2_controller",<item:ae2:controller>*8,[
+	[<item:createindustry:heavy_machinery_casing>,<item:createindustry:heavy_machinery_casing>,<item:create_dd:calculation_mechanism>,<item:createindustry:heavy_machinery_casing>,<item:createindustry:heavy_machinery_casing>],
+	[<item:createindustry:heavy_machinery_casing>,<item:ae2:engineering_processor>,<item:ae2:engineering_processor>,<item:ae2:engineering_processor>,<item:createindustry:heavy_machinery_casing>],
+	[<item:create_dd:inductive_mechanism>,<item:ae2:engineering_processor>,<item:ae2:smooth_sky_stone_block>,<item:ae2:engineering_processor>,<item:create_dd:inductive_mechanism>],
+	[<item:createindustry:heavy_machinery_casing>,<item:ae2:engineering_processor>,<item:ae2:engineering_processor>,<item:ae2:engineering_processor>,<item:createindustry:heavy_machinery_casing>],
+	[<item:createindustry:heavy_machinery_casing>,<item:createindustry:heavy_machinery_casing>,<item:create_dd:calculation_mechanism>,<item:createindustry:heavy_machinery_casing>,<item:createindustry:heavy_machinery_casing>],
+]);
+
+<recipetype:create:milling>.remove(<item:ae2:fluix_dust>);
+
+
+//silicon
+furnace.remove(<item:ae2:silicon>);
+blastFurnace.remove(<item:ae2:silicon>);
+<recipetype:create:compacting>.addRecipe("silicon1",<constant:create:heat_condition:superheated>,[<item:ae2:silicon>],[<item:thermal:polished_slag>,<item:thermal:ender_pearl_dust>],[<fluid:minecraft:lava>*1000],200);
+<recipetype:create:compacting>.addRecipe("silicon2",<constant:create:heat_condition:superheated>,[<item:ae2:silicon>*4],[<item:thermal:polished_rich_slag>,<item:thermal:ender_pearl_dust>],[<fluid:minecraft:lava>*1000],200);
+blastFurnace.addRecipe("skydust_smelting",<item:ae2:silicon>, <item:ae2:sky_dust>, 2.0, 40);
+<recipetype:create:mixing>.addRecipe("skydust",<constant:create:heat_condition:superheated>,[<item:ae2:sky_dust>*3],[<tag:items:forge:dusts/netherite>,<tag:items:forge:dusts/iron>*4,<tag:items:forge:dusts/diamond>*2,<tag:items:forge:dusts/glowstone>*8],[<fluid:createindustry:lubrication_oil> * 100],1000);
+
+var aecore = <item:ae2:silicon>;
+var aemachines = [
+	[<item:ae2:energy_acceptor>,<item:createaddition:capacitor>],
+	[<item:ae2:drive>,<item:storagedrawers:controller>]
+];
+
+for index, element in aemachines{
+	recipes.remove(element[0]);
+	smithing.addRecipe("smithing_ae_"+index,element[0],c3core,element[1]);
+}

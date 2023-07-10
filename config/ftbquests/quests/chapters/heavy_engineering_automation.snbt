@@ -1,0 +1,80 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "heavy_engineering_automation"
+	group: "4FD6447209893FFA"
+	icon: "immersiveengineering:heavy_engineering"
+	id: "5955379405EF673E"
+	order_index: 2
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["0E7D5723444B215C"]
+			id: "29534BCB84469F83"
+			tasks: [{
+				id: "4A5AEF10B8C7FAE9"
+				item: "create:brass_casing"
+				type: "item"
+			}]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"4A5D457A17C5CDEB"
+				"310D62D9B6D93C38"
+				"4460C25965065AF4"
+			]
+			id: "0E7D5723444B215C"
+			tasks: [{
+				id: "4F3ACB564DED146A"
+				item: "create:precision_mechanism"
+				type: "item"
+			}]
+			x: 0.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["1C0A560537CB9E70"]
+			id: "4A5D457A17C5CDEB"
+			tasks: [{
+				id: "254905D604003A4E"
+				item: "create:electron_tube"
+				type: "item"
+			}]
+			x: 0.0d
+			y: -4.0d
+		}
+		{
+			id: "1C0A560537CB9E70"
+			tasks: [{
+				id: "3D755F1D59975FAD"
+				item: "create:rose_quartz"
+				type: "item"
+			}]
+			x: 0.0d
+			y: -6.0d
+		}
+		{
+			id: "4460C25965065AF4"
+			tasks: [{
+				id: "3B2ECC7056C662CB"
+				item: "immersiveengineering:ingot_steel"
+				type: "item"
+			}]
+			x: -1.5d
+			y: -4.0d
+		}
+		{
+			id: "310D62D9B6D93C38"
+			tasks: [{
+				id: "71D32EF987D15827"
+				item: "minecraft:gold_ingot"
+				type: "item"
+			}]
+			x: 1.5d
+			y: -4.0d
+		}
+	]
+	title: "Heavy Engineering"
+}

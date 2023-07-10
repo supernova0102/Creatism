@@ -42,7 +42,6 @@ var transMachines = [<item:create:fluid_pipe>*4,
 <item:create_enchantment_industry:disenchanter>,
 <item:create:item_drain>];
 
-recipes.remove(<item:prettypipes:blank_module>);
 recipes.remove(<item:create:portable_fluid_interface>);
 for index, element in transMachines{
     recipes.remove(element);

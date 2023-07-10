@@ -35,6 +35,7 @@ ServerEvents.entityLootTables(event => {
 
 ServerEvents.recipes(event => {
 	//레시피변경
+	etc();
 	c1Recipes();
 
 	event.recipes.createoreexcavation.drilling('immersiveengineering:raw_aluminum', '{"text": "Bauxite vein"}', 50, 400).id("my_vein1");
@@ -62,14 +63,27 @@ ServerEvents.recipes(event => {
 	}
 
 	//레시피 등록 파편화
+	function etc(){
+		event.shaped(
+			Item.of('tetra:chthonic_extractor',1),
+			[
+				'pmp',
+				' b ',
+				' b '
+			],
+			{
+				p: 'create:sturdy_sheet',
+				m: 'create_things_and_misc:vibration_mechanism',
+				b: 'immersiveengineering:stick_steel'
+			}
+		)
+	}
 	function c1Recipes(){
 		for(let item of custom_gen_stones){
 			custom_rockgen(item, 'minecraft:sculk');
 			custom_rockgen(item, 'minecraft:sculk_catalyst');
 			custom_rockgen(item, 'minecraft:bedrock');
 		}
-
-		
 	}
 
 })

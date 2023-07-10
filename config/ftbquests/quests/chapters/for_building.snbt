@@ -1,0 +1,13 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "for_building"
+	group: "4FD6447209893FFA"
+	icon: "minecraft:bricks"
+	id: "1338FEFE6312B40D"
+	order_index: 0
+	quest_links: [ ]
+	quests: [ ]
+	subtitle: ["인생은 짧고 당신은 자동화가 필요하다."]
+	title: "for Building"
+}

@@ -55,3 +55,34 @@ for index, element in gearboxes{
         <recipetype:create:item_application>.addRecipe("press_to_press"+index+iindex,[element[4]],eelement[4],element[0],true);
     }
 }
+
+
+// steel
+// smeltery buff
+<recipetype:immersiveengineering:blast_furnace>.remove(<item:immersiveengineering:ingot_steel>);
+<recipetype:immersiveengineering:blast_furnace>.addRecipe("buffed_steel",<item:minecraft:iron_ingot>,2000,<item:alloyed:steel_ingot>*2,<item:immersiveengineering:slag>);
+<recipetype:immersiveengineering:arc_furnace>.remove(<item:immersiveengineering:ingot_steel>);
+<recipetype:immersiveengineering:arc_furnace>.addRecipe("buffed_steel2",<item:minecraft:iron_ingot>,[<tag:items:forge:dusts/coal_coke>*2],200,10000,[<item:alloyed:steel_ingot>*3],<item:thermal:slag_block>);
+
+
+blastFurnace.addRecipe("steel_blast",<item:alloyed:steel_ingot>,<item:minecraft:iron_ingot>,0.0,100);
+
+<recipetype:create:mixing>.remove(<item:create_dd:steel_ingot>);
+<recipetype:create:mixing>.remove(<item:createindustry:steel_ingot>);
+<recipetype:create:mixing>.remove(<item:alloyed:steel_ingot>);
+
+
+craftingTable.addShapeless("steel_to_steel",<item:alloyed:steel_ingot>,[<tag:items:forge:ingots/steel>]);
+
+
+
+//processor
+var processor_and_origins = [
+    [<item:ae2:printed_calculation_processor>,<item:ae2:certus_quartz_crystal>,<item:ae2:calculation_processor_press>],
+    [<item:ae2:printed_engineering_processor>,<item:thermal:enderium_ingot>,<item:ae2:engineering_processor_press>],
+    [<item:ae2:printed_logic_processor>,<item:thermal:electrum_plate>,<item:ae2:logic_processor_press>],
+    [<item:ae2:printed_silicon>,<item:ae2:silicon>,<item:ae2:silicon_press>]
+];
+for index, element in processor_and_origins{
+    <recipetype:create:deploying>.addRecipe("printed_circuit"+index, element[1], element[2], [element[0] % 100], true);
+}

@@ -1,0 +1,6 @@
+{
+	chapter_groups: [
+		{ id: "2E336C42198827A5", title: "Tutorials" }
+		{ id: "4FD6447209893FFA", title: "Automation" }
+	]
+}

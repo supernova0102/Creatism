@@ -99,7 +99,7 @@ craftingTable.addShaped("drill_head",<item:createindustry:drill_head>,[
 
 //press plate for mech press
 <recipetype:create:pressing>.remove(<item:createcasing:press_plate>);
-craftingTable.addShaped("",<item:createcasing:press_plate>,
+craftingTable.addShaped("press_plate",<item:createcasing:press_plate>,
 [
 	[<tag:items:forge:ingots/lead>,<tag:items:forge:ingots/lead>,<tag:items:forge:ingots/lead>]
 ]);
