@@ -1,0 +1,172 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: "hexagon"
+	filename: "1_1"
+	group: "4FD6447209893FFA"
+	icon: "create:copper_casing"
+	id: "124A2AC5657FB475"
+	order_index: 1
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["19F0DAF5FFFDA8A6"]
+			description: [
+				"이번에 자동화 해볼건 그다지 많이 필요한건 아닙니다."
+				"아이템과 액체 운송에 필요한 파이프나 깔때기에 주로 사용되는 기계장치를 만들어 볼때입니다."
+				""
+				"사실 필요할때마다 만들어둬도 문제는 없습니다."
+				"액체 수송의 경우 다룰일이 적으니까요."
+				"하지만 자동화를 고려 해봅시다, 당신의 노동력은 상상 이상으로 가치있답니다."
+				"조합대 위에서 재료와, 작업장에서 벨트와 씨름하며 낭비하기엔 아까워요."
+				""
+				"이번 챕터의 자동화를 통해 액체 재료의 사용이 수월해질겁니다."
+			]
+			icon: "create_dd:sealed_mechanism"
+			id: "48B719A83583D912"
+			rewards: [{
+				id: "37373B5A0582E4ED"
+				type: "xp_levels"
+				xp_levels: 5
+			}]
+			size: 2.0d
+			tasks: [{
+				id: "10D693149E548806"
+				type: "checkmark"
+			}]
+			title: "유체역학 개론"
+			x: 0.0d
+			y: -0.5d
+		}
+		{
+			dependencies: ["48B719A83583D912"]
+			description: [
+				"신축성이 좋고 가공하기도 쉬우며 방수에 도움이 되는 재료입니다."
+				"나무에서 원액을 얻어내 열가공하여 만들수 있습니다."
+				""
+				"고무가 진부하게 느껴지고 색다른걸 원한다면 말린 켈프도 사용 가능합니다."
+			]
+			icon: "thermal:cured_rubber"
+			id: "4BD9D0EEA388C714"
+			tasks: [{
+				id: "03FF9FE8060E5E4F"
+				type: "checkmark"
+			}]
+			title: "고무?"
+			x: -1.5d
+			y: 1.0d
+		}
+		{
+			dependencies: ["48B719A83583D912"]
+			description: [
+				"이 규소 덩어리는 단순히 모래에 열을 가하는것 만으로도 쉽게 만들수 있습니다."
+				""
+				"모래는 모래와 자갈, 흙을 섞고 맷돌에서 갈아줘서 그 수를 늘릴수 있지요."
+				"흙은 흙과 자갈을 섞고 삽으로 부숴주면 얻을수 있습니다."
+				"자갈은 조약돌을 갈아서 얻으면 됩니다."
+			]
+			icon: "minecraft:glass"
+			id: "1F4DDA3B5A312761"
+			tasks: [
+				{
+					id: "4EC1AF3A8183A5A8"
+					type: "checkmark"
+				}
+				{
+					id: "08C10C02AE6D2800"
+					item: {
+						Count: 1b
+						id: "itemfilters:tag"
+						tag: {
+							value: "forge:glass"
+						}
+					}
+					title: "Any #forge:glass"
+					type: "item"
+				}
+			]
+			title: "유리?"
+			x: -0.5d
+			y: 1.0d
+		}
+		{
+			dependencies: ["48B719A83583D912"]
+			description: [
+				"가공된 구리는 순수한 물이나 증기로인한 부식현상에 내성이 있답니다."
+				"액체를 다루는 기계장치에 필수적이죠."
+				""
+				"sifting machine을 사용해 자갈에서 얻을수도 있고, 특이한 몇몇 돌을 갈아 얻을수도 있습니다."
+			]
+			icon: "minecraft:copper_ingot"
+			id: "5949C42D661D56EB"
+			tasks: [
+				{
+					id: "6583CD6BB76B97F3"
+					type: "checkmark"
+				}
+				{
+					id: "2103A32AFCC9F9BF"
+					item: "minecraft:copper_ingot"
+					type: "item"
+				}
+			]
+			title: "구리?"
+			x: 0.5d
+			y: 1.0d
+		}
+		{
+			dependencies: [
+				"5949C42D661D56EB"
+				"1F4DDA3B5A312761"
+				"4BD9D0EEA388C714"
+				"791C6AB3FC868574"
+			]
+			description: [
+				"네 진짜로 벌써 끝입니다."
+				"초라한가요? 하지만 사소하진 않을겁니다."
+				"자동화 한번 잘해둔 덕에 여러모로 잘 활용하게 될겁니다."
+				""
+				"다른 서브 챕터들도 이정도 분량을 유지합니다."
+				""
+				"차이점이 있다면 이 챕터만큼 중요하지 않고, 가이드가 없다는거죠"
+				"물론 예외가 있을수 있습니다."
+			]
+			icon: "create_dd:sealed_mechanism"
+			id: "21E465876E57C2CB"
+			shape: "gear"
+			tasks: [
+				{
+					id: "084735D10E38E17B"
+					item: "create_dd:sealed_mechanism"
+					type: "item"
+				}
+				{
+					id: "507EE8CF371E75AD"
+					type: "checkmark"
+				}
+			]
+			title: "벌써 끝?"
+			x: 0.0d
+			y: 2.5d
+		}
+		{
+			dependencies: ["48B719A83583D912"]
+			description: [
+				"기계를 만들때의 구리는 수분에는 강하지만 공기중 산소와의 접촉으로 인한 산화에는 약합니다."
+				""
+				"이때문에 산소와의 노출을 막아줄 무언가가 필요하지요."
+				""
+				"고무의 원료가 되는 라텍스를 사용해도 좋고 벌집의 밀랍을 사용해도 좋습니다."
+			]
+			icon: "thermal:latex_bucket"
+			id: "791C6AB3FC868574"
+			tasks: [{
+				id: "558DD0A7525F187D"
+				type: "checkmark"
+			}]
+			title: "녹 방지"
+			x: 1.5d
+			y: 1.0d
+		}
+	]
+	title: "챕터 1_1 : 유체역학"
+}

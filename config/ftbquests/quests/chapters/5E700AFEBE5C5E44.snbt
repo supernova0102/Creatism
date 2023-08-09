@@ -1,6 +1,7 @@
 {
 	default_hide_dependency_lines: false
 	default_quest_shape: "hexagon"
+	disable_toast: true
 	filename: "5E700AFEBE5C5E44"
 	group: "2E336C42198827A5"
 	icon: "minecraft:compass"
@@ -9,7 +10,10 @@
 	quest_links: [ ]
 	quests: [
 		{
-			dependencies: ["21DC5120B5F15594"]
+			dependencies: [
+				"21DC5120B5F15594"
+				"411E2B79D97FCDBD"
+			]
 			description: [
 				"공장을 설계하는건 즐거운 일입니다."
 				"직접 고민하며 배치한 기계들이 정확하게 맞물리며 복잡한 물건을 생산하는 광경을 보는건 일종의 카타르시스까지 느끼게 하죠."

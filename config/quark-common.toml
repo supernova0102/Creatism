@@ -125,7 +125,7 @@
 	"Hollow Logs" = true
 	"Shear Vines" = true
 	"More Mud Blocks" = true
-	"Variant Chests" = true
+	"Variant Chests" = false
 	"Industrial Palette" = true
 	Midori = true
 	"Variant Ladders" = true

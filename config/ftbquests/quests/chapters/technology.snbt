@@ -10,12 +10,15 @@
 	quests: [
 		{
 			description: [
-				"Create 기반의 모드팩 입니다."
+				"Create : creativism을 소개합니다."
+				"공장 건설에 머리를 싸매가며 고민하는걸 좋아하는 여러분들을 위한 패키지 도전 상품이죠."
+				"그리고 저는 여러분들을 위한 가이드입니다."
 				""
-				"기계장치 자동제작을 위해 공장을 짓는것이 주된 컨텐츠 입니다."
-				"퀘스트를 통해 공장 건설에 필요한 지식들을 배우실수 있습니다."
+				"Creativism에선 특이한 방식의 시련이 여러분을 다가올겁니다."
+				"단순히 복잡하고 어지러운 제작법이 아닌, 생산 수율, 유통망 설계, 공구 공급 같은 색다른 시련들이죠."
 				""
-				"기존의 모드팩 Create : above and beyond에서 영감을 얻었음을 밝힙니다."
+				"하지만 저는 여러분들이 이 모든 난관을 이겨내리라 믿습니다."
+				"이 모든 난관을 이겨낸 끝에는 또다른 도전이 기다리고 있을겁니다."
 			]
 			icon: "minecraft:writable_book"
 			id: "0E58D04284AACC3E"
@@ -26,40 +29,18 @@
 					type: "item"
 				}
 				{
-					id: "683A7D28DEA86E3B"
-					item: {
-						Count: 1b
-						id: "minecraft:stone_pickaxe"
-						tag: {
-							Damage: 0
-						}
-					}
-					type: "item"
-				}
-				{
-					id: "026EBC3F5CF949DF"
-					item: {
-						Count: 1b
-						id: "minecraft:stone_axe"
-						tag: {
-							Damage: 0
-						}
-					}
-					type: "item"
-				}
-				{
-					count: 4
-					id: "6839BF195FBAF65D"
-					item: "farmersdelight:barbecue_stick"
-					type: "item"
-				}
-				{
 					id: "4239F258BAE00DA2"
 					item: {
 						Count: 1b
 						id: "tiab:time_in_a_bottle"
 						tag: { }
 					}
+					type: "item"
+				}
+				{
+					count: 12
+					id: "178BC50974216382"
+					item: "farmersdelight:sweet_berry_cookie"
 					type: "item"
 				}
 			]
@@ -88,11 +69,6 @@
 			hide_dependency_lines: true
 			icon: "immersiveengineering:light_engineering"
 			id: "19F0DAF5FFFDA8A6"
-			rewards: [{
-				id: "139FCB20F5E00739"
-				item: "minecraft:lead"
-				type: "item"
-			}]
 			subtitle: "맨땅에서 시작하는 기계 공학"
 			tasks: [{
 				id: "7BF30354F45C91D7"
@@ -100,12 +76,12 @@
 			}]
 			title: "챕터 1: 기초기계공학"
 			x: 0.0d
-			y: 2.0d
+			y: -0.5d
 		}
 		{
 			dependencies: [
 				"19F0DAF5FFFDA8A6"
-				"0F06F9B6709BC305"
+				"7A7A80A243253D6F"
 			]
 			icon: "immersiveengineering:heavy_engineering"
 			id: "6FDB303616818AEC"
@@ -115,15 +91,15 @@
 				type: "checkmark"
 			}]
 			title: "챕터 2: 정밀제어"
-			x: 2.0d
-			y: 2.0d
+			x: 1.5d
+			y: -1.0d
 		}
 		{
 			dependencies: [
 				"6FDB303616818AEC"
-				"5955379405EF673E"
+				"509081C7C7C83EA5"
 			]
-			icon: "thermal:machine_frame"
+			icon: "createindustry:heavy_machinery_casing"
 			id: "7D60C8CAFD5224C1"
 			subtitle: "All In One Block"
 			tasks: [{
@@ -131,86 +107,34 @@
 				type: "checkmark"
 			}]
 			title: "챕터 3: 규격화와 모듈화"
-			x: 4.0d
-			y: 2.0d
+			x: 2.0d
+			y: -2.5d
 		}
 		{
-			dependencies: [
-				"7D60C8CAFD5224C1"
-				"0AB9B2F09FBAE4E0"
-			]
-			icon: "ae2:controller"
-			id: "5FD2CC2B477CA746"
+			dependencies: ["0E58D04284AACC3E"]
+			icon: "minecraft:writable_book"
+			id: "30139E250790404E"
+			subtitle: "온갖 유용한 팁과 잡지식을 담았습니다!"
 			tasks: [{
-				id: "2A145827003739F4"
+				id: "07AC933960750B4D"
 				type: "checkmark"
 			}]
-			title: "챕터 4: 전자회로"
-			x: 6.0d
-			y: 2.0d
+			title: "알아두면 쓸모있는 신기한 잡지식"
+			x: -1.5d
+			y: -1.0d
 		}
 		{
-			dependencies: ["19F0DAF5FFFDA8A6"]
-			description: [
-				"해당 챕터는 챕터 1의 부속입니다."
-				"고무나 구리, 다시마를 통해 구리 캐이싱 제작을 자동화 하는것이 목표입니다."
-				""
-				"파이프, 호퍼같은 편리한 운송수단을 원하신다면 꼭 진행하시는걸 권장합니다."
-			]
-			icon: "create:fluid_pipe"
-			id: "2AE17160F2F11BC4"
-			subtitle: "벨트와의 이별"
+			dependencies: ["0E58D04284AACC3E"]
+			icon: "minecraft:writable_book"
+			id: "411E2B79D97FCDBD"
+			subtitle: "누구든 할수있다!"
 			tasks: [{
-				id: "09D5C044708BEE4E"
+				id: "1A5F23D7E83FEA95"
 				type: "checkmark"
 			}]
-			title: "유체역학"
-			x: 1.0d
-			y: 1.0d
-		}
-		{
-			dependencies: ["19F0DAF5FFFDA8A6"]
-			id: "39E92E350C148FED"
-			tasks: [
-				{
-					id: "1A5A1CD25A1A2D6A"
-					item: "create:mechanical_press"
-					type: "item"
-				}
-				{
-					id: "2EA98768A7556F9D"
-					item: "create:mechanical_mixer"
-					type: "item"
-				}
-				{
-					id: "34302254C6EC7B07"
-					item: "create:encased_fan"
-					type: "item"
-				}
-				{
-					id: "5D4035E0136EE718"
-					item: "create:millstone"
-					type: "item"
-				}
-				{
-					id: "1C62CD76D6BCAD77"
-					item: "createaddition:rolling_mill"
-					type: "item"
-				}
-				{
-					id: "37C1AF70BFF15738"
-					item: "minecraft:smithing_table"
-					type: "item"
-				}
-				{
-					id: "19EF92B7C02E9A6C"
-					item: "minecraft:stonecutter"
-					type: "item"
-				}
-			]
-			title: "기초공방 만들기"
-			x: 1.0d
-			y: 3.0d
+			title: "구체적 가이드라인"
+			x: -2.0d
+			y: -2.5d
 		}
 	]
 	subtitle: ["\"그래서 뭘 하면 되는거죠?\""]

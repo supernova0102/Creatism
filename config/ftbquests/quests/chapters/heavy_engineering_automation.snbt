@@ -1,80 +1,406 @@
 {
 	default_hide_dependency_lines: false
-	default_quest_shape: ""
+	default_quest_shape: "hexagon"
+	disable_toast: true
 	filename: "heavy_engineering_automation"
 	group: "4FD6447209893FFA"
-	icon: "immersiveengineering:heavy_engineering"
+	icon: "create:brass_casing"
 	id: "5955379405EF673E"
 	order_index: 2
 	quest_links: [ ]
 	quests: [
 		{
-			dependencies: ["0E7D5723444B215C"]
-			id: "29534BCB84469F83"
+			dependencies: ["6FDB303616818AEC"]
+			description: [
+				"이번 자동화는 분류체계를 사용하는게 주된 과제입니다."
+				"불량률과 액체 재료 취급도 조금은 들어가지만 본격적인 시작은 아니지요."
+				""
+				"필터링을 본격적으로 활용해 봅시다."
+				""
+				"ps. 꼭 자동화를 한뒤에 그 챕터의 기계를 써야하는건 아닙니다."
+				"상위 챕터의 기계를 적당히 사용하는게 수월한 진행에 도움이 될수도 있습니다."
+			]
+			icon: "create:precision_mechanism"
+			id: "51F90E3BE77416A6"
+			size: 2.0d
 			tasks: [{
-				id: "4A5AEF10B8C7FAE9"
-				item: "create:brass_casing"
-				type: "item"
+				id: "13420B4F72AC2D75"
+				type: "checkmark"
 			}]
-			x: 0.0d
-			y: 0.0d
+			title: "정밀제어 개론"
+			x: -0.5d
+			y: -1.0d
+		}
+		{
+			dependencies: ["51F90E3BE77416A6"]
+			description: [
+				"네 금입니다!"
+				"부식될 염려가 없는 시간이 지나도 영원한 금속이죠."
+				""
+				"내구성을 위해서 이번 기계들은 금을 사용합니다!"
+				"이상한가요? 글쎄요 이럼어떠하고 저럼 어떠합니까?"
+			]
+			icon: "minecraft:gold_ingot"
+			id: "0C7E56996B7251C7"
+			shape: "square"
+			tasks: [{
+				id: "21B3435B33EF7839"
+				type: "checkmark"
+			}]
+			title: "금?"
+			x: -1.5d
+			y: 1.0d
+		}
+		{
+			dependencies: ["51F90E3BE77416A6"]
+			description: [
+				"튼튼합니다!"
+				"금의 강성 문제를 해결해주죠."
+				"철을 한번 가공해 얻을수 있습니다."
+			]
+			icon: "immersiveengineering:ingot_steel"
+			id: "0AED426E1894801D"
+			shape: "square"
+			tasks: [{
+				id: "4E293E520AFCF740"
+				type: "checkmark"
+			}]
+			title: "강철?"
+			x: -0.5d
+			y: 1.0d
+		}
+		{
+			dependencies: ["51F90E3BE77416A6"]
+			description: [
+				"기존 석영에 레드스톤 성분이 섞여들어간 장밋빛 석영은 가공을 통해 회로같은 역할이 가능합니다."
+				""
+				"이 덕분에 정밀제어를 위한 전지튜브의 핵심 재료가 되지요."
+				"만들어도 좋고 특수한 원자재를 사용해 대기중 성분을 결정화 시켜도 좋습니다."
+				""
+				"특수한 성질만큼 제조와 체집에 많은 노력이 들어갑니다."
+			]
+			icon: "create:polished_rose_quartz"
+			id: "61C19D207B0F1F2A"
+			shape: "square"
+			tasks: [{
+				id: "2EF335AA8B013170"
+				type: "checkmark"
+			}]
+			title: "장밋빛 석영?"
+			x: 0.5d
+			y: 1.0d
+		}
+		{
+			dependencies: ["51F90E3BE77416A6"]
+			description: ["챕터 1때 만들어 두셨을거라 믿고 따로 언급하지 않겠습니다."]
+			icon: "immersiveengineering:component_iron"
+			id: "5F776026F900B1C6"
+			shape: "square"
+			tasks: [{
+				id: "3B68BC6BE6B8CBC4"
+				type: "checkmark"
+			}]
+			title: "철 기계 부품?"
+			x: 1.5d
+			y: 1.0d
 		}
 		{
 			dependencies: [
-				"4A5D457A17C5CDEB"
-				"310D62D9B6D93C38"
-				"4460C25965065AF4"
+				"0C7E56996B7251C7"
+				"0AED426E1894801D"
 			]
-			id: "0E7D5723444B215C"
+			description: [
+				"자갈이나 모래속 금속을 찾아도 좋습니다."
+				"이러면 생산성은 떨어지지만 공장 설계가 간단해지죠."
+				""
+				"베드락이나 스컬크 블럭을 촉매로 여러 화성암을 마구잡이로 생산한 다음, 갈아서 금속을 얻어도 좋습니다."
+				"생산성은 높아지지만 공장이 복잡해지겠죠."
+				""
+				"어찌되었던 간에 체계적인 분류 시스템으로 금속 체집 공장을 만들어 봅시다."
+			]
+			icon: "createsifter:sifter"
+			id: "23674EB7B2065FB3"
 			tasks: [{
-				id: "4F3ACB564DED146A"
-				item: "create:precision_mechanism"
-				type: "item"
+				id: "1F6C9926EBE3E8D5"
+				type: "checkmark"
 			}]
-			x: 0.0d
-			y: -2.0d
+			title: "금속 체집"
+			x: -0.5d
+			y: 2.0d
 		}
 		{
-			dependencies: ["1C0A560537CB9E70"]
-			id: "4A5D457A17C5CDEB"
-			tasks: [{
-				id: "254905D604003A4E"
-				item: "create:electron_tube"
-				type: "item"
-			}]
-			x: 0.0d
-			y: -4.0d
+			dependencies: ["61C19D207B0F1F2A"]
+			description: [
+				"세상엔 대기중의 성분으로 결정을 만드는 블럭들이 있습니다."
+				""
+				"장밋빛 석영도 마찬가지이지요. 장밋빛 석영 결정을 맻는 블럭이 있습니다."
+				""
+				"하지만 직접 만들수도 있죠,"
+				"적당한 재료와, 결정화 블럭, 레드스톤을 액체화시킬 기술만 있다면요."
+				"그리 어렵진 않습니다."
+				"세투스 석영의 결정화 블럭은 만들기가 쉽기 때문이죠, 재료로도 사용 가능합니다."
+				""
+				"&l## 섬세한 손길로 다루어 주세요! ##&r"
+			]
+			icon: "geodeoplenty:budding_rose_quartz"
+			id: "0AF7C69748CF8252"
+			tasks: [
+				{
+					id: "65BD4F39874DDC8D"
+					type: "checkmark"
+				}
+				{
+					id: "2D0C3E3C1F79EEC7"
+					item: "geodeoplenty:budding_rose_quartz"
+					type: "item"
+				}
+			]
+			title: "결정화 공법"
+			x: 0.5d
+			y: 2.0d
 		}
 		{
-			id: "1C0A560537CB9E70"
-			tasks: [{
-				id: "3D755F1D59975FAD"
-				item: "create:rose_quartz"
-				type: "item"
-			}]
-			x: 0.0d
-			y: -6.0d
-		}
-		{
-			id: "4460C25965065AF4"
-			tasks: [{
-				id: "3B2ECC7056C662CB"
-				item: "immersiveengineering:ingot_steel"
-				type: "item"
-			}]
-			x: -1.5d
-			y: -4.0d
-		}
-		{
-			id: "310D62D9B6D93C38"
-			tasks: [{
-				id: "71D32EF987D15827"
-				item: "minecraft:gold_ingot"
-				type: "item"
-			}]
+			dependencies: ["61C19D207B0F1F2A"]
+			description: [
+				"만약 자수정 결정화 블럭을 구할수 있고, 액체 레드스톤을 다룰수 있다면 직접 만드는것도 방법입니다."
+				"오히려 이쪽이 더 싸게 먹히는 감도 있죠"
+				""
+				"자수정 블럭은 섬세한 손길로 옮길수 있습니다."
+			]
+			icon: "create:rose_quartz"
+			id: "6DF640AD18CA37E5"
+			tasks: [
+				{
+					id: "01D261A07A944602"
+					type: "checkmark"
+				}
+				{
+					id: "4046DF4BAD658D2A"
+					item: "create:rose_quartz"
+					type: "item"
+				}
+			]
+			title: "제조법"
 			x: 1.5d
-			y: -4.0d
+			y: 2.0d
+		}
+		{
+			dependencies: [
+				"6DF640AD18CA37E5"
+				"0AF7C69748CF8252"
+			]
+			dependency_requirement: "one_completed"
+			description: [
+				"기계도 사포를 다룰수 있습니다!"
+				"다만 사포는 소모품이라 지속적으로 공급해주는것이 문제지요."
+				""
+				"그리 만들기도 어렵지 않으니 만들어서 공급해 주어도 되고, 가끔 생각날때마다 만들어서 넣어줘도 됩니다."
+			]
+			icon: {
+				Count: 1b
+				id: "createaddition:diamond_grit_sandpaper"
+				tag: {
+					Damage: 0
+				}
+			}
+			id: "3E5DE7AE9BDF847A"
+			tasks: [{
+				id: "52DF8CDA85B6A219"
+				type: "checkmark"
+			}]
+			title: "사포질 가공"
+			x: 1.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["23674EB7B2065FB3"]
+			description: [
+				"기계식 조합기로 기어를 손수 말들어도 좋고 틀에 찍어버려도 됩니다."
+				""
+				"어떤 방식으로던 가공해줍시다."
+			]
+			icon: "immersiveengineering:mold_gear"
+			id: "61E75E7A44600498"
+			tasks: [{
+				id: "1CEEEB76F5A881FB"
+				type: "checkmark"
+			}]
+			title: "금속가공"
+			x: -0.5d
+			y: 3.5d
+		}
+		{
+			dependencies: ["3E5DE7AE9BDF847A"]
+			description: [
+				"결과물이 정밀하면 정밀할수록 제작은 어려워지고 불량 상품은 많아집니다."
+				""
+				"투입 수에 대한 완성된 양품의 비율을 수율이라 하죠"
+				""
+				"이 수율을 높이는건 공장 설계에 있어서 굉장히 중요한 부분입니다."
+				"좀더 복잡한 공정은 이 수율을 높이는데 유의미한 도움을 줍니다."
+				""
+				"전자 튜브의 경우 액화된 발광석을 통해 장밋빛 석영을 새척하는것으로 수율을 증대시킬수 있습니다."
+				""
+				"충분히 많은 재료와 기계팔을 통해 공급을 충당하는것도 하나의 방법이지만"
+				"추후 방대한 양의 전자 튜브가 필요해질때를 대비하시길 바랍니다."
+			]
+			icon: "create:electron_tube"
+			id: "37F421F7271D5C53"
+			tasks: [
+				{
+					id: "28227FE9F06C8DFA"
+					item: "create:electron_tube"
+					type: "item"
+				}
+				{
+					id: "5EB1557ED35D6B1C"
+					type: "checkmark"
+				}
+			]
+			title: "기초 수율론"
+			x: 1.0d
+			y: 4.0d
+		}
+		{
+			dependencies: [
+				"61E75E7A44600498"
+				"37F421F7271D5C53"
+			]
+			description: [
+				"복잡한 조립체계가 기다리고 있습니다."
+				"같은 재료가 반복적으로 사용되고, 조립 절차도 여러번을 거쳐야 하죠."
+				""
+				"팁이 있다면 필터링이나 레드스톤 장치를 통해 통제하여 같은 조합법을 반복할때 발사대를 통해 공정의 어느지점으로 보내버리면 자동화를 더 쉽게 할수 있다는 겁니다."
+			]
+			icon: "create:precision_mechanism"
+			id: "661F7434E1E350A8"
+			tasks: [
+				{
+					id: "7A9ECBB874929464"
+					item: "create:precision_mechanism"
+					type: "item"
+				}
+				{
+					id: "63D80D2132DB50B9"
+					type: "checkmark"
+				}
+			]
+			title: "완성?"
+			x: -0.5d
+			y: 5.0d
+		}
+		{
+			dependencies: [
+				"661F7434E1E350A8"
+				"1B32F0C213C145FF"
+			]
+			description: ["축하드립니다. 하나의 자동화를 또 해내셨어요!"]
+			id: "509081C7C7C83EA5"
+			shape: "gear"
+			tasks: [{
+				id: "75008BBCADEA88BF"
+				item: "create:brass_casing"
+				type: "item"
+			}]
+			title: "완성!"
+			x: -0.5d
+			y: 6.5d
+		}
+		{
+			dependencies: ["51F90E3BE77416A6"]
+			icon: "immersiveengineering:treated_wood_horizontal"
+			id: "1FAC28E0899BCA74"
+			shape: "square"
+			tasks: [{
+				id: "3FEB858D1DC3E7FE"
+				type: "checkmark"
+			}]
+			title: "방부목?"
+			x: -2.5d
+			y: 1.0d
+		}
+		{
+			dependencies: ["1FAC28E0899BCA74"]
+			description: [
+				"크레오소트는 크레오소트입니다."
+				"나무의 부식을 막는 방부 처리에 자주 쓰이죠."
+				""
+				"단순히 코크오븐에서 나무를 구워 목탄을 만들거나, 석탄을 구워 코크를 만드는것으로 얻을수 있습니다."
+			]
+			icon: "immersiveengineering:cokebrick"
+			id: "6943D1AE62BD6125"
+			tasks: [
+				{
+					id: "212635289C1A706B"
+					item: "immersiveengineering:creosote_bucket"
+					type: "item"
+				}
+				{
+					count: 27L
+					id: "077C1C18780496AB"
+					item: "immersiveengineering:cokebrick"
+					type: "item"
+				}
+				{
+					id: "14012716BA94E255"
+					type: "checkmark"
+				}
+			]
+			title: "크레오소트"
+			x: -2.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["6943D1AE62BD6125"]
+			description: [
+				"챕터 1_1을 완료하지 않으셨더라도 액체 재료를 다루긴 해야합니다."
+				"그래도 간단한 설비 덕분에 쉽겠지요."
+				"아마도..?"
+			]
+			icon: "immersiveengineering:treated_wood_horizontal"
+			id: "1B32F0C213C145FF"
+			tasks: [
+				{
+					id: "16EA6C8B4DA3E0D0"
+					item: "immersiveengineering:treated_wood_horizontal"
+					type: "item"
+				}
+				{
+					id: "78B7D812C557DC1B"
+					type: "checkmark"
+				}
+			]
+			title: "방부목!"
+			x: -2.5d
+			y: 5.0d
+		}
+		{
+			dependencies: ["37F421F7271D5C53"]
+			description: [
+				"수율을 높이기 위해선 액화된 발광석이 필요합니다!"
+				""
+				"액화된 발광석을 만들기 위해선 야간투시의 용액과 네더랙이 필요하죠"
+				"네더랙을 만들려면 조약돌에 치유의 포션을 뿌려주면됩니다."
+				""
+				"포션양조의 시간입니다."
+			]
+			icon: "minecraft:glowstone_dust"
+			id: "080A509A92EA1C82"
+			tasks: [
+				{
+					id: "1486A7DD52DC8431"
+					item: "minecraft:glowstone_dust"
+					type: "item"
+				}
+				{
+					id: "611F227E22004BE0"
+					type: "checkmark"
+				}
+			]
+			title: "수율 높이기"
+			x: 1.0d
+			y: 5.0d
 		}
 	]
-	title: "Heavy Engineering"
+	title: "챕터 2 : 정밀 제어"
 }

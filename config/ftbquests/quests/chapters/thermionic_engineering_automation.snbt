@@ -1,257 +1,408 @@
 {
 	default_hide_dependency_lines: false
-	default_quest_shape: ""
+	default_quest_shape: "hexagon"
+	disable_toast: true
 	filename: "thermionic_engineering_automation"
 	group: "4FD6447209893FFA"
-	icon: "thermal:machine_frame"
+	icon: "createindustry:heavy_machinery_casing"
 	id: "0AB9B2F09FBAE4E0"
-	order_index: 3
+	order_index: 4
 	quest_links: [ ]
 	quests: [
 		{
-			dependencies: [
-				"12183991C8A6AB31"
-				"141773548658D003"
+			dependencies: ["7D60C8CAFD5224C1"]
+			description: [
+				"이번챕터는 본격적인 수율관리가 필요합니다."
+				"지난 챕터에선 불량품이 생산되어도 원재료가 나왔지만 이제부턴 별의별 잡동사니들이 나오기 때문이죠."
+				""
+				"단순히 좋은 재료를 투입하는것 만으로는 충분한 수율을 얻을수 없을겁니다."
+				"이젠 전용 도구들을 사용해야하죠."
+				""
+				"도구의 지속적인 공급을 위한 공정 설계가 여러분을 괴롭힐겁니다."
+				"하지만 디젤엔진과 챕터 3_1, 그리고 기타 등등의 기계장치들은 그 어려움을 감내할만큼 유용할테니 이 또한 이를 악물고 해봅시다."
 			]
-			id: "0606CF37D0C5F10A"
-			shape: "octagon"
+			icon: "createindustry:steel_mechanism"
+			id: "1E205C2257BF1050"
 			size: 2.0d
 			tasks: [{
-				id: "5BA220AC4157B2D9"
-				item: "thermal:machine_frame"
-				type: "item"
+				id: "52272276E0001F19"
+				type: "checkmark"
 			}]
-			x: -4.5d
+			title: "규격화와 모듈화 개론"
+			x: -1.0d
+			y: -0.5d
+		}
+		{
+			dependencies: ["1E205C2257BF1050"]
+			description: [
+				"이번 챕터의 가장큰 시련은 강철의 소비량입니다."
+				"이전 챕터에선 소량의 재료들을 가공하는정도에서 그쳤다면 이번 챕터에선 대량의 강철이 요구되죠."
+				""
+				"적은양의 철로 강철을 많이 만드는 방법은 여러가지가 있습니다."
+				"아크 화로 공정은 대표적인 방법중 하나죠."
+				""
+				"물론 많은 양의 철 공급으로 대체해도 상관 없습니다."
+			]
+			icon: "immersiveengineering:ingot_steel"
+			id: "0707D5A534EE9256"
+			shape: "square"
+			tasks: [
+				{
+					id: "03D1C41ABF7EEB8A"
+					item: {
+						Count: 1b
+						id: "itemfilters:tag"
+						tag: {
+							value: "forge:ingots/steel"
+						}
+					}
+					title: "Any #forge:ingots/steel"
+					type: "item"
+				}
+				{
+					id: "5B32651D894C2F25"
+					type: "checkmark"
+				}
+			]
+			title: "강철이 철철철!"
+			x: -0.5d
+			y: 1.0d
+		}
+		{
+			dependencies: ["1E205C2257BF1050"]
+			description: [
+				"공구에 인챈트를 해보는게 공구의 공급의 필요성을 줄여줍니다."
+				"생산도 까다롭고 보관도 어려운것들을 적게 만들어도 되게 해주죠."
+				""
+				"충분한 경험치만 있다면 인챈트도 자동화가 가능하니 고려해보는것도 좋습니다."
+			]
+			icon: {
+				Count: 1b
+				id: "minecraft:enchanted_book"
+				tag: {
+					StoredEnchantments: [{
+						id: "minecraft:unbreaking"
+						lvl: 3s
+					}]
+				}
+			}
+			id: "6C114043ECDD9AB9"
+			tasks: [{
+				id: "6DCFDD8C1F9C6F83"
+				type: "checkmark"
+			}]
+			title: "인챈트의 도입"
+			x: 1.0d
+			y: -0.5d
+		}
+		{
+			dependencies: ["1E205C2257BF1050"]
+			description: [
+				"이번 챕터의 기계장치는 챕터 2의 기계장치를 완전히 뜯어고치는 방식으로 만들어 집니다."
+				""
+				"기계장치를 이루는 모든 부품을 갈아끼우는 겁니다."
+				"태세우스의 배 이론이 생각나지 않나요?"
+			]
+			icon: "create:precision_mechanism"
+			id: "39867C96720E7C90"
+			shape: "square"
+			tasks: [
+				{
+					id: "63BADCCABBE9C74D"
+					item: "create:precision_mechanism"
+					type: "item"
+				}
+				{
+					id: "13BED874CA1137A4"
+					type: "checkmark"
+				}
+			]
+			title: "태세우스의 배 이론을 아시나요?"
+			x: 0.5d
+			y: 1.0d
+		}
+		{
+			dependencies: [
+				"0707D5A534EE9256"
+				"39867C96720E7C90"
+				"626C769DA8E31816"
+			]
+			description: [
+				"단순히 정밀 기계장치의 부품들을 강철로 바꿔주는 겁니다."
+				"강철판을 덧대고 강철 기어를 넣어주는거죠."
+				""
+				"수율은 낮지만 싸고 공정을 관리하기 편합니다."
+				"재료의 대량생산이 가능하다면 여기서 만족해도 될겁니다."
+				""
+				"하지만 더 높은 수율을 원하신다면, 다 방법이 있죠."
+			]
+			icon: "thermal:steel_gear"
+			id: "6785F03D2A64D1EC"
+			tasks: [{
+				id: "34A6DB835C8C73C6"
+				type: "checkmark"
+			}]
+			title: "단순 부품 교체"
+			x: 1.5d
+			y: 2.0d
+		}
+		{
+			dependencies: ["6785F03D2A64D1EC"]
+			icon: "createindustry:screw"
+			id: "043CE1C44B95AD73"
+			subtitle: "나사입니다! 설명이 더 필요할까요?"
+			tasks: [{
+				id: "54BA77627DA94861"
+				type: "checkmark"
+			}]
+			title: "고정장치"
+			x: 0.5d
 			y: 2.5d
 		}
 		{
-			dependencies: ["2692BDE128804CE1"]
-			id: "52F83C12003C9A62"
-			tasks: [{
-				id: "415C8015E556BF14"
-				item: "thermal:cured_rubber"
-				type: "item"
-			}]
-			x: -8.5d
-			y: 5.5d
-		}
-		{
-			dependencies: [
-				"568D35BC119297F8"
-				"349E9762261F76C3"
-				"399086E6FAF59B8A"
-			]
-			id: "7B68D64F5A17F08D"
-			tasks: [{
-				id: "535CEF9D193ACFF6"
-				item: {
-					Count: 1b
-					id: "minecraft:enchanted_book"
-					tag: {
-						StoredEnchantments: [{
-							id: "minecraft:efficiency"
-							lvl: 5s
-						}]
-					}
+			dependencies: ["32766AE8FCEAAD60"]
+			icon: "createindustry:steel_mechanism"
+			id: "6FB3C173FF5A5895"
+			shape: "gear"
+			subtitle: "완성입니다!"
+			tasks: [
+				{
+					id: "448949E0C097F719"
+					item: "createindustry:steel_mechanism"
+					type: "item"
 				}
-				type: "item"
-			}]
-			x: -8.0d
-			y: 7.0d
-		}
-		{
-			id: "568D35BC119297F8"
-			tasks: [{
-				id: "77C5304DF51DEBA0"
-				item: "create_enchantment_industry:printer"
-				type: "item"
-			}]
-			x: -9.0d
-			y: 8.0d
-		}
-		{
-			id: "349E9762261F76C3"
-			rewards: [{
-				id: "23457E47353F2F76"
-				item: {
-					Count: 1b
-					id: "minecraft:enchanted_book"
-					tag: {
-						StoredEnchantments: [{
-							id: "minecraft:efficiency"
-							lvl: 5s
-						}]
-					}
+				{
+					id: "078EEE2C5145E4B5"
+					type: "checkmark"
 				}
-				type: "item"
-			}]
-			tasks: [{
-				id: "20935A8BC65CAA51"
-				item: "minecraft:book"
-				type: "item"
-			}]
-			x: -9.5d
-			y: 7.0d
-		}
-		{
-			id: "399086E6FAF59B8A"
-			tasks: [{
-				id: "652AE1AB934FED1D"
-				item: "create:experience_nugget"
-				type: "item"
-			}]
-			x: -8.0d
-			y: 8.5d
-		}
-		{
-			id: "2692BDE128804CE1"
-			tasks: [{
-				id: "27285D2290FE9281"
-				item: "thermal:latex_bucket"
-				type: "item"
-			}]
-			x: -10.0d
-			y: 5.5d
-		}
-		{
-			dependencies: [
-				"38D50828D2578E7E"
-				"2B66DECCDE73B094"
 			]
-			id: "12183991C8A6AB31"
-			shape: "hexagon"
-			size: 2.0d
-			tasks: [{
-				id: "4E24D48B08FACCBA"
-				item: "thermal:redstone_servo"
-				type: "item"
-			}]
-			x: -2.5d
-			y: 5.5d
-		}
-		{
-			dependencies: [
-				"7B68D64F5A17F08D"
-				"097C5C1C042E7003"
-				"52F83C12003C9A62"
-				"0401D0E81D6560CB"
-			]
-			id: "38D50828D2578E7E"
-			shape: "hexagon"
-			size: 2.0d
-			tasks: [{
-				id: "272E56F5B698A87E"
-				item: "thermal:rf_coil"
-				type: "item"
-			}]
-			x: -6.5d
-			y: 5.5d
-		}
-		{
-			dependencies: [
-				"5777AF1E7819C4DC"
-				"12FFDC72D6678057"
-				"328331F9A96FBE3C"
-			]
-			id: "2B66DECCDE73B094"
-			tasks: [{
-				id: "2B639D7F8029110A"
-				item: "create_sa:heat_engine"
-				type: "item"
-			}]
-			x: -1.0d
-			y: 7.0d
-		}
-		{
-			dependencies: [
-				"6D9ADB04655F2B89"
-				"60E8FA55111C458B"
-			]
-			id: "097C5C1C042E7003"
-			tasks: [{
-				id: "311B3D275047EC96"
-				item: "thermal:electrum_ingot"
-				type: "item"
-			}]
-			x: -6.5d
-			y: 7.5d
-		}
-		{
-			id: "6D9ADB04655F2B89"
-			tasks: [{
-				id: "571EC2B996F6B261"
-				item: "thermal:silver_ingot"
-				type: "item"
-			}]
-			x: -7.0d
-			y: 9.0d
-		}
-		{
-			id: "60E8FA55111C458B"
-			tasks: [{
-				id: "37DC3A66DE2CA745"
-				item: "minecraft:gold_ingot"
-				type: "item"
-			}]
-			x: -6.0d
-			y: 9.0d
-		}
-		{
-			id: "141773548658D003"
-			tasks: [{
-				id: "6610BE1C6CF3A8E3"
-				item: "immersiveengineering:heavy_engineering"
-				type: "item"
-			}]
-			x: -4.5d
-			y: 0.0d
-		}
-		{
-			id: "12FFDC72D6678057"
-			tasks: [{
-				id: "3515303B56FC6163"
-				item: "thermal:invar_ingot"
-				type: "item"
-			}]
-			x: -1.0d
-			y: 8.5d
-		}
-		{
-			id: "5777AF1E7819C4DC"
-			tasks: [{
-				id: "6D579BBCEA6B2366"
-				item: "create:precision_mechanism"
-				type: "item"
-			}]
+			title: "강철 기계장치"
 			x: 0.5d
-			y: 7.0d
+			y: 3.5d
 		}
 		{
-			id: "0401D0E81D6560CB"
-			tasks: [{
-				id: "5EDDCB5AADD91A95"
-				item: {
-					Count: 1b
-					id: "immersiveengineering:graphite_electrode"
-					tag: {
-						graphDmg: 0
-					}
+			dependencies: ["6A2C61673C00103C"]
+			description: [
+				"네더라이트와 강철을 제련하는겁니다"
+				"용암만으론 부족하니 테르밋을 사용하고 강철 가루를 뿌리고 프레스로 두들기고"
+				"이 과정을 여러번 반복하는 겁니다."
+			]
+			icon: "createindustry:heavy_plate"
+			id: "16F9A9CEC2A31B71"
+			tasks: [
+				{
+					id: "5DCC1A43832A01E7"
+					item: "createindustry:heavy_plate"
+					type: "item"
 				}
-				type: "item"
-			}]
-			x: -8.0d
+				{
+					id: "007077C395336DB1"
+					type: "checkmark"
+				}
+			]
+			title: "중강판"
+			x: -1.5d
 			y: 4.0d
 		}
 		{
-			id: "328331F9A96FBE3C"
+			dependencies: ["1E205C2257BF1050"]
+			description: [
+				"이번 챕터의 케이싱은 총 두 단계를 거쳐 제작됩니다."
+				"하나는 강화 목제에 강철 기계장치를 더한 강철 케이싱이고"
+				"그 다음 단계는 중형 판을 강철 케이싱에 더한 중형 기계 케이싱이죠."
+				""
+				"아래의 퀘스트에선 케이싱 제작과정에 대한 지시가 주된 내용이 됩니다."
+			]
+			icon: "createindustry:steel_casing"
+			id: "7BCF1AAB67733DAC"
+			shape: "square"
 			tasks: [{
-				id: "7D9D12C566032F8D"
-				item: "immersiveengineering:toolupgrade_railgun_capacitors"
-				type: "item"
+				id: "7AAFC09F8F9186EE"
+				type: "checkmark"
 			}]
-			x: 0.0d
-			y: 8.0d
+			title: "프레임워크 준비"
+			x: -1.5d
+			y: 1.0d
+		}
+		{
+			dependencies: ["1E205C2257BF1050"]
+			description: [
+				"챕터 1_1을 해보셨다면 익숙한 과정이실겁니다."
+				"차이점이 있다면 이번에는 라텍스나 왁스를 생으로 발라선 안되고, 가공된 형태가 필요하다는 것이죠."
+			]
+			icon: {
+				Count: 1b
+				id: "createindustry:water_insulation"
+				tag: {
+					Damage: 0
+				}
+			}
+			id: "626C769DA8E31816"
+			shape: "square"
+			tasks: [
+				{
+					id: "2F9CF145B5429CEA"
+					type: "checkmark"
+				}
+				{
+					id: "34730FCAA1A89A4D"
+					item: {
+						Count: 1b
+						id: "createindustry:water_insulation"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			title: "방수처리"
+			x: 1.5d
+			y: 1.0d
+		}
+		{
+			dependencies: ["7BCF1AAB67733DAC"]
+			icon: "createindustry:hardened_planks"
+			id: "1F7624C96AEA6808"
+			subtitle: "나무를 압축해주면 됩니다."
+			tasks: [
+				{
+					id: "4A708E7075CE098C"
+					item: "createindustry:hardened_planks"
+					type: "item"
+				}
+				{
+					id: "421E891CE313A756"
+					type: "checkmark"
+				}
+			]
+			title: "강화 목재"
+			x: -0.5d
+			y: 2.5d
+		}
+		{
+			dependencies: [
+				"1F7624C96AEA6808"
+				"6FB3C173FF5A5895"
+			]
+			description: [
+				"강철 케이싱 자체로는 무언가를 만들수 없습니다."
+				""
+				"추가적인 보강이 필요하죠."
+			]
+			icon: "createindustry:steel_casing"
+			id: "4E74F1934D35D22D"
+			tasks: [
+				{
+					id: "0B67792DD1E8E072"
+					item: "createindustry:steel_casing"
+					type: "item"
+				}
+				{
+					id: "0E05AD6BE13314EE"
+					type: "checkmark"
+				}
+			]
+			title: "한단계 더 남았습니다."
+			x: -0.5d
+			y: 4.0d
+		}
+		{
+			dependencies: [
+				"16F9A9CEC2A31B71"
+				"4E74F1934D35D22D"
+			]
+			icon: "createindustry:heavy_machinery_casing"
+			id: "01822A38DA963248"
+			shape: "gear"
+			size: 2.0d
+			subtitle: "챕터 3를 완료하셨습니다!"
+			tasks: [
+				{
+					id: "3C5769C76896E1A4"
+					item: "createindustry:heavy_machinery_casing"
+					type: "item"
+				}
+				{
+					id: "3C204A7C65F3503A"
+					type: "checkmark"
+				}
+			]
+			title: "마무리"
+			x: -1.0d
+			y: 5.5d
+		}
+		{
+			dependencies: ["628FC41A76D06AF4"]
+			description: [
+				"네더라이트는 열에 저항력이 높은 금속입니다."
+				"용암에 담궈도 녹지 않죠."
+				"이러한 성질 때문에 네더라이트와 다른금속간의 혼합이 어려워지고 이는 낮은 수율로 이어지죠."
+				""
+				"테르밋가루를 사용한 화학적 용해가 해결책이 될겁니다."
+			]
+			icon: "createindustry:thermite_powder"
+			id: "6A2C61673C00103C"
+			tasks: [
+				{
+					id: "66297B7F4478B1A5"
+					item: "createindustry:thermite_powder"
+					type: "item"
+				}
+				{
+					id: "6433DAF78A0F731C"
+					type: "checkmark"
+				}
+			]
+			title: "테르밋 가루"
+			x: -1.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["043CE1C44B95AD73"]
+			icon: {
+				Count: 1b
+				id: "createindustry:screwdriver"
+				tag: {
+					Damage: 0
+				}
+			}
+			id: "32766AE8FCEAAD60"
+			subtitle: "기계손보단 전용 도구를 사용하는게 더 안정적인 법!"
+			tasks: [{
+				id: "7E1534F81CF80BA9"
+				type: "checkmark"
+			}]
+			title: "스크류 드라이버"
+			x: 1.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["7BCF1AAB67733DAC"]
+			description: [
+				"네더라이트를 프레스에 여러번 넣어주기만 해도 중강판은 만들수 있습니다."
+				""
+				"단지 수율이 안나올 뿐이죠."
+				""
+				"분말 형태의 강철을 첨가해서 수율을 높일수 있습니다."
+			]
+			icon: "minecraft:netherite_ingot"
+			id: "628FC41A76D06AF4"
+			tasks: [
+				{
+					id: "781FC5933CF60DF4"
+					item: "minecraft:netherite_ingot"
+					type: "item"
+				}
+				{
+					id: "1A3D479EF5BE7289"
+					type: "checkmark"
+				}
+			]
+			title: "네더라이트"
+			x: -1.5d
+			y: 2.0d
 		}
 	]
-	title: "OneBlock Engineering"
+	title: "챕터 3 : 규격화와 모듈화"
 }

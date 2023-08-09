@@ -1,0 +1,273 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: "hexagon"
+	filename: "2_1"
+	group: "4FD6447209893FFA"
+	icon: "create:railway_casing"
+	id: "57B14C44FBFBA776"
+	order_index: 3
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["661F7434E1E350A8"]
+			description: [
+				"앞으로 대량의 광물 수급이 필요할겁니다."
+				""
+				"네더라이트 64개, 다이아 블럭 64개, 철블럭 100개 "
+				"이런 무식하게 많은 광물이 필요한건 아니지만 기계장치 하나에 많아야 주괴 8개를 넘지 않던 기존과 비교해서 많이 필요하다 이겁니다."
+				"이후엔 기계장치 하나에 주괴 10개, 20개 분량이 필요할겁니다."
+				""
+				"이걸 전부 직접 체집하는건 미련한 짓입니다."
+				"다행히도 여러가지 해결책이 존재하죠"
+				"광맥을 찾아 드릴링 체굴기계로 광맥에서 거의 무한한 광물을 얻는것이 대표적인 방법중 하나입니다."
+				""
+				"이를 위해선 체굴기계 말고도 광맥과 기지간 장거리 유통망도 필요하죠."
+				"철로를 만드는게 도움이 될겁니다."
+			]
+			icon: "create_dd:integrated_mechanism"
+			id: "0F662508F15F373A"
+			rewards: [{
+				id: "36D142EF812832EB"
+				type: "xp_levels"
+				xp_levels: 5
+			}]
+			size: 2.0d
+			tasks: [{
+				id: "5C7E91E8222F831D"
+				type: "checkmark"
+			}]
+			title: "운송과 이동과 주문"
+			x: 0.0d
+			y: -0.5d
+		}
+		{
+			dependencies: ["0F662508F15F373A"]
+			description: [
+				"흑요석으로 강판을 만들어 봅시다!"
+				""
+				"강판의 수율통제 과정읜 선형적입니다."
+				"1단계를 못하면 2~3단계도 못하게되지요."
+				"하지만 걱정마세요 각 단계가 그렇게 어렵진 않을겁니다."
+				""
+				"기초적인 50% 수율부터 시작해 목표는 90%"
+				"하나하나 설명해드리겠습니다!"
+			]
+			icon: "create:sturdy_sheet"
+			id: "59E5B80E5ADCA317"
+			tasks: [{
+				id: "6D23FFAE5D2AB13C"
+				type: "checkmark"
+			}]
+			title: "강판 ?"
+			x: -1.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["0F662508F15F373A"]
+			description: [
+				"이친구는 챕터 2때 왕창 만들어 두셨을겁니다."
+				"그냥 만들어도 양호한 수율이 나오지만 액체 발광석으로 세척하면 더 나은 수율을 얻을수 있다는것도 알고 계시겠지요."
+				""
+				"이걸 알고있다면 OK입니다."
+			]
+			id: "2F7B22876ED13693"
+			tasks: [{
+				id: "35FC0AE98B187AE4"
+				item: "create:electron_tube"
+				type: "item"
+			}]
+			title: "전자 튜브"
+			x: 0.0d
+			y: 2.5d
+		}
+		{
+			dependencies: ["0F662508F15F373A"]
+			description: [
+				"수율하면 전자회로, 전자회로하면 수율이지요."
+				"조그만한 장치가 복잡한 연산을 수행하다보니 제조법도 복잡하고 불량품도 많이 나옵니다."
+				""
+				"그래도 이번엔 최대수율 100%까지 올릴수있으니 가이드를 믿고 따라오시면 됩니다."
+			]
+			id: "5725522FF03C37E4"
+			tasks: [{
+				id: "7A23ADC37ABDEBAA"
+				item: "create_dd:integrated_circuit"
+				type: "item"
+			}]
+			title: "전자 회로를 만들어봅시다!"
+			x: 1.0d
+			y: 1.0d
+		}
+		{
+			dependencies: [
+				"2F7B22876ED13693"
+				"50A1600B20D7976D"
+				"28AD26C62C175726"
+			]
+			description: ["여려분의 통합 기계장치 공장의 총수율은 얼마나 나오나요?"]
+			icon: "create_dd:integrated_mechanism"
+			id: "0F3D96263CB140F4"
+			shape: "gear"
+			tasks: [
+				{
+					id: "63E32E9EA54705EB"
+					item: "create_dd:integrated_mechanism"
+					type: "item"
+				}
+				{
+					id: "5F6C4C392585A782"
+					type: "checkmark"
+				}
+			]
+			title: "수율 통제는 즐거우셨나요?"
+			x: 0.0d
+			y: 5.0d
+		}
+		{
+			dependencies: ["0F662508F15F373A"]
+			description: [
+				"수율에 대한 기초적인 개념은 챕터 2를 참고해주세요."
+				""
+				"이번엔 수율통제에 대해서 좀더 깊게 배워봅시다."
+				"좀더 다단계로 말이죠."
+				""
+				"불량품들은 전부 원재료의 상태로 돌아갑니다."
+				"적어도 이 쳅터에선 그러합니다. 아닌경우가 있긴하지만 나중에 생각합시다."
+			]
+			id: "4DD9BBC532662A92"
+			tasks: [{
+				id: "10CB36C6416F6FC4"
+				type: "checkmark"
+			}]
+			title: "이번 챕터는 수율제어를 본격적으로 다룹니다!"
+			x: 1.5d
+			y: -0.5d
+		}
+		{
+			dependencies: ["59E5B80E5ADCA317"]
+			description: [
+				"흑요석은 단단한만큼 가공하기 어렵습니다."
+				"하지만 가공하기 어려운만큼 단단하기 때문에 강판의 주재료로 사용되죠."
+				""
+				"가장 간단한 가공법은 많이 두드리는겁니다"
+				"떡매를 치듯 두드리는거죠"
+			]
+			icon: "create:powdered_obsidian"
+			id: "6A7FF1FAF41FB938"
+			tasks: [
+				{
+					id: "20EA5FD2E204D03A"
+					item: "create:powdered_obsidian"
+					type: "item"
+				}
+				{
+					id: "7E870D761FDBB798"
+					type: "checkmark"
+				}
+			]
+			title: "수율 50% : 기초 가공"
+			x: -1.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["6A7FF1FAF41FB938"]
+			description: [
+				"단순히 흑요석 가루를 두드리는거 만으론 충분한 가공이 되지 않습니다."
+				"충격이 균일하게 전달이 되지 않아 판이 깨져버려 불량품이 나오기 쉽죠."
+				""
+				"두드리기 전에 용암을 뿌려 열을 가해주면 판에 생긴 금이 어느정도는 줄어듭니다."
+				"불량률도 낲아지죠, 수율이 높아진다는 뜻 입니다."
+			]
+			icon: "minecraft:fire_charge"
+			id: "20F2E3F7093FDA04"
+			tasks: [{
+				id: "453EF653A0497844"
+				type: "checkmark"
+			}]
+			title: "수율 70% : 열원 투입"
+			x: -1.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["20F2E3F7093FDA04"]
+			description: [
+				"흑요석을 두드리다 금이 크게 나기 시작하면 용암을 뿌려주는것 만으로는 해결되지 않습니다."
+				"금 사이를 매꿔줄 무언가가 필요하죠"
+				""
+				"잿가루 조금만 뿌려주면 됩니다."
+				""
+				"강판 수율 통제법은 이게 전부입니다!"
+				"수율 90%가 한계지요, 많이 사용한다면 많이 만들어야 합니다."
+			]
+			icon: "create:cinder_flour"
+			id: "50A1600B20D7976D"
+			tasks: [{
+				id: "38AE06AB47635E04"
+				type: "checkmark"
+			}]
+			title: "수율 90% : 금 간곳 매꾸기"
+			x: -1.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["5725522FF03C37E4"]
+			description: [
+				"금조각 대신 일렉트럼을 사용하면 수율을 67%에서 80%까지 올릴수 있습니다."
+				""
+				"금조각을 써야할까요? 그냥 일렉트럼부터 시작합시다!"
+			]
+			icon: "thermal:electrum_nugget"
+			id: "79C8AAE575DD003A"
+			tasks: [{
+				id: "1CBB8BDF36317470"
+				type: "checkmark"
+			}]
+			title: "수율 80% : 합금 사용"
+			x: 1.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["79C8AAE575DD003A"]
+			description: [
+				"우리의 기계팔은 아쉽게도 힘조절을 잘 못합니다."
+				"일렉트럼 조각을 라피스 합금판에 박기만 하면되는걸 아예 관통시키는 경우가 종종 있죠."
+				""
+				"이 문제는 강판을 덧대고 두드려 해결할수 있습니다. "
+			]
+			icon: "create:sturdy_sheet"
+			id: "3B893ADD2F74BA29"
+			tasks: [{
+				id: "7C44E57EF3DE692A"
+				type: "checkmark"
+			}]
+			title: "수율 86% : 강판 덧대기"
+			x: 1.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["3B893ADD2F74BA29"]
+			description: [
+				"강판을 덧대고 두드리는 과정에서 너무 튀어나온 일렉트럼 접점이나 어긋난 부분이 생기기 마련입니다."
+				""
+				"정교한 날붙이로 이런 부분을 잘라내줘서 문제를 해결할수 있습니다."
+				"그럼 수율 100% 달성도 꿈이 아니죠. "
+			]
+			icon: {
+				Count: 1b
+				id: "ae2:certus_quartz_cutting_knife"
+				tag: {
+					Damage: 0
+				}
+			}
+			id: "28AD26C62C175726"
+			tasks: [{
+				id: "50C7D0246C52D020"
+				type: "checkmark"
+			}]
+			title: "수율 100% : 잉여물 잘라내기"
+			x: 1.0d
+			y: 4.0d
+		}
+	]
+	title: "챕터 2_1 : 운송과 이동과 주문"
+}

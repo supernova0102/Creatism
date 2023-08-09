@@ -27,8 +27,8 @@ recipes.remove(<item:immersiveengineering:component_steel>);
 //rose_quartz
 recipes.remove(<item:create:rose_quartz>);
 
-<recipetype:create:mixing>.addRecipe("rose_quartz",<constant:create:heat_condition:none>,[<item:create:rose_quartz>%100],[<item:minecraft:amethyst_shard>*4,<tag:items:ae2:all_quartz>*4],[<fluid:thermal:redstone> * 500],250);
-<recipetype:create:mixing>.addRecipe("budding_rose_quartz",<constant:create:heat_condition:heated>,[<item:geodeoplenty:budding_rose_quartz>%100],[<item:minecraft:budding_amethyst>,<item:ae2:quartz_block>],[<fluid:thermal:redstone> * 500],500);
+<recipetype:create:mixing>.addRecipe("rose_quartz",<constant:create:heat_condition:none>,[<item:create:rose_quartz>*8%100],[<item:minecraft:amethyst_shard>*2,],[<fluid:thermal:redstone> * 250],250);
+<recipetype:create:mixing>.addRecipe("budding_rose_quartz",<constant:create:heat_condition:heated>,[<item:geodeoplenty:budding_rose_quartz>%100],[<tag:items:forge:budding>,<item:ae2:quartz_block>],[<fluid:thermal:redstone> * 500],500);
 //electron_tube
 recipes.remove(<item:create:electron_tube>);
 
@@ -38,13 +38,10 @@ craftingTable.addShaped("hand_made_electron",<item:create:electron_tube>,[[<item
 	.transitionTo(<item:create:polished_rose_quartz>)
 	.require(<item:create:polished_rose_quartz>)
 	.loops(1)
-	.addOutput(<item:create:electron_tube>, 7)
-	.addOutput(<item:create:rose_quartz>, 1)
-	
-
+	.addOutput(<item:create:electron_tube>*4, 6)
+	.addOutput(<item:create:rose_quartz>, 4)
 	.addStep<mods.createtweaker.CuttingRecipe>((a) => a.duration(50))
 	.addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:create:andesite_alloy>))
-
 	.addStep<mods.createtweaker.CuttingRecipe>((a) => a.duration(50))
 
 );
@@ -53,17 +50,16 @@ craftingTable.addShaped("hand_made_electron",<item:create:electron_tube>,[[<item
 	.transitionTo(<item:create:polished_rose_quartz>)
 	.require(<item:create:polished_rose_quartz>)
 	.loops(1)
-	.addOutput(<item:create:electron_tube>, 1)
-
+	.addOutput(<item:create:electron_tube>*4, 1)
+	.addStep<mods.createtweaker.FillingRecipe>((a) => a.require(<fluid:thermal:glowstone> * 250))
 	.addStep<mods.createtweaker.CuttingRecipe>((a) => a.duration(50))
 	.addStep<mods.createtweaker.FillingRecipe>((a) => a.require(<fluid:thermal:glowstone> * 250))
-
-
 	.addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:create:andesite_alloy>))
 	.addStep<mods.createtweaker.CuttingRecipe>((a) => a.duration(50))
 );
 
-
+//energized_glowstone
+<recipetype:create:mixing>.addRecipe("energized_glowstone",<constant:create:heat_condition:none>,[<fluid:thermal:glowstone> * 250],[<item:minecraft:glowstone_dust>*2],[<fluid:immersiveengineering:potion>.withTag({Potion: "minecraft:long_night_vision"}) * 1000],400);
 
 //precision_mechanism
 
@@ -71,13 +67,12 @@ craftingTable.addShaped("hand_made_electron",<item:create:electron_tube>,[[<item
 
 
 <recipetype:create:sequenced_assembly>.addRecipe(<recipetype:create:sequenced_assembly>.builder("precision_mechanism")
-	.transitionTo(<item:create:golden_sheet>)
+	.transitionTo(<item:create:incomplete_precision_mechanism>)
 	.require(<item:create:golden_sheet>)
-	.loops(1)
+	.loops(2)
 	.addOutput(<item:create:precision_mechanism>, 1)
 	.addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:create:electron_tube>))
-	.addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<tag:items:forge:gears/gold>))
-	.addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<tag:items:forge:gears/gold>))
+	.addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:create:electron_tube>))
 	.addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<tag:items:forge:gears/gold>))
 	.addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<tag:items:forge:plates/steel>))
 	.addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:immersiveengineering:component_iron>))
@@ -92,8 +87,8 @@ recipes.remove(<item:create:brass_tunnel>);
 smithing.addRecipe("brass_funnel",<item:create:brass_funnel>,<item:create:andesite_funnel>,<item:create:precision_mechanism>);
 smithing.addRecipe("brass_tunnel",<item:create:brass_tunnel>,<item:create:andesite_tunnel>,<item:create:precision_mechanism>);
 
-<recipetype:create:item_application>.addRecipe("brass_tunnel_hand",[<item:create:brass_tunnel>],<item:create:andesite_tunnel>,<item:create_dd:integrated_mechanism>,false);
-<recipetype:create:item_application>.addRecipe("brass_funnel_hand",[<item:create:brass_funnel>],<item:create:andesite_funnel>,<item:create_dd:integrated_mechanism>,false);
+<recipetype:create:item_application>.addRecipe("brass_tunnel_hand",[<item:create:brass_tunnel>],<item:create:andesite_tunnel>,<item:create:precision_mechanism>,false);
+<recipetype:create:item_application>.addRecipe("brass_funnel_hand",[<item:create:brass_funnel>],<item:create:andesite_funnel>,<item:create:precision_mechanism>,false);
 
 
 
@@ -124,7 +119,6 @@ var c2_1machine = [
 	[<item:create:rotation_speed_controller>,<item:create:adjustable_chain_gearshift>],
 	[<item:create:clockwork_bearing>,<item:supplementaries:clock_block>],
 	[<item:create:elevator_pulley>,<item:supplementaries:pulley_block>],
-	[<item:createcasing:brass_gearbox>,<item:create:cogwheel>],
 	[<item:createaddition:portable_energy_interface>,<item:immersiveengineering:coil_hv>],
 ];
 
@@ -175,13 +169,42 @@ craftingTable.addShaped("pipe_pressurizer",<item:prettypipes:pressurizer>,[
 	.addOutput(<item:createaddition:copper_spool> ,1)
 	.addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<tag:items:forge:wires/copper>))
 );*/
+//sturdy plate
+<recipetype:create:sequenced_assembly>.remove(<item:create:sturdy_sheet>);
 
+<recipetype:create:sequenced_assembly>.addRecipe(<recipetype:create:sequenced_assembly>.builder("sturdy_plate")
+	.transitionTo(<item:create:unprocessed_obsidian_sheet>)
+	.require(<item:create:powdered_obsidian>)
+	.loops(10)
+	.addOutput(<item:create:sturdy_sheet>,1)
+	.addOutput(<item:create:powdered_obsidian>,1)
+	.addStep<mods.createtweaker.PressingRecipe>((rb) => rb.duration(140))
+);
+<recipetype:create:sequenced_assembly>.addRecipe(<recipetype:create:sequenced_assembly>.builder("sturdy_plate1")
+	.transitionTo(<item:create:unprocessed_obsidian_sheet>)
+	.require(<item:create:powdered_obsidian>)
+	.loops(10)
+	.addOutput(<item:create:sturdy_sheet>,7)
+	.addOutput(<item:create:powdered_obsidian>,3)
+	.addStep<mods.createtweaker.PressingRecipe>((rb) => rb.duration(140))
+	.addStep<mods.createtweaker.FillingRecipe>((a) => a.require(<fluid:minecraft:lava> * 100))
+);
+<recipetype:create:sequenced_assembly>.addRecipe(<recipetype:create:sequenced_assembly>.builder("sturdy_plate2")
+	.transitionTo(<item:create:unprocessed_obsidian_sheet>)
+	.require(<item:create:powdered_obsidian>)
+	.loops(10)
+	.addOutput(<item:create:sturdy_sheet>,4)
+	.addOutput(<item:create:powdered_obsidian>,1)
+	.addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:create:cinder_flour>))
+	.addStep<mods.createtweaker.PressingRecipe>((rb) => rb.duration(140))
+	.addStep<mods.createtweaker.FillingRecipe>((a) => a.require(<fluid:thermal:glowstone> * 100))
+);
 
 //integrated_mechanism
 <recipetype:create:sequenced_assembly>.remove(<item:create_dd:integrated_mechanism>);
 
 <recipetype:create:sequenced_assembly>.addRecipe(<recipetype:create:sequenced_assembly>.builder("integrated_mechanism")
-	.transitionTo(<item:create:precision_mechanism>)
+	.transitionTo(<item:create_dd:incomplete_integrated_mechanism>)
 	.require(<item:create:precision_mechanism>)
 	.loops(2)
 	.addOutput(<item:create_dd:integrated_mechanism>, 1)
@@ -193,6 +216,57 @@ craftingTable.addShaped("pipe_pressurizer",<item:prettypipes:pressurizer>,[
 <recipetype:create:item_application>.remove(<item:create:railway_casing>);
 <recipetype:create:item_application>.addRecipe("train_casing",[<item:create:railway_casing>],<item:create:brass_casing>,<item:create_dd:integrated_mechanism>,false);
 
+//integrated_circuit
+<recipetype:create:sequenced_assembly>.remove(<item:create_dd:integrated_circuit>);
+<recipetype:create:sequenced_assembly>.addRecipe(<recipetype:create:sequenced_assembly>.builder("integrated_mechanism2")
+	.transitionTo(<item:create_dd:incomplete_integrated_circuit>)
+	.require(<item:create_dd:lapis_sheet>)
+	.loops(18)
+	.addOutput(<item:create_dd:integrated_circuit>, 2)
+	.addOutput(<item:create_dd:lapis_sheet>,1)
+	.addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:minecraft:gold_nugget>))
+);
+<recipetype:create:sequenced_assembly>.addRecipe(<recipetype:create:sequenced_assembly>.builder("integrated_mechanism3")
+	.transitionTo(<item:create_dd:incomplete_integrated_circuit>)
+	.require(<item:create_dd:lapis_sheet>)
+	.loops(18)
+	.addOutput(<item:create_dd:integrated_circuit>, 4)
+	.addOutput(<item:create_dd:lapis_sheet>,1)
+	.addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<tag:items:forge:nuggets/electrum>))
+);
+<recipetype:create:sequenced_assembly>.addRecipe(<recipetype:create:sequenced_assembly>.builder("integrated_mechanism4")
+	.transitionTo(<item:create_dd:incomplete_integrated_circuit>)
+	.require(<item:create_dd:lapis_sheet>)
+	.loops(18)
+	.addOutput(<item:create_dd:integrated_circuit>, 6)
+	.addOutput(<item:create_dd:lapis_sheet>,1)
+	.addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:create:sturdy_sheet>))
+	.addStep<mods.createtweaker.PressingRecipe>((rb) => rb.duration(140))
+	.addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<tag:items:forge:nuggets/electrum>))
+);
+<recipetype:create:sequenced_assembly>.addRecipe(<recipetype:create:sequenced_assembly>.builder("integrated_mechanism5")
+	.transitionTo(<item:create_dd:incomplete_integrated_circuit>)
+	.require(<item:create_dd:lapis_sheet>)
+	.loops(18)
+	.addOutput(<item:create_dd:integrated_circuit>, 6)
+	.addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:ae2:nether_quartz_cutting_knife>.anyDamage()))
+	.addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:create:sturdy_sheet>))
+	.addStep<mods.createtweaker.PressingRecipe>((rb) => rb.duration(140))
+	.addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<tag:items:forge:nuggets/electrum>))
+);
+<recipetype:create:sequenced_assembly>.addRecipe(<recipetype:create:sequenced_assembly>.builder("integrated_mechanism5_1")
+	.transitionTo(<item:create_dd:incomplete_integrated_circuit>)
+	.require(<item:create_dd:lapis_sheet>)
+	.loops(18)
+	.addOutput(<item:create_dd:integrated_circuit>, 6)
+	.addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:ae2:certus_quartz_cutting_knife>.anyDamage()))
+	.addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:create:sturdy_sheet>))
+	.addStep<mods.createtweaker.PressingRecipe>((rb) => rb.duration(140))
+	.addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<tag:items:forge:nuggets/electrum>))
+);
+
+
+
 
 <recipetype:create:sequenced_assembly>.remove(<item:balancedflight:flight_anchor>);
 <recipetype:create:sequenced_assembly>.addRecipe(<recipetype:create:sequenced_assembly>.builder("flight_anchor")
@@ -202,7 +276,7 @@ craftingTable.addShaped("pipe_pressurizer",<item:prettypipes:pressurizer>,[
 	.addOutput(<item:balancedflight:flight_anchor>, 1)
 	.addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:create:railway_casing>))
 	.addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:create_dd:integrated_mechanism>))
-	.addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:minecraft:feather>))
+	.addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:minecraft:phantom_membrane>))
 );
 
 recipes.remove(<item:prettypipes:item_terminal>);
@@ -212,25 +286,35 @@ recipes.remove(<item:prettypipes:item_terminal>);
 	[<item:create_dd:integrated_mechanism>,<item:create:railway_casing>,<item:create_dd:integrated_mechanism>],
 ]);
 
+
+<recipetype:create:mechanical_crafting>.remove(<item:createoreexcavation:drilling_machine>);
+<recipetype:create:mechanical_crafting>.addRecipe("drilling_machine",<item:createoreexcavation:drilling_machine>,[
+	[<item:create:brass_casing>,<item:create:railway_casing>,<item:create:railway_casing>,<item:create:railway_casing>,<item:create:brass_casing>],
+	[<item:create:railway_casing>,<item:create:metal_girder>,<item:immersiveengineering:fluid_pump>,<item:create:metal_girder>,<item:create:railway_casing>],
+	[<item:create:railway_casing>,<item:create:railway_casing>,<item:create:mechanical_drill>,<item:create:railway_casing>,<item:create:railway_casing>],
+	[<item:create:railway_casing>,<item:create:metal_girder>,<item:create:copper_casing>,<item:create:metal_girder>,<item:create:railway_casing>],
+	[<item:create:brass_casing>,<item:create:railway_casing>,<item:create:railway_casing>,<item:create:railway_casing>,<item:create:brass_casing>]
+]);
+
 //tier2 base machines
 recipes.remove(<item:storagedrawers:controller_slave>);
 recipes.remove(<item:immersiveengineering:generator>);
 //recipes.remove(<item:create:content_observer>);
 recipes.remove(<item:storagedrawers:controller>);
 //recipes.remove(<item:create:mechanical_arm>);
-recipes.remove(<item:engineersdecor:small_solar_panel>);
+//recipes.remove(<item:engineersdecor:small_solar_panel>);
 <recipetype:create:mechanical_crafting>.remove(<item:create_sa:brass_drone_item>);
 //recipes.remove(<item:createaddition:portable_energy_interface>);
 
 
 //recipes.remove(<item:create:mechanical_crafter>);
 //recipes.remove(<item:create:rotation_speed_controller>);
-recipes.remove(<item:engineersdecor:small_solar_panel>);
-recipes.remove(<item:buzzydrones:idle_station>);
+//recipes.remove(<item:engineersdecor:small_solar_panel>);
+//recipes.remove(<item:buzzydrones:idle_station>);
 recipes.remove(<item:immersiveengineering:thermoelectric_generator>);
 recipes.remove(<item:immersiveengineering:dynamo>);
 recipes.remove(<item:immersiveengineering:cloche>);
-recipes.remove(<item:autosmithingtable:auto_smithing_table>);
+//recipes.remove(<item:autosmithingtable:auto_smithing_table>);
 
 
 
@@ -248,10 +332,16 @@ stoneCutter.addRecipe("brass_drone",<item:create_sa:brass_drone_item>,c2core);
 
 //smithing.addRecipe("mechanical_crafting",<item:create:mechanical_crafter>*5,c2core,<item:create:crafting_blueprint>);
 //smithing.addRecipe("speed_controller",<item:create:rotation_speed_controller>,c2core,<item:create:adjustable_chain_gearshift>);
-smithing.addRecipe("solar_panel",<item:engineersdecor:small_solar_panel>,c2core,<item:minecraft:daylight_detector>);
+//smithing.addRecipe("solar_panel",<item:engineersdecor:small_solar_panel>,c2core,<item:minecraft:daylight_detector>);
 smithing.addRecipe("kinetic_dynamo",<item:immersiveengineering:dynamo>,c2core,<item:immersiveengineering:coil_lv>);
 smithing.addRecipe("thermionic_generator",<item:immersiveengineering:thermoelectric_generator>,c2core,<item:immersiveengineering:sheetmetal_constantan>);
-smithing.addRecipe("idle_station",<item:buzzydrones:idle_station>,c2core,<item:minecraft:beehive>);
+//smithing.addRecipe("idle_station",<item:buzzydrones:idle_station>,<item:create:railway_casing>,<item:minecraft:beehive>);
 //smithing.addRecipe("electric_motor",<item:createaddition:electric_motor>,c2core,<item:immersiveengineering:dynamo>);
 smithing.addRecipe("garden_cloche",<item:immersiveengineering:cloche>,c2core,<item:immersiveengineering:light_bulb>);
-smithing.addRecipe("auto_smithingtable",<item:autosmithingtable:auto_smithing_table>,c2core,<item:minecraft:smithing_table>);
+//smithing.addRecipe("auto_smithingtable",<item:autosmithingtable:auto_smithing_table>,c2core,<item:minecraft:smithing_table>);
+
+
+recipes.remove(<item:entangled:block>);
+//craftingTable.addShapeless("entangled",<item:entangled:block>,[<item:create:railway_casing>,<item:create_dd:chromatic_block>]);
+craftingTable.addShapeless("entangled_reset",<item:entangled:block>,[<item:entangled:block>]);
+<recipetype:create:item_application>.addRecipe("entangled",[<item:entangled:block>],<item:create:railway_casing>,<item:create_dd:chromatic_compound>,false);

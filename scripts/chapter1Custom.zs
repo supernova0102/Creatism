@@ -44,6 +44,44 @@ craftingTable.addShaped("iron_component_recipe_changed",<item:immersiveengineeri
 	.addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:create:andesite_alloy>))
 );
 
+//cog wheels
+recipes.remove(<item:create:cogwheel>);
+recipes.remove(<item:create:large_cogwheel>);
+
+craftingTable.addShaped("cogwheel",<item:create:cogwheel>,
+[
+	[<tag:items:minecraft:wooden_slabs>,<tag:items:minecraft:wooden_slabs>,<tag:items:minecraft:wooden_slabs>],
+	[<tag:items:minecraft:wooden_slabs>,<item:create:shaft>,<tag:items:minecraft:wooden_slabs>],
+	[<tag:items:minecraft:wooden_slabs>,<tag:items:minecraft:wooden_slabs>,<tag:items:minecraft:wooden_slabs>]
+]);
+craftingTable.addShaped("largewheel",<item:create:large_cogwheel>,
+[
+	[<tag:items:minecraft:planks>,<tag:items:minecraft:planks>,<tag:items:minecraft:planks>],
+	[<tag:items:minecraft:planks>,<item:create:shaft>,<tag:items:minecraft:planks>],
+	[<tag:items:minecraft:planks>,<tag:items:minecraft:planks>,<tag:items:minecraft:planks>]
+]);
+craftingTable.addShapeless("cogwheel9",<item:create:cogwheel>*9,[<item:create_compressed:cogwheel_block>]);
+craftingTable.addShapeless("largewheel9",<item:create:large_cogwheel>*9,[<item:create_compressed:large_cogwheel_block>]);
+
+<recipetype:create:sequenced_assembly>.addRecipe(
+	<recipetype:create:sequenced_assembly>
+	.builder("assembly_cogwheel")
+	.transitionTo(<item:create:shaft>)
+	.require(<item:create:shaft>)
+	.loops(4)
+	.addOutput(<item:create:cogwheel>*2, 1)
+	.addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<tag:items:minecraft:planks>))
+);
+<recipetype:create:sequenced_assembly>.addRecipe(
+	<recipetype:create:sequenced_assembly>
+	.builder("assembly_largewheel")
+	.transitionTo(<item:create:cogwheel>)
+	.require(<item:create:cogwheel>)
+	.loops(4)
+	.addOutput(<item:create:large_cogwheel>*2, 1)
+	.addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<tag:items:minecraft:planks>))
+);
+
 //andesite_casing
 <recipetype:create:item_application>.remove(baseMachineCore);
 
@@ -55,18 +93,16 @@ recipes.remove(<item:create:andesite_alloy>);
 <recipetype:create:mixing>.remove(<item:create:andesite_alloy>);
 
 
-craftingTable.addShaped("changed_andesite_alloy", <item:create:andesite_alloy>*2,[[<item:minecraft:andesite>,<item:supplementaries:daub>],[<item:supplementaries:daub>,<item:minecraft:andesite>]]);
-
-<recipetype:create:mixing>.addRecipe("andesite_alloy",<constant:create:heat_condition:none>,[<item:create:andesite_alloy>*2%100],[<item:supplementaries:daub>,<item:minecraft:andesite>],[] as crafttweaker.api.fluid.FluidIngredient[],100);
-
+blastFurnace.addRecipe("andesite_alloy_smelting",<item:create:andesite_alloy>,<item:supplementaries:daub>,0.0,100);
 
 //daub, resource for andesite alloy
 
 recipes.remove(<item:supplementaries:daub>);
 
-craftingTable.addShapeless("daub",<item:supplementaries:daub>*2,[<item:exnihilosequentia:porcelain_clay>,<item:exnihilosequentia:porcelain_clay>,<item:exnihilosequentia:porcelain_clay>,<item:exnihilosequentia:porcelain_clay>]);
-craftingTable.addShapeless("daub2",<item:supplementaries:daub>*4,[<item:exnihilosequentia:porcelain_clay>,<item:exnihilosequentia:porcelain_clay>,<item:farmersdelight:canvas>,<item:farmersdelight:tree_bark>]);
+craftingTable.addShapeless("daub",<item:supplementaries:daub>*2,[<item:exnihilosequentia:porcelain_clay>,<item:minecraft:andesite>,<item:minecraft:andesite>,<item:exnihilosequentia:porcelain_clay>]);
+craftingTable.addShapeless("daub2",<item:supplementaries:daub>*2,[<item:exnihilosequentia:porcelain_clay>,<item:minecraft:andesite>,<item:farmersdelight:canvas>,<item:farmersdelight:tree_bark>]);
 
+//grinding to make sand
 
 //washing gravel
 
@@ -84,6 +120,8 @@ craftingTable.addShapeless("daub2",<item:supplementaries:daub>*4,[<item:exnihilo
 <recipetype:create:splashing>.addRecipe("washing_dirt",[
 <item:exnihilosequentia:stone_pebble>%10, <item:exnihilosequentia:granite_pebble>%5,<item:exnihilosequentia:andesite_pebble>%15,<item:exnihilosequentia:calcite_pebble>%5,<item:exnihilosequentia:diorite_pebble>%5,<item:exnihilosequentia:dripstone_pebble>%10,<item:exnihilosequentia:tuff_pebble>%10
 ],<item:minecraft:dirt>, 100);
+
+<recipetype:create:milling>.addRecipe("milling_sand",[<item:minecraft:sand>*2%100],<item:minecraft:packed_mud>,200);
 
 
 
@@ -125,6 +163,7 @@ recipes.remove(<item:create:andesite_tunnel>);
 recipes.remove(<item:create:windmill_bearing>);
 recipes.remove(<item:create:gantry_carriage>);
 
+
 stoneCutter.addRecipe("redstone_contact",<item:create:redstone_contact>*2,c1core);
 stoneCutter.addRecipe("mechanical_bearing",<item:create:mechanical_bearing>,c1core);
 stoneCutter.addRecipe("rope_polley",<item:create:rope_pulley>,c1core);
@@ -148,6 +187,7 @@ recipes.remove(<item:create:mechanical_mixer>);
 recipes.remove(<item:sliceanddice:slicer>);
 recipes.remove(<item:createsifter:sifter>);
 recipes.remove(<item:create:mechanical_drill>);
+
 
 smithing.addRecipe("rolling_mill",<item:createaddition:rolling_mill>,c1core,<item:create:shaft>);
 //smithing.addRecipe("encased_fan",<item:create:encased_fan>,c1core,<item:create:propeller>);
@@ -179,18 +219,20 @@ smithing.addRecipe("batch_composter",<item:thermal:device_composter>,baseMachine
 //aquatic_entangler
 recipes.remove(<item:thermal:device_fisher>);
 
-smithing.addRecipe("aquatic_entangler",<item:thermal:device_fisher>,baseMachineCore,<tag:items:forge:fishing_rods>);
+smithing.addRecipe("aquatic_entangler",<item:thermal:device_fisher>,baseMachineCore,<item:minecraft:fishing_rod>);
 
 var c1_1machine = [
 	[<item:create:mechanical_harvester>,<item:createdeco:zinc_sheet>],
 	[<item:create:mechanical_saw>,<item:thermal:saw_blade>],
 	[<item:create:mechanical_drill>,<item:createindustry:drill_head>],
 	[<item:create:encased_fan>,<item:create:propeller>],
-	[<item:create:gearshift>,<item:minecraft:redstone_torch>],
+	[<item:create:gearshift>,<item:minecraft:tripwire_hook>],
 	[<item:create:clutch>,<item:minecraft:lever>],
 	[<item:create:mechanical_plough>,<item:create:iron_sheet>],
 	[<item:create:mechanical_roller>,<item:createdeco:andesite_hull>],
-	[<item:create:adjustable_chain_gearshift>,<item:create:electron_tube>]
+	[<item:create:adjustable_chain_gearshift>,<item:create:electron_tube>],
+	[<item:create:encased_chain_drive>,<item:minecraft:chain>],
+	[<item:create_dd:reversed_gearshift>,<item:minecraft:stone_button>]
 ];
 
 var c1_1core = <item:create:andesite_casing>;
@@ -225,25 +267,76 @@ var chasis2 = <item:create:secondary_linear_chassis>;
 <recipetype:create:item_application>.remove(<item:create:copper_casing>);
 
 <recipetype:create:item_application>.addRecipe("copper_casing1",[<item:create:copper_casing>],<item:create:andesite_casing>,<item:create_dd:sealed_mechanism>,false);
-smithing.addRecipe("copper_casing",<item:create:andesite_casing>,<item:create_dd:sealed_mechanism>,<item:create:copper_casing>);
+smithing.addRecipe("copper_casing",<item:create:copper_casing>,<item:create_dd:sealed_mechanism>,<item:create:andesite_casing>);
 
 
 
 craftingTable.addShaped("sealed_mechanism",<item:create_dd:sealed_mechanism>,
 [
-    [<item:minecraft:air>,<item:thermal:cured_rubber_block>,<item:minecraft:air>],
+    [<item:minecraft:air>,<item:minecraft:honeycomb>,<item:minecraft:air>],
     [<item:minecraft:copper_ingot>,c1_1core,<item:minecraft:copper_ingot>],
     [<item:minecraft:air>,<item:thermal:cured_rubber_block>,<item:minecraft:air>]
 ]);
 
 <recipetype:create:sequenced_assembly>.addRecipe(<recipetype:create:sequenced_assembly>.builder("sealed_mechanism")
-	.transitionTo(<item:thermal:cured_rubber>)
+	.transitionTo(<item:create_dd:incomplete_sealed_mechanism>)
 	.require(<item:thermal:cured_rubber>)
 	.loops(1)
-	.addOutput(<item:create_dd:sealed_mechanism>*2, 1)
-	.addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<tag:items:forge:gears/copper>))
+	.addOutput(<item:create_dd:sealed_mechanism>*4, 1)
 	.addStep<mods.createtweaker.FillingRecipe>((rb) => rb.require(<fluid:thermal:latex> *125))
 	.addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<tag:items:forge:glass/silica>))
 	.addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:minecraft:copper_ingot>))
 );
+<recipetype:create:sequenced_assembly>.addRecipe(<recipetype:create:sequenced_assembly>.builder("sealed_mechanism2")
+	.transitionTo(<item:create_dd:incomplete_sealed_mechanism>)
+	.require(<item:thermal:cured_rubber>)
+	.loops(1)
+	.addOutput(<item:create_dd:sealed_mechanism>*2, 1)
+	.addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:minecraft:honeycomb>))
+	.addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<tag:items:forge:glass/silica>))
+	.addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:minecraft:copper_ingot>))
+);
+<recipetype:create:sequenced_assembly>.addRecipe(<recipetype:create:sequenced_assembly>.builder("sealed_mechanism3")
+	.transitionTo(<item:create_dd:incomplete_sealed_mechanism>)
+	.require(<item:minecraft:dried_kelp_block>)
+	.loops(1)
+	.addOutput(<item:create_dd:sealed_mechanism>*1, 1)
+	.addStep<mods.createtweaker.CuttingRecipe>((rb) => rb.duration(50))
+	.addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:minecraft:honeycomb>))
+	.addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<tag:items:forge:glass/silica>))
+	.addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:minecraft:copper_ingot>))
+);
+<recipetype:create:sequenced_assembly>.addRecipe(<recipetype:create:sequenced_assembly>.builder("sealed_mechanism4")
+	.transitionTo(<item:minecraft:dried_kelp_block>)
+	.require(<item:minecraft:dried_kelp_block>)
+	.loops(1)
+	.addOutput(<item:create_dd:sealed_mechanism>*2, 1)
+	.addStep<mods.createtweaker.FillingRecipe>((rb) => rb.require(<fluid:thermal:latex> *125))
+	.addStep<mods.createtweaker.CuttingRecipe>((rb) => rb.duration(50))
+	.addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<tag:items:forge:glass/silica>))
+	.addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:minecraft:copper_ingot>))
+);
 
+<recipetype:create:sequenced_assembly>.addRecipe(<recipetype:create:sequenced_assembly>.builder("sealed_mechanism5")
+	.transitionTo(<item:minecraft:dried_kelp_block>)
+	.require(<item:minecraft:dried_kelp_block>)
+	.loops(1)
+	.addOutput(<item:create_dd:sealed_mechanism>*1, 1)
+	.addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:createindustry:water_insulation>))
+	.addStep<mods.createtweaker.CuttingRecipe>((rb) => rb.duration(50))
+	.addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<tag:items:forge:glass/silica>))
+	.addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:minecraft:copper_ingot>))
+);
+<recipetype:create:sequenced_assembly>.addRecipe(<recipetype:create:sequenced_assembly>.builder("sealed_mechanism6")
+	.transitionTo(<item:create_dd:incomplete_sealed_mechanism>)
+	.require(<item:thermal:cured_rubber>)
+	.loops(1)
+	.addOutput(<item:create_dd:sealed_mechanism>*2, 1)
+	.addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:createindustry:water_insulation>))
+	.addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<tag:items:forge:glass/silica>))
+	.addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:minecraft:copper_ingot>))
+);
+
+//heat engine
+//hydraric engine
+//in chap3 script

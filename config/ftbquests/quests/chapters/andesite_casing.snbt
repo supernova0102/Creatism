@@ -1,492 +1,596 @@
 {
 	default_hide_dependency_lines: false
-	default_quest_shape: ""
+	default_quest_shape: "hexagon"
+	disable_toast: true
 	filename: "andesite_casing"
 	group: "4FD6447209893FFA"
 	icon: "create:andesite_casing"
 	id: "2AF6639C0F4B9326"
-	order_index: 1
+	order_index: 0
 	quest_links: [ ]
 	quests: [
 		{
-			dependencies: ["1EEB505A12B555D1"]
-			id: "79F65B6F0899DD52"
-			size: 1.5d
-			tasks: [{
-				id: "50BE1297B020A0ED"
-				item: "create:andesite_casing"
-				type: "item"
-			}]
-			x: 3.5d
-			y: 0.0d
-		}
-		{
-			dependencies: [
-				"142C45B555308455"
-				"49573E5503E03EBA"
+			dependencies: ["19F0DAF5FFFDA8A6"]
+			description: [
+				"챕터 1에선 간단한 기계장치를 생산해 볼겁니다."
+				"수집, 가공, 조합. 이 세가지 절차만 다루면 되지요."
+				""
+				"액체재료, 전선연결, 장거리 운송, 소모성 공구, 불량품 문제, 생산환경 제한, 대규모 분류같은 어려운 요소가 하나도 없습니다!"
 			]
-			icon: "create:andesite_alloy"
-			id: "4617D3DDF9F45BBB"
-			tasks: [
-				{
-					id: "4AAA56DBBCFFE55A"
-					item: "create:andesite_alloy"
-					type: "item"
-				}
-				{
-					id: "41EDEA261CD27906"
-					type: "checkmark"
-				}
-			]
-			x: -2.5d
-			y: -4.0d
-		}
-		{
-			dependencies: [
-				"7AFE96AE1400D0BD"
-				"7E83C82EE334F782"
-			]
-			icon: "minecraft:stripped_oak_log"
-			id: "441AACBDA5692F2A"
-			tasks: [{
-				id: "48AC86D375E01038"
-				type: "checkmark"
-			}]
-			x: 0.5d
-			y: -4.0d
-		}
-		{
-			dependencies: [
-				"779D3DF4F53368D3"
-				"4835F67041A12B67"
-			]
-			icon: "supplementaries:daub"
-			id: "142C45B555308455"
-			tasks: [
-				{
-					id: "3CEF6041BC1CBAA3"
-					item: "supplementaries:daub"
-					type: "item"
-				}
-				{
-					id: "1FF7B1C537E977F2"
-					type: "checkmark"
-				}
-			]
-			x: -1.5d
-			y: -4.5d
-		}
-		{
-			dependencies: [
-				"1E20474E33ABA1CD"
-				"0D078C18220529C5"
-			]
-			dependency_requirement: "one_completed"
-			icon: "minecraft:andesite"
-			id: "49573E5503E03EBA"
-			tasks: [
-				{
-					id: "12975DD0CF3AA71C"
-					item: "minecraft:andesite"
-					type: "item"
-				}
-				{
-					id: "51E9CBEBC2441758"
-					type: "checkmark"
-				}
-			]
-			x: -3.0d
-			y: -5.0d
-		}
-		{
-			dependencies: ["5C0D9DC31C6E6E19"]
-			icon: "minecraft:oak_log"
-			id: "7AFE96AE1400D0BD"
-			tasks: [{
-				id: "303D1B22F96A1C46"
-				type: "checkmark"
-			}]
-			x: 1.0d
-			y: -5.0d
-		}
-		{
-			dependencies: ["734892A7C10DA1CE"]
-			icon: "minecraft:clay_ball"
-			id: "4835F67041A12B67"
-			tasks: [
-				{
-					id: "79F8162A8230DE8F"
-					item: "minecraft:clay_ball"
-					type: "item"
-				}
-				{
-					id: "4EAE7D6AAFA229FE"
-					type: "checkmark"
-				}
-			]
-			x: -2.0d
-			y: -5.5d
-		}
-		{
-			dependencies: ["21FFB33B6667B643"]
 			icon: "immersiveengineering:component_iron"
-			id: "1EEB505A12B555D1"
-			rewards: [
-				{
-					id: "7A080BCFBADCB0A7"
-					item: "create:builders_tea"
-					type: "item"
-				}
-				{
-					id: "58EB334320036050"
-					item: "create:honeyed_apple"
-					type: "item"
-				}
-			]
-			shape: "hexagon"
-			size: 3.0d
-			tasks: [
-				{
-					id: "1025E4D9D9184F1C"
-					item: "immersiveengineering:component_iron"
-					type: "item"
-				}
-				{
-					id: "44980A4C61B532F3"
-					type: "checkmark"
-				}
-			]
-			x: -1.0d
-			y: 0.0d
-		}
-		{
-			dependencies: [
-				"207EA3414E6ED2E9"
-				"505978F5E66FC1F8"
-			]
-			icon: "create:cogwheel"
-			id: "21FFB33B6667B643"
-			tasks: [
-				{
-					id: "3AF8B8DA6B082664"
-					item: "create:cogwheel"
-					type: "item"
-				}
-				{
-					id: "6DF2C7559DE9C29C"
-					item: "create:large_cogwheel"
-					type: "item"
-				}
-				{
-					id: "2C59579EB6EA854C"
-					type: "checkmark"
-				}
-			]
-			x: -1.0d
-			y: -2.5d
-		}
-		{
-			dependencies: ["441AACBDA5692F2A"]
-			icon: "minecraft:oak_planks"
-			id: "505978F5E66FC1F8"
+			id: "2DC5576F7412EF40"
+			size: 2.0d
 			tasks: [{
-				id: "5BA9E536DBF52180"
+				id: "2106333AD16D9036"
 				type: "checkmark"
 			}]
+			title: "기초기계공학 개론 "
 			x: 0.0d
-			y: -3.0d
+			y: -0.5d
 		}
 		{
-			dependencies: ["79F65B6F0899DD52"]
-			id: "0F06F9B6709BC305"
-			shape: "hexagon"
-			size: 3.0d
-			tasks: [{
-				id: "3A5B446CC2A77F00"
-				item: "immersiveengineering:light_engineering"
-				type: "item"
+			dependencies: ["2DC5576F7412EF40"]
+			description: [
+				"과도한 산업화는 환경악화를 불러옵니다."
+				""
+				"지구온난화나 생태계파괴 같은게 아닌"
+				"TPS와 FPS저하로 인한 플레이 환경의 악화를 말하는겁니다."
+				""
+				"과잉 생산을 감지해 생산체계의 작동을 멈추는것이 해결책이 될수 있습니다."
+				"기계장치 자체의 기능을 이용해도 좋고, 레드스톤 신호를 이용한 통제도 좋습니다."
+				""
+				"확실한건 환경악화를 고려하지 않은 산업화의 끝은 좋지 못하다는 것이죠."
+			]
+			icon: "create_sa:drone_controller"
+			id: "6ABDDC2702CB6ACA"
+			rewards: [{
+				id: "6CF1786E9D1CD449"
+				type: "xp_levels"
+				xp_levels: 5
 			}]
-			x: 3.5d
-			y: -3.0d
+			tasks: [{
+				id: "5BC06CA3F757998F"
+				type: "checkmark"
+			}]
+			title: "과잉생산과 최적화"
+			x: 2.0d
+			y: -0.5d
 		}
 		{
-			dependencies: ["22CE8702CA1B43B9"]
-			dependency_requirement: "one_completed"
-			icon: "minecraft:dripstone_block"
-			id: "734892A7C10DA1CE"
+			dependencies: ["2DC5576F7412EF40"]
+			description: [
+				"안산암! 땅을 파면 흔하다가도 막상 쓰려고 찾으면 없는 재료입니다."
+				"직접 채집할 필요가 있을까요? 없습니다! 아주 쉽게 만들수 있어요"
+			]
+			icon: "minecraft:andesite"
+			id: "1FAB27F197C48832"
+			shape: "square"
+			tasks: [{
+				id: "4F1D8E32AF43BBCA"
+				type: "checkmark"
+			}]
+			title: "안산암?"
+			x: -2.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["2DC5576F7412EF40"]
+			description: [
+				"강가에서 발견 가능한 점토는 쉽게 만들수 없는 재료입니다."
+				"흐르는 강이 퇴적시킨 규소, 유기물, 그밖에 복잡한것들이 더 복잡한 방식으로 혼합되어야 하죠"
+				""
+				"물론 우리가 그정도로 어렵게 만들 필요는 없습니다."
+				"더 간단한 방법이 있어요. "
+			]
+			icon: "minecraft:clay_ball"
+			id: "254469C46056BF4B"
+			shape: "square"
+			tasks: [{
+				id: "7A85ACA71B2E25B7"
+				type: "checkmark"
+			}]
+			title: "점토?"
+			x: -1.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["2DC5576F7412EF40"]
+			description: [
+				"단백질, 콜라겐, 미네랄 그리고 다수의 칼슘으로 구성된 뼈는 상당히 유용한 재료입니다."
+				"물론 뼈 체로 사용해서 뭔가를 만들기는 꺼림찍하니 가공해서 사용하죠"
+				""
+				"기계를 만들땐 뼛가루로 갈아서 합금을 만들어 사용합니다."
+			]
+			icon: "minecraft:bone_meal"
+			id: "0E859E1E7F39AF12"
+			shape: "square"
+			tasks: [{
+				id: "5B3273B64A43DF4E"
+				type: "checkmark"
+			}]
+			title: "뼛가루?"
+			x: 1.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["2DC5576F7412EF40"]
+			description: [
+				"불에 잘 타긴 해도 가공하기 쉽고 적당히 가벼우며 적당히 단단합니다!"
+				"괜히 도구 손잡이로 쓰는게 아니지요."
+				""
+				"거기다 얻기도 쉽습니다!"
+			]
+			icon: "minecraft:spruce_log"
+			id: "6A8F6596E6EFD52F"
+			shape: "square"
+			tasks: [{
+				id: "3E96374CF726A8CB"
+				type: "checkmark"
+			}]
+			title: "나무?"
+			x: 2.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["1FAB27F197C48832"]
+			description: [
+				"흐르는 물과 흐르는 용암이 만나면 화성암이 나옵니다."
+				"만나는 지점에 무엇이 있냐에 따라서 어떤 화성암이 나오냐가 달라지죠"
+				""
+				"안산암의 경우 특별하게도 밑에 안산암을 두면 만들어집니다."
+				"준비됐으면 부수면 됩니다."
+			]
+			icon: "minecraft:lava_bucket"
+			id: "48F58FB041BD1AC5"
+			tasks: [{
+				id: "3641AAEE30C9EAD8"
+				type: "checkmark"
+			}]
+			title: "질량 보존의 법칙? 그게뭐죠?"
+			x: -2.5d
+			y: 2.5d
+		}
+		{
+			dependencies: ["254469C46056BF4B"]
+			description: [
+				"모래에 물을부어 점토를 만드는것도 방법이죠"
+				""
+				"모래는 망치로 자갈을 부수거나 단단한 진흙을 갈아서 만들수 있습니다."
+			]
+			icon: "minecraft:sand"
+			id: "5EA900C9F2355E91"
 			tasks: [
 				{
-					id: "2FD44F55AE9EE95C"
+					id: "2DE9A8D84ADF7D04"
+					item: "minecraft:sand"
+					type: "item"
+				}
+				{
+					id: "7BDE418B97A7832F"
+					type: "checkmark"
+				}
+			]
+			title: "모래를 통해서"
+			x: -0.5d
+			y: 2.5d
+		}
+		{
+			dependencies: ["0E859E1E7F39AF12"]
+			description: [
+				"농작물도 유기물입니다!"
+				"미네랄과 콜라겐, 단백질과 칼슘이 많이 들었는지는 모르겠지만"
+				"동물도 농작물도 유기물이니 비슷하지 않겠습니까?"
+				""
+				"퇴비통에 작물을 넣어 숙성시키면 뼛가루를 얻을수 있습니다."
+				"깔때기나 슈트등으로 재료를 넣어주면 됩니다."
+			]
+			icon: "minecraft:composter"
+			id: "0C1137A5894BC9EA"
+			tasks: [
+				{
+					id: "5B7C4BEA82678A4B"
+					item: "minecraft:composter"
+					type: "item"
+				}
+				{
+					id: "38222084C62B598E"
+					type: "checkmark"
+				}
+			]
+			title: "농업"
+			x: 1.5d
+			y: 2.5d
+		}
+		{
+			dependencies: ["254469C46056BF4B"]
+			description: [
+				"진흙을 점석석과 종유석 위에 두면 시간이 지남에 따라 점토가 됩니다."
+				""
+				"오래걸리긴 해도 간단하고 쉬운 방법이죠."
+				""
+				"시간이 없다면 점석석을 갈아버려도 되긴 합니다."
+			]
+			icon: "minecraft:dripstone_block"
+			id: "4EA2BA7892FAFA4C"
+			tasks: [
+				{
+					id: "4608BCEFE1CA343D"
 					item: "minecraft:dripstone_block"
 					type: "item"
 				}
 				{
-					id: "15B4CE0E4ED1D2DA"
+					id: "16FDF46E158ED572"
 					type: "checkmark"
 				}
 			]
-			x: -2.0d
-			y: -6.5d
+			title: "점석석 생산법"
+			x: -1.5d
+			y: 2.5d
 		}
 		{
-			dependencies: ["19F0DAF5FFFDA8A6"]
-			icon: "minecraft:oak_log"
-			id: "1E0DB48CA76F0374"
-			shape: "square"
-			tasks: [{
-				id: "7B1AE4C85D09A605"
-				type: "checkmark"
-			}]
-			x: 1.0d
-			y: -8.5d
-		}
-		{
-			dependencies: ["19F0DAF5FFFDA8A6"]
-			icon: "minecraft:bone_meal"
-			id: "4BFB9EB122796B21"
-			shape: "square"
-			tasks: [{
-				id: "29E55A3F8C71B585"
-				type: "checkmark"
-			}]
-			x: -0.5d
-			y: -8.5d
-		}
-		{
-			dependencies: ["19F0DAF5FFFDA8A6"]
-			icon: "minecraft:clay_ball"
-			id: "704B0C329A5DC71E"
-			shape: "square"
-			tasks: [{
-				id: "396DE0DD55EB21DF"
-				type: "checkmark"
-			}]
-			x: -2.0d
-			y: -8.5d
-		}
-		{
-			dependencies: ["19F0DAF5FFFDA8A6"]
-			icon: "minecraft:andesite"
-			id: "164D829DB47A8BCF"
-			shape: "square"
-			tasks: [{
-				id: "69D616F0946500F3"
-				type: "checkmark"
-			}]
-			x: -3.0d
-			y: -8.5d
-		}
-		{
-			dependencies: [
-				"164D829DB47A8BCF"
-				"704B0C329A5DC71E"
+			dependencies: ["0E859E1E7F39AF12"]
+			description: [
+				"뼈를 얻는 가장 좋은 방법은 동물입니다."
+				""
+				"꺼림찍한 활쏘는 언데드가 아닙니다."
+				""
+				"양이나 돼지 소를 키워서 도축하여 뼈를 얻을수 있습니다."
 			]
-			icon: "minecraft:dirt"
-			id: "22CE8702CA1B43B9"
-			shape: "square"
-			tasks: [
-				{
-					id: "5380C7A416AB0698"
-					item: "minecraft:dirt"
-					type: "item"
-				}
-				{
-					id: "686551B878EE676C"
-					type: "checkmark"
-				}
-			]
-			x: -2.5d
-			y: -7.5d
-		}
-		{
-			dependencies: ["4BFB9EB122796B21"]
-			icon: "minecraft:wheat_seeds"
-			id: "6577198F21EE141E"
-			tasks: [
-				{
-					id: "5409E207D9D15E0F"
-					type: "checkmark"
-				}
-				{
-					id: "5C07424286AA9BC2"
-					item: "minecraft:composter"
-					type: "item"
-				}
-			]
-			x: -1.0d
-			y: -7.0d
-		}
-		{
-			dependencies: [
-				"6577198F21EE141E"
-				"6E24211EA4EC3D2B"
-			]
-			dependency_requirement: "one_completed"
-			icon: "minecraft:bone_meal"
-			id: "779D3DF4F53368D3"
-			tasks: [
-				{
-					id: "2905CC7905024A7A"
-					item: "minecraft:bone_meal"
-					type: "item"
-				}
-				{
-					id: "34A75B78FFAD9488"
-					type: "checkmark"
-				}
-			]
-			x: -0.5d
-			y: -5.5d
-		}
-		{
-			dependencies: ["1E0DB48CA76F0374"]
-			icon: "minecraft:oak_sapling"
-			id: "5C0D9DC31C6E6E19"
-			shape: "gear"
-			tasks: [{
-				id: "2FFCBC15498BE16D"
-				type: "checkmark"
-			}]
-			x: 1.0d
-			y: -6.5d
-		}
-		{
-			dependencies: ["4617D3DDF9F45BBB"]
-			icon: "create:shaft"
-			id: "207EA3414E6ED2E9"
-			tasks: [
-				{
-					id: "09FFEA2C7561D5C7"
-					item: "create:shaft"
-					type: "item"
-				}
-				{
-					id: "6C822DF3AC640FB0"
-					type: "checkmark"
-				}
-			]
-			x: -2.0d
-			y: -3.0d
-		}
-		{
-			dependencies: ["4BFB9EB122796B21"]
 			icon: "minecraft:bone"
-			id: "6E24211EA4EC3D2B"
+			id: "796FAC7E3A0282EC"
 			tasks: [
 				{
-					id: "1B807F35F50C0A31"
+					id: "529933831DA9C8E6"
 					item: "minecraft:bone"
 					type: "item"
 				}
 				{
-					id: "541CADA28099D8FB"
+					id: "72201285319CC8DD"
 					type: "checkmark"
 				}
 			]
-			x: 0.0d
-			y: -7.0d
+			title: "도축업"
+			x: 0.5d
+			y: 2.5d
 		}
 		{
-			dependencies: ["19F0DAF5FFFDA8A6"]
+			dependencies: ["6A8F6596E6EFD52F"]
 			description: [
-				"나무 판자를 만들기위해 별 생각 없이 톱에 나무를 넣으면 끔찍한 일이 일어납니다."
-				"원하지 않았던 아이템이 나오는 일이 빈번하게 발생하죠."
+				"귀찮아도 어쩔수 없습니다."
 				""
-				"아이템 필터를 설정하여 이런일을 예방할수 있습니다."
-				"아니면 Slicer를 사용해도 됩니다."
+				"기계손과 톱으로 나무를 수확하는 농장을 만들어 줍시다."
+				"이왕이면 가문비나 정글나무처럼 높게 자라는 나무가 생산성 향상에 도움이 되겠지요."
 			]
-			icon: {
-				Count: 1b
-				id: "create:filter"
-				tag: {
-					Items: { }
-				}
-			}
-			id: "7E83C82EE334F782"
-			subtitle: "불량품 걸러내기"
+			icon: "minecraft:spruce_sapling"
+			id: "644076EDF3119AE7"
 			tasks: [{
-				id: "2C1451864B1C93CA"
+				id: "5BF2C5582816D30F"
 				type: "checkmark"
 			}]
-			title: "필터 사용의 중요성"
-			x: -0.5d
-			y: -4.5d
+			title: "산림업"
+			x: 2.5d
+			y: 2.5d
 		}
 		{
-			dependencies: ["2AE17160F2F11BC4"]
-			id: "2BF916B5A36F0B6D"
-			tasks: [{
-				id: "0D7C0B49EECEA516"
-				item: "minecraft:copper_ingot"
-				type: "item"
-			}]
-			x: 2.0d
+			dependencies: ["48F58FB041BD1AC5"]
+			icon: "minecraft:andesite"
+			id: "49335FDAE541596D"
+			tasks: [
+				{
+					id: "4897C78A1A0AD21E"
+					item: "minecraft:andesite"
+					type: "item"
+				}
+				{
+					id: "020225C8E51E1AA0"
+					type: "checkmark"
+				}
+			]
+			title: "안산암!"
+			x: -2.5d
 			y: 3.5d
 		}
 		{
 			dependencies: [
-				"79F65B6F0899DD52"
-				"2BF916B5A36F0B6D"
-				"53E838CE3E5781C6"
+				"5EA900C9F2355E91"
+				"4EA2BA7892FAFA4C"
 			]
-			id: "4785DFDF2F043B0E"
-			shape: "hexagon"
-			size: 1.5d
-			tasks: [{
-				id: "09D047A5167E24D6"
-				item: "create:copper_casing"
-				type: "item"
-			}]
-			x: 3.5d
-			y: 3.5d
-		}
-		{
-			dependencies: ["164D829DB47A8BCF"]
-			icon: "minecraft:lava_bucket"
-			id: "0D078C18220529C5"
+			dependency_requirement: "one_completed"
+			icon: "minecraft:clay_ball"
+			id: "30B39EC28DE887CD"
 			tasks: [
 				{
-					id: "2797982185469AF1"
-					item: "minecraft:lava_bucket"
+					id: "5D45C54D41A7D43E"
+					item: "minecraft:clay_ball"
 					type: "item"
 				}
 				{
-					id: "1AA05C0E2E84F7B5"
+					id: "352309A798FA7FF0"
 					type: "checkmark"
 				}
 			]
-			x: -4.0d
-			y: -7.0d
+			title: "점토!"
+			x: -1.0d
+			y: 3.5d
 		}
 		{
-			dependencies: ["22CE8702CA1B43B9"]
-			icon: "exnihilosequentia:andesite_pebble"
-			id: "1E20474E33ABA1CD"
+			dependencies: [
+				"0C1137A5894BC9EA"
+				"796FAC7E3A0282EC"
+			]
+			dependency_requirement: "one_completed"
+			icon: "minecraft:bone_meal"
+			id: "56CA9C11C617B692"
 			tasks: [
 				{
-					id: "6FA11186D250BE7B"
-					item: "exnihilosequentia:andesite_pebble"
+					id: "1C4AC764FF5C6D6E"
+					item: "minecraft:bone_meal"
 					type: "item"
 				}
 				{
-					id: "3D08FC922B0EE7D9"
+					id: "5A243EBCEA991291"
 					type: "checkmark"
 				}
 			]
-			x: -3.0d
-			y: -6.5d
+			title: "뼛가루!"
+			x: 1.0d
+			y: 3.5d
 		}
 		{
-			dependencies: ["19F0DAF5FFFDA8A6"]
-			id: "53E838CE3E5781C6"
+			dependencies: ["644076EDF3119AE7"]
+			icon: "minecraft:spruce_log"
+			id: "5D8D601EA819F79F"
 			tasks: [{
-				id: "09A1BEDC54C19FEE"
-				item: "thermal:latex_bucket"
+				id: "59EC19CDBD24C5E7"
+				item: {
+					Count: 1b
+					id: "itemfilters:tag"
+					tag: {
+						value: "minecraft:logs"
+					}
+				}
+				title: "Any #minecraft:logs"
 				type: "item"
 			}]
-			x: 5.0d
+			title: "나무!"
+			x: 2.5d
 			y: 3.5d
+		}
+		{
+			dependencies: [
+				"30B39EC28DE887CD"
+				"56CA9C11C617B692"
+			]
+			description: ["점토에 뼛가루를 섞는것 만으로도 재료의 강도를 한껏 높일수 있습니다."]
+			icon: "exnihilosequentia:porcelain_clay"
+			id: "214A1ED2F837F8ED"
+			tasks: [
+				{
+					id: "325ECF9863F05A00"
+					item: "exnihilosequentia:porcelain_clay"
+					type: "item"
+				}
+				{
+					id: "46D38CE50AA7F651"
+					type: "checkmark"
+				}
+			]
+			title: "도자기 점토"
+			x: 0.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["13928D0E615D56FB"]
+			description: [
+				"아무런 조약돌을 사용한것보다 단단한 안산암 합금입니다."
+				""
+				"기계제작에 핵심적인 재료들중 하나죠."
+			]
+			icon: "create:andesite_alloy"
+			id: "6DC2195156BBB3DE"
+			tasks: [
+				{
+					id: "2B6449A78B129A9E"
+					item: "create:andesite_alloy"
+					type: "item"
+				}
+				{
+					id: "15EFDC641EA4E496"
+					type: "checkmark"
+				}
+			]
+			title: "안산암 합금"
+			x: -1.5d
+			y: 5.5d
+		}
+		{
+			dependencies: ["5D8D601EA819F79F"]
+			description: [
+				"기계톱을 써도 좋고 도마위에서 도끼로 벗겨도 좋습니다"
+				""
+				"일단 불필요한 껍질을 벗겨내도록 합시다."
+			]
+			icon: "minecraft:stripped_spruce_log"
+			id: "729576FA1EF11E31"
+			tasks: [
+				{
+					id: "516B6D3F0422F49B"
+					item: {
+						Count: 1b
+						id: "itemfilters:tag"
+						tag: {
+							value: "forge:stripped_logs"
+						}
+					}
+					title: "Any #forge:stripped_logs"
+					type: "item"
+				}
+				{
+					id: "26B20615E623F5B7"
+					type: "checkmark"
+				}
+			]
+			title: "톱질 한번 더!"
+			x: 2.5d
+			y: 4.5d
+		}
+		{
+			dependencies: ["729576FA1EF11E31"]
+			description: [
+				"다시한번 톱질을해서 판자로 가공해 줍시다."
+				"껍질 벗긴 원목을 조금 남겨두는걸 잊지 마세요."
+				""
+				"안산암 터널을 사용하면 도움이 될겁니다."
+			]
+			icon: "minecraft:spruce_planks"
+			id: "452122BF4A46B6EC"
+			tasks: [
+				{
+					id: "60D4F125605B268B"
+					item: {
+						Count: 1b
+						id: "itemfilters:tag"
+						tag: {
+							value: "minecraft:planks"
+						}
+					}
+					title: "Any #minecraft:planks"
+					type: "item"
+				}
+				{
+					id: "0EDD321949DACF41"
+					type: "checkmark"
+				}
+			]
+			title: "한번만더!"
+			x: 1.5d
+			y: 5.5d
+		}
+		{
+			dependencies: [
+				"452122BF4A46B6EC"
+				"6DC2195156BBB3DE"
+			]
+			description: [
+				"동력전달에 아주 적절한 장치죠"
+				"크게 만들면 기계장치에 담기 어려우니 작게 만듭시다."
+			]
+			icon: "create:cogwheel"
+			id: "00D71DE41968FE9E"
+			tasks: [
+				{
+					id: "0B4ADD249FB6BFE8"
+					item: "create:cogwheel"
+					type: "item"
+				}
+				{
+					id: "3A943E982986D366"
+					type: "checkmark"
+				}
+			]
+			title: "톱니바퀴"
+			x: 0.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["00D71DE41968FE9E"]
+			description: [
+				"이름과 다르게 철이 필수는 아닙니다."
+				"다양한 기계장치의 부품으로 들어갑니다."
+			]
+			icon: "immersiveengineering:component_iron"
+			id: "7195967281782799"
+			shape: "gear"
+			tasks: [
+				{
+					id: "4B892D3F8B2D145B"
+					item: "immersiveengineering:component_iron"
+					type: "item"
+				}
+				{
+					id: "55B41784DCC888E7"
+					type: "checkmark"
+				}
+			]
+			title: "철 기계 부품"
+			x: 0.0d
+			y: 7.0d
+		}
+		{
+			dependencies: ["7195967281782799"]
+			description: [
+				"다양한 기계장치의 기반이 됩니다."
+				"아니면 장식용으로 써도 잘 어울리죠."
+			]
+			icon: "create:andesite_casing"
+			id: "7A7A80A243253D6F"
+			shape: "gear"
+			size: 2.0d
+			tasks: [
+				{
+					id: "72474C7738244CA6"
+					item: "create:andesite_casing"
+					type: "item"
+				}
+				{
+					id: "059CB78F022BC17C"
+					type: "checkmark"
+				}
+			]
+			title: "안산암 케이싱"
+			x: 0.0d
+			y: 8.5d
+		}
+		{
+			dependencies: [
+				"214A1ED2F837F8ED"
+				"49335FDAE541596D"
+			]
+			description: [
+				"도자기 점토를 단순히 많이 쌓아둬 가공하는겁니다."
+				"혹시 재료가 있으시다면 나무 껍질과 캔버스를 섞어도 되긴 합니다."
+			]
+			icon: "supplementaries:daub"
+			id: "13928D0E615D56FB"
+			tasks: [
+				{
+					id: "25D98AD3C7CC7250"
+					item: "supplementaries:daub"
+					type: "item"
+				}
+				{
+					id: "65914E37809A7D41"
+					type: "checkmark"
+				}
+			]
+			title: "Daub"
+			x: -2.5d
+			y: 4.5d
+		}
+		{
+			dependencies: ["7A7A80A243253D6F"]
+			description: [
+				"지금시점의 기술력의 정수입니다."
+				""
+				"좀더 복잡한 기계장치의 기반이 되죠."
+			]
+			icon: "immersiveengineering:light_engineering"
+			id: "19587ECB43301323"
+			tasks: [
+				{
+					id: "1E5C460F19CDE850"
+					item: "immersiveengineering:light_engineering"
+					type: "item"
+				}
+				{
+					id: "12C95735D77A7463"
+					type: "checkmark"
+				}
+			]
+			title: "경 공학 블럭"
+			x: 2.0d
+			y: 8.5d
 		}
 	]
-	title: "Light Engineering"
+	title: "챕터 1 : 기초기계공학"
 }

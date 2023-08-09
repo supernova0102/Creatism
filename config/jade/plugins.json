@@ -54,6 +54,12 @@
   "entangled": {
     "entangled_block_component": true
   },
+  "exnihilosequentia": {
+    "barrel": true,
+    "crucible": true,
+    "sieve": true,
+    "infesting_leaves": true
+  },
   "immersiveengineering": {
     "hemp": true,
     "multiblock_icon": true
@@ -66,8 +72,8 @@
     "registry_name": "OFF",
     "mod_name": true
   },
-  "lootr": {
-    "info": true
+  "waystones": {
+    "waystone": true
   },
   "ae2": {
     "part_icon": true,
@@ -80,40 +86,6 @@
     "power_storage": true,
     "crafting_monitor": true,
     "part_name": true
-  },
-  "platforms": {
-    "hud": true
-  },
-  "jadeaddons": {
-    "equipment_requirement": ""
-  },
-  "exnihilosequentia": {
-    "barrel": true,
-    "crucible": true,
-    "sieve": true,
-    "infesting_leaves": true
-  },
-  "shetiphiancore": {
-    "hud.rgb16": true,
-    "hud": true,
-    "hud.redstone": true
-  },
-  "create": {
-    "filter": true,
-    "goggles.requires_goggles": true,
-    "goggles": true,
-    "copper_backtank": true,
-    "blaze_burner": true,
-    "exact_block": true,
-    "crafting_blueprint": true,
-    "goggles.detailed": false,
-    "placard": true
-  },
-  "waystones": {
-    "waystone": true
-  },
-  "corpse": {
-    "corpse": true
   },
   "storagedrawers": {
     "display.stacklimit": true,
